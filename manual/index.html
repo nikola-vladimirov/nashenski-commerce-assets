@@ -96,7 +96,7 @@ section{padding:20px 16px}
 <div class="layout">
 <aside id="side">
 	<div class="brand"><img class="mark" src="img/logo.png" alt="" width="34" height="34"><strong><span data-l="en">Nashenski Commerce</span><span data-l="bg">Нашенски Комерс</span></strong></div>
-	<p class="version"><span data-l="en">Manual for version 0.19.8, built 2026-11-05</span><span data-l="bg">Ръководство за версия 0.19.8, изградено на 2026-11-05</span></p>
+	<p class="version"><span data-l="en">Manual for version 0.21.3, built 2026-11-07</span><span data-l="bg">Ръководство за версия 0.21.3, изградено на 2026-11-07</span></p>
 	<div class="lang-switch lang-switch-side" role="group" aria-label="Language / Език">
 		<button type="button" data-set-lang="en" aria-pressed="true">EN</button>
 		<button type="button" data-set-lang="bg" aria-pressed="false">BG</button>
@@ -115,25 +115,25 @@ section{padding:20px 16px}
 <hr class="rule" aria-hidden="true">
 </header>
 <section id="overview" aria-labelledby="overview-h"><h2 id="overview-h"><span data-l="en">What it is</span><span data-l="bg">Какво е</span></h2><div data-l="en">
-<p>Nashenski Commerce adds what a Bulgarian online store needs to WooCommerce: the couriers Econt, Speedy, BOX NOW, Pigeon Express and CVC, invoices and the documents of Ordinance N-18 (the light regime), the customer checks before cash on delivery, quick orders, abandoned carts and the EU withdrawal function.</p>
+<p>Nashenski Commerce adds what a Bulgarian online store needs to WooCommerce: the couriers Econt, Speedy, BOX NOW and Pigeon Express, invoices and the documents of Ordinance N-18 (the light regime), the customer checks before cash on delivery, quick orders, abandoned carts and the EU withdrawal function.</p>
 <p>Everything runs on your own site. Prices, labels and documents are made by your site and sent only to the services you turn on. The plugin is free, and it is a self-contained fork of Bulgarisation for WooCommerce 4.0.13.</p>
-<div class="callout"><strong>Version 0.19.8.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab, and invoice numbering only shows when documents are on.</div>
+<div class="callout"><strong>Version 0.21.3.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab, and invoice numbering sits under "When to generate invoices?" in Documents and stays visible when invoices are off.</div>
 <h3>Requirements</h3>
 <ul>
 <li>WordPress 6.5 or newer, tested up to 7.1.</li>
 <li>WooCommerce 9.4 or newer. The EU withdrawal function needs WooCommerce 11.1 or newer.</li>
-<li>PHP 7.4 or newer. The EU VAT number check (VIES) needs the PHP SOAP extension.</li>
+<li>PHP 8.2 or newer. The EU VAT number check (VIES) needs the PHP SOAP extension.</li>
 <li>Languages: English and Bulgarian.</li>
 </ul>
 <h3>What is inside</h3></div><div data-l="bg">
-<p>Nashenski Commerce добавя към WooCommerce това, от което се нуждае българският онлайн магазин: куриерите Econt, Speedy, BOX NOW, Pigeon Express и CVC, фактури и документите по Наредба Н-18 (облекчения режим), проверките на клиентите преди наложен платеж, бързи поръчки, изоставени колички и функцията за отказ от договор от ЕС.</p>
+<p>Nashenski Commerce добавя към WooCommerce това, от което се нуждае българският онлайн магазин: куриерите Econt, Speedy, BOX NOW и Pigeon Express, фактури и документите по Наредба Н-18 (облекчения режим), проверките на клиентите преди наложен платеж, бързи поръчки, изоставени колички и функцията за отказ от договор от ЕС.</p>
 <p>Всичко работи във вашия собствен сайт. Цените, товарителниците и документите се създават от сайта ви и се изпращат само до услугите, които включите. Добавката е безплатна и е самостоятелно копие (fork) на Bulgarisation for WooCommerce 4.0.13.</p>
-<div class="callout"><strong>Версия 0.19.8.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел, а номерацията на фактурите се показва само когато документите са включени.</div>
+<div class="callout"><strong>Версия 0.21.3.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел, а номерацията на фактурите е под „Кога да се издават фактури?“ в Документи и се вижда и когато фактурите са изключени.</div>
 <h3>Изисквания</h3>
 <ul>
 <li>WordPress 6.5 или по-нов, тестван до 7.1.</li>
 <li>WooCommerce 9.4 или по-нов. Функцията за отказ от договор от ЕС изисква WooCommerce 11.1 или по-нов.</li>
-<li>PHP 7.4 или по-нов. Проверката на ДДС номер във VIES изисква PHP разширението SOAP.</li>
+<li>PHP 8.2 или по-нов. Проверката на ДДС номер във VIES изисква PHP разширението SOAP.</li>
 <li>Езици: английски и български.</li>
 </ul>
 <h3>Какво съдържа</h3></div><div class="table-wrap" data-l="en"><table>
@@ -168,9 +168,9 @@ section{padding:20px 16px}
 <p>All settings are in <strong>WooCommerce &gt; Settings &gt; Nashenski Commerce</strong>. The row of links under the title takes you to each page.</p></div><div data-l="bg">
 <p>Всички настройки са в <strong>WooCommerce &gt; Настройки &gt; Нашенски Комерс</strong>. Редът с връзки под заглавието ви отвежда до всяка страница.</p></div><div class="table-wrap" data-l="en"><table>
 <thead><tr><th>Page</th><th>What it holds</th></tr></thead>
-<tbody><tr><td>Overview</td><td>Switches for the couriers, Invoices and N-18, quick order and abandoned carts; the customer check services; the waybill automation (order number on the waybill, order status when the parcel is delivered or returned)</td></tr><tr><td>Couriers</td><td>One tab per courier that is on (Econt, Speedy, BOX NOW, Pigeon Express, CVC), and the public prices for each courier</td></tr><tr><td>Checkout</td><td>Countries, courier logos, address transliteration, company invoice fields, order notes, checkout fields, look of the shipping options, EU withdrawal function</td></tr><tr><td>Quick order</td><td>Where the button shows, the form template and fields, phone checks, confirmation email</td></tr><tr><td>Abandoned carts</td><td>Reminder times, coupons, how long carts are kept, and the list of carts (with the status filter)</td></tr><tr><td>Documents</td><td>Company details, VAT group, return method, invoice numbering and triggers, the PDF look, cash on delivery payment details, document clean-up, VIES</td></tr><tr><td>Customer checks</td><td>nekorekten.com, Connectix and NepoStop: API keys, the level of warning, payment methods to hide, the column on the orders list</td></tr><tr><td>Exports</td><td>NRA audit file, Microinvest Delta file, invoice archive, and the custom export builder (buttons, not settings)</td></tr><tr><td>Help</td><td>Getting started, the recommended settings, the import from other plugins, how to use each part</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
+<tbody><tr><td>Overview</td><td>Switches for the couriers, Invoices and N-18, quick order and abandoned carts; the customer check services; the waybill automation (order number on the waybill, order status when the parcel is delivered or returned)</td></tr><tr><td>Couriers</td><td>One tab per courier that is on (Econt, Speedy, BOX NOW, Pigeon Express), and the public prices for each courier</td></tr><tr><td>Checkout</td><td>Countries, courier logos, address transliteration, company invoice fields, order notes, checkout fields, look of the shipping options, EU withdrawal function</td></tr><tr><td>Quick order</td><td>Where the button shows, the form template and fields, phone checks, confirmation email</td></tr><tr><td>Abandoned carts</td><td>Reminder times, coupons, how long carts are kept, and the list of carts (with the status filter)</td></tr><tr><td>Documents</td><td>Company details, VAT group, return method, invoice numbering and triggers, the PDF look, cash on delivery payment details, document clean-up, VIES</td></tr><tr><td>Customer checks</td><td>nekorekten.com, Connectix and NepoStop: API keys, the level of warning, payment methods to hide, the column on the orders list</td></tr><tr><td>Exports</td><td>NRA audit file, Microinvest Delta file, invoice archive, and the custom export builder (buttons, not settings)</td></tr><tr><td>Help</td><td>Getting started, the recommended settings, the import from other plugins, how to use each part</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Страница</th><th>Какво съдържа</th></tr></thead>
-<tbody><tr><td>Общ преглед</td><td>Превключватели за куриерите, Фактури и Н-18, бърза поръчка и изоставени колички; услугите за проверка на клиенти; автоматизацията на товарителниците (номер на поръчката в товарителницата, статус на поръчката при доставка или връщане)</td></tr><tr><td>Куриери</td><td>По един раздел за всеки включен куриер (Econt, Speedy, BOX NOW, Pigeon Express, CVC) и публичните цени за всеки куриер</td></tr><tr><td>Плащане</td><td>Държави, лога на куриерите, превод на адреси, полета за фирма, бележки към поръчката, полета при плащане, вид на опциите за доставка, функция за отказ от ЕС</td></tr><tr><td>Бърза поръчка</td><td>Къде се показва бутонът, шаблонът и полетата на формата, проверките на телефона, имейлът за потвърждение</td></tr><tr><td>Изоставени колички</td><td>Времена за напомняне, купони, колко време се пазят количките и списъкът с колички (с филтър по статус)</td></tr><tr><td>Документи</td><td>Данни на фирмата, ДДС група, метод на връщане, номерация и моменти за фактурите, вид на PDF, данни за плащане с наложен платеж, почистване на документи, VIES</td></tr><tr><td>Проверки на клиенти</td><td>nekorekten.com, Connectix и NepoStop: API ключове, ниво на предупреждение, методи за плащане за скриване, колона в списъка с поръчки</td></tr><tr><td>Експорти</td><td>Файл за НАП, файл за Microinvest Delta, архив с фактури и конструкторът на експорт (бутони, не настройки)</td></tr><tr><td>Помощ</td><td>Начало, препоръчителни настройки, импорт от други добавки, как се ползва всяка част</td></tr></tbody></table></div></section>
+<tbody><tr><td>Общ преглед</td><td>Превключватели за куриерите, Фактури и Н-18, бърза поръчка и изоставени колички; услугите за проверка на клиенти; автоматизацията на товарителниците (номер на поръчката в товарителницата, статус на поръчката при доставка или връщане)</td></tr><tr><td>Куриери</td><td>По един раздел за всеки включен куриер (Econt, Speedy, BOX NOW, Pigeon Express) и публичните цени за всеки куриер</td></tr><tr><td>Плащане</td><td>Държави, лога на куриерите, превод на адреси, полета за фирма, бележки към поръчката, полета при плащане, вид на опциите за доставка, функция за отказ от ЕС</td></tr><tr><td>Бърза поръчка</td><td>Къде се показва бутонът, шаблонът и полетата на формата, проверките на телефона, имейлът за потвърждение</td></tr><tr><td>Изоставени колички</td><td>Времена за напомняне, купони, колко време се пазят количките и списъкът с колички (с филтър по статус)</td></tr><tr><td>Документи</td><td>Данни на фирмата, ДДС група, метод на връщане, номерация и моменти за фактурите, вид на PDF, данни за плащане с наложен платеж, почистване на документи, VIES</td></tr><tr><td>Проверки на клиенти</td><td>nekorekten.com, Connectix и NepoStop: API ключове, ниво на предупреждение, методи за плащане за скриване, колона в списъка с поръчки</td></tr><tr><td>Експорти</td><td>Файл за НАП, файл за Microinvest Delta, архив с фактури и конструкторът на експорт (бутони, не настройки)</td></tr><tr><td>Помощ</td><td>Начало, препоръчителни настройки, импорт от други добавки, как се ползва всяка част</td></tr></tbody></table></div></section>
 <section id="couriers" aria-labelledby="couriers-h"><h2 id="couriers-h"><span data-l="en">Couriers: how they work</span><span data-l="bg">Куриери: как работят</span></h2><div data-l="en">
 <p>Each courier works the same way, with differences in the details below.</p>
 <ul>
@@ -566,9 +566,9 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="speedy_send_from изпращане от изберете откъде ще изпращате пратките и запазете, за да се покажат повече опции. ако изберете „адрес“, ще се използва адресът от профила. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
+			<tr data-search-bg="speedy_send_from изпращане от select from where you will send the packages and save to show more options. if you choose &quot;address&quot; the profile address will be used. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>speedy_send_from</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да се покажат повече опции. Ако изберете „Адрес“, ще се използва адресът от профила.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Select from where you will send the packages and save to show more options. If you choose &quot;Address&quot; the profile address will be used.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
@@ -661,9 +661,9 @@ section{padding:20px 16px}
 				<td>number</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="boxnow_price_free_shipping_over free shipping over  free shipping over total cart price.">
+			<tr data-search-en="boxnow_price_free_shipping_over free shipping over  free shipping at or above total cart price.">
 				<td><code>boxnow_price_free_shipping_over</code></td>
-				<td><strong>Free shipping over</strong><div class="desc">Free shipping over total cart price.</div></td>
+				<td><strong>Free shipping over</strong><div class="desc">Free shipping at or above total cart price.</div></td>
 				<td>number</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -752,9 +752,9 @@ section{padding:20px 16px}
 				<td>число</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="boxnow_price_free_shipping_over безплатна доставка над  безплатна доставка над тази сума на количката.">
+			<tr data-search-bg="boxnow_price_free_shipping_over безплатна доставка над  безплатна доставка при обща стойност на количката от тази сума нагоре.">
 				<td><code>boxnow_price_free_shipping_over</code></td>
-				<td><strong>Безплатна доставка над</strong><div class="desc">Безплатна доставка над тази сума на количката.</div></td>
+				<td><strong>Безплатна доставка над</strong><div class="desc">Безплатна доставка при обща стойност на количката от тази сума нагоре.</div></td>
 				<td>число</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -779,7 +779,7 @@ section{padding:20px 16px}
 				<td><code>pigeon_env</code></td>
 				<td><strong>Environment</strong><div class="desc">Select used environment.</div><div class="desc">Demo works with the courier&#39;s test system and nothing is really shipped. Switch to Live with your real login before you start sending.</div><div class="choices">Choices: live = Live; sandbox = Sandbox</div></td>
 				<td>one choice</td>
-				<td><code>live</code></td>
+				<td><code>sandbox</code></td>
 			</tr>
 			<tr data-search-en="pigeon_api_key api key given by pigeon express for your account. enter your api key.">
 				<td><code>pigeon_api_key</code></td>
@@ -882,7 +882,7 @@ section{padding:20px 16px}
 				<td><code>pigeon_env</code></td>
 				<td><strong>Среда</strong><div class="desc">Изберете средата.</div><div class="desc">Демо работи с тестовата система на куриера и нищо не се изпраща наистина. Преминете на „Реална среда“ с истинските си данни за вход, преди да започнете да изпращате.</div><div class="choices">Избор: live = Реална среда; sandbox = Тестова среда</div></td>
 				<td>един избор</td>
-				<td><code>live</code></td>
+				<td><code>sandbox</code></td>
 			</tr>
 			<tr data-search-bg="pigeon_api_key api ключ предоставя се от pigeon express за профила ви. въведете api ключа си.">
 				<td><code>pigeon_api_key</code></td>
@@ -975,156 +975,6 @@ section{padding:20px 16px}
 				<td><code>no</code></td>
 			</tr></tbody>
 		</table>
-		</div><div data-l="en">
-<h3>CVC</h3>
-<p>CVC offices and addresses. Enter the API token from CVC. The sender section sets the name, phone, email, city, and the send-from office or address. Cash on delivery as PPP and "Pay by contract" follow your agreement with CVC.</p></div><div data-l="bg">
-<h3>CVC</h3>
-<p>Офиси и адреси на CVC. Въведете API токена от CVC. Секцията за подател задава името, телефона, имейла, населеното място и офиса или адреса за изпращане. Наложеният платеж като PPP и „Плащане по договор“ следват договора ви с CVC.</p></div>
-		<div class="table-wrap settings-wrap" data-l="en">
-		<table class="settings">
-			<caption>CVC settings</caption>
-			<thead><tr><th scope="col">CLI name</th><th scope="col">Setting</th><th scope="col">Type</th><th scope="col">Default</th></tr></thead>
-			<tbody>
-			<tr data-search-en="cvc_token api token given by cvc for your account. enter your token.">
-				<td><code>cvc_token</code></td>
-				<td><strong>API Token</strong><div class="desc">Given by CVC for your account.</div><div class="desc">Enter your token.</div></td>
-				<td>text</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_name name sender contact on the waybill. enter sender name.">
-				<td><code>cvc_sender_name</code></td>
-				<td><strong>Name</strong><div class="desc">Sender contact on the waybill.</div><div class="desc">Enter sender name.</div></td>
-				<td>text</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_phone phone sender phone on the waybill. enter sender phone.">
-				<td><code>cvc_sender_phone</code></td>
-				<td><strong>Phone</strong><div class="desc">Sender phone on the waybill.</div><div class="desc">Enter sender phone.</div></td>
-				<td>text</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_email e-mail sender email on the waybill. enter sender email.">
-				<td><code>cvc_sender_email</code></td>
-				<td><strong>E-mail</strong><div class="desc">Sender email on the waybill.</div><div class="desc">Enter sender email.</div></td>
-				<td>email address</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_ppp cash on delivery as ppp. enable ">
-				<td><code>cvc_sender_ppp</code></td>
-				<td><strong>Cash on delivery as PPP.</strong><div class="desc">Enable</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_contract_pay pay by contract enable ">
-				<td><code>cvc_sender_contract_pay</code></td>
-				<td><strong>Pay by contract</strong><div class="desc">Enable</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_force_variations_in_desc force variations in label add additional variations information. please use this option only if you want the variation data to be available in the label print and it&#39;s missing. use it only when the waybill contents miss sizes or colours of the products.">
-				<td><code>cvc_sender_force_variations_in_desc</code></td>
-				<td><strong>Force variations in label</strong><div class="desc">Add additional variations information. Please use this option only if you want the variation data to be available in the label print and it&#39;s missing.</div><div class="desc">Use it only when the waybill contents miss sizes or colours of the products.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_label_after_checkout generate label after checkout this option will try to generate your label immediately after user checkout. also, will add the tracking number in the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
-				<td><code>cvc_sender_label_after_checkout</code></td>
-				<td><strong>Generate label after checkout</strong><div class="desc">This option will try to generate your label immediately after user checkout. Also, will add the tracking number in the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_city city  where your parcels start. prices are calculated from here.">
-				<td><code>cvc_sender_city</code></td>
-				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
-				<td>one choice</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_send_from send from select from where you will send the packages and save to show more options. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
-				<td><code>cvc_sender_send_from</code></td>
-				<td><strong>Send From</strong><div class="desc">Select from where you will send the packages and save to show more options.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
-				<td>one choice</td>
-				<td><code>office</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_office office  where your parcels start. prices are calculated from here.">
-				<td><code>cvc_sender_office</code></td>
-				<td><strong>Office</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
-				<td>one choice</td>
-				<td><span class="muted">empty</span></td>
-			</tr></tbody>
-		</table>
-		</div>
-		<div class="table-wrap settings-wrap" data-l="bg">
-		<table class="settings">
-			<caption>Настройки на CVC</caption>
-			<thead><tr><th scope="col">Име в командния ред</th><th scope="col">Настройка</th><th scope="col">Вид</th><th scope="col">По подразбиране</th></tr></thead>
-			<tbody>
-			<tr data-search-bg="cvc_token api токен предоставя се от cvc за профила ви. въведете токена.">
-				<td><code>cvc_token</code></td>
-				<td><strong>API токен</strong><div class="desc">Предоставя се от CVC за профила Ви.</div><div class="desc">Въведете токена.</div></td>
-				<td>текст</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_name име лице за контакт на подателя в товарителницата. въведете име на подателя.">
-				<td><code>cvc_sender_name</code></td>
-				<td><strong>Име</strong><div class="desc">Лице за контакт на подателя в товарителницата.</div><div class="desc">Въведете име на подателя.</div></td>
-				<td>текст</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_phone телефон телефон на подателя в товарителницата. въведете телефон на подателя.">
-				<td><code>cvc_sender_phone</code></td>
-				<td><strong>Телефон</strong><div class="desc">Телефон на подателя в товарителницата.</div><div class="desc">Въведете телефон на подателя.</div></td>
-				<td>текст</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_email имейл имейл на подателя в товарителницата. въведете имейл на подателя.">
-				<td><code>cvc_sender_email</code></td>
-				<td><strong>Имейл</strong><div class="desc">Имейл на подателя в товарителницата.</div><div class="desc">Въведете имейл на подателя.</div></td>
-				<td>имейл адрес</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_ppp наложен платеж като ппп. включване ">
-				<td><code>cvc_sender_ppp</code></td>
-				<td><strong>Наложен платеж като ППП.</strong><div class="desc">Включване</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_contract_pay плащане по договор включване ">
-				<td><code>cvc_sender_contract_pay</code></td>
-				<td><strong>Плащане по договор</strong><div class="desc">Включване</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_force_variations_in_desc вариациите в товарителницата добавя данни за вариациите. използвайте само ако данните за вариацията липсват при печат на товарителницата. използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.">
-				<td><code>cvc_sender_force_variations_in_desc</code></td>
-				<td><strong>Вариациите в товарителницата</strong><div class="desc">Добавя данни за вариациите. Използвайте само ако данните за вариацията липсват при печат на товарителницата.</div><div class="desc">Използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_label_after_checkout създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
-				<td><code>cvc_sender_label_after_checkout</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_city град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
-				<td><code>cvc_sender_city</code></td>
-				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
-				<td>един избор</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_send_from изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
-				<td><code>cvc_sender_send_from</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
-				<td>един избор</td>
-				<td><code>office</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_office офис  откъдето тръгват пратките ви. цените се изчисляват оттук.">
-				<td><code>cvc_sender_office</code></td>
-				<td><strong>Офис</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
-				<td>един избор</td>
-				<td><span class="muted">празно</span></td>
-			</tr></tbody>
-		</table>
 		</div></section>
 <section id="shipping" aria-labelledby="shipping-h"><h2 id="shipping-h"><span data-l="en">Shipping methods and prices</span><span data-l="bg">Методи за доставка и цени</span></h2><div data-l="en">
 <h3>Shipping methods in zones</h3>
@@ -1132,13 +982,33 @@ section{padding:20px 16px}
 <p>Each method can have a free shipping amount and a fixed price. A method with no courier login uses the public price list of its courier.</p>
 <h3>Live prices and the public price list</h3>
 <p>With a login, the courier calculates the price for the order. Without one, or when the courier does not answer, the public price list is used. The list is built in and editable on each courier tab, under "Public prices". Press "Check the courier website" to compare the list with the courier's published prices: you see what changed, and new prices are filled in only when you choose. The check also runs once a week. When a courier publishes new prices, a notice says so; save that courier's prices or press Dismiss.</p>
-<p>The price table has one band per weight step, with the price for an office, a locker and an address, plus the over-weight price per kilogram and the cash on delivery fee.</p></div><div data-l="bg">
+<p>The price table has one band per weight step, with the price for an office, a locker and an address, plus the over-weight price per kilogram and the cash on delivery fee.</p>
+<h3>Shipping abroad</h3>
+<ul>
+<li>Your store is always in Bulgaria. Only the customer may be abroad. Turn on "Ship abroad" on the courier method in the shipping zone, for each courier you want to use.</li>
+<li>Econt delivers to Romania and Greece. Speedy delivers to Romania, Greece, Cyprus, Hungary, the Czech Republic, Croatia, Poland, Slovakia and Slovenia. Other countries are not offered.</li>
+<li>Add the countries to the shipping zone as usual. Customers there choose the office, locker or address as at home.</li>
+<li>Prices abroad come only from the courier's live calculation, so a courier login is needed. The public price list is for Bulgaria only and is never used abroad. If there is no courier data for the order, the customer sees no price.</li>
+<li>If the customer has chosen no office, locker or address, the checkout says "Please fill in your delivery address."</li>
+<li>"Free shipping over" is for Bulgaria. For other countries use "Free shipping over, abroad" and write the country code and the total, for example RO=150, GR=200. A country that is not listed gets no free shipping. BG is not allowed in this field.</li>
+<li>Pigeon Express gives no price for a parcel over 30 kg.</li>
+</ul></div><div data-l="bg">
 <h3>Методи за доставка в зоните</h3>
 <p>Методите на куриерите са методи за доставка на WooCommerce и се добавят към зона за доставка в WooCommerce &gt; Настройки &gt; Доставка. По един метод за всеки вид доставка. Методите носят името на куриера, а количката и плащането показват лого на куриера до всяка опция (изключете логото в раздел Плащане).</p>
 <p>Всеки метод може да има безплатна сума за доставка и фиксирана цена. Метод без вход на куриера ползва публичната ценова листа на куриера.</p>
 <h3>Живи цени и публична ценова листа</h3>
 <p>С вход куриерът изчислява цената за поръчката. Без вход или когато куриерът не отговаря, се ползва публичната ценова листа. Листата е вградена и може да се редактира в раздела на всеки куриер, под „Публични цени“. Натиснете „Проверка в сайта на куриера“, за да сравните листата с публикуваните цени на куриера: виждате какво е променено, а новите цени се попълват само когато вие изберете. Проверката се прави и веднъж седмично. Когато куриер публикува нови цени, се показва известие: запазете цените на този куриер или натиснете „Скриване“.</p>
-<p>Ценовата таблица има по един ред за всяка стъпка по тегло, с цената за офис, автомат и адрес, плюс цената за превишено тегло за килограм и таксата за наложен платеж.</p></div>
+<p>Ценовата таблица има по един ред за всяка стъпка по тегло, с цената за офис, автомат и адрес, плюс цената за превишено тегло за килограм и таксата за наложен платеж.</p>
+<h3>Доставка в чужбина</h3>
+<ul>
+<li>Магазинът ви е винаги в България. Само клиентът може да е в чужбина. Включете „Доставка в чужбина“ на метода на куриера в зоната за доставка, за всеки куриер, който искате да ползвате.</li>
+<li>Еконт доставя до Румъния и Гърция. Спиди доставя до Румъния, Гърция, Кипър, Унгария, Чехия, Хърватия, Полша, Словакия и Словения. Други държави не се предлагат.</li>
+<li>Добавете държавите към зоната за доставка както обикновено. Клиентите там избират офис, автомат или адрес като в България.</li>
+<li>Цените в чужбина идват само от изчислението на куриера на живо, затова е нужен вход в куриера. Публичният ценоразпис е само за България и никога не се ползва в чужбина. Ако няма данни от куриера за поръчката, клиентът не вижда цена.</li>
+<li>Ако клиентът не е избрал офис, автомат или адрес, поръчката показва „Моля, попълнете адреса за доставка.“</li>
+<li>„Безплатна доставка над“ е за България. За другите държави ползвайте „Безплатна доставка в чужбина над“ и напишете кода на държавата и сумата, например RO=150, GR=200. Държава, която не е в списъка, няма безплатна доставка. BG не е позволено в това поле.</li>
+<li>Pigeon Express не дава цена за пратка над 30 кг.</li>
+</ul></div>
 		<div class="table-wrap settings-wrap" data-l="en">
 		<table class="settings">
 			<caption>Public prices settings</caption>
@@ -1179,18 +1049,6 @@ section{padding:20px 16px}
 				<td><strong>Public prices, Pigeon</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>price table (JSON)</td>
 				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="prices_use_public_cvc use public prices, cvc use the courier public price list when the courier does not answer. ">
-				<td><code>prices_use_public_cvc</code></td>
-				<td><strong>Use public prices, Cvc</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
-				<td>yes or no</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-en="prices_cvc public prices, cvc price bands for the courier public price list. ">
-				<td><code>prices_cvc</code></td>
-				<td><strong>Public prices, Cvc</strong><div class="desc">Price bands for the courier public price list.</div></td>
-				<td>price table (JSON)</td>
-				<td><span class="muted">empty</span></td>
 			</tr></tbody>
 		</table>
 		</div>
@@ -1199,51 +1057,39 @@ section{padding:20px 16px}
 			<caption>Настройки на публичните цени</caption>
 			<thead><tr><th scope="col">Име в командния ред</th><th scope="col">Настройка</th><th scope="col">Вид</th><th scope="col">По подразбиране</th></tr></thead>
 			<tbody>
-			<tr data-search-bg="prices_use_public_econt използване на публичните цени, econt използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
+			<tr data-search-bg="prices_use_public_econt use public prices, econt use the courier public price list when the courier does not answer. ">
 				<td><code>prices_use_public_econt</code></td>
-				<td><strong>Използване на публичните цени, Econt</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
+				<td><strong>Use public prices, Econt</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
-			<tr data-search-bg="prices_econt публични цени, econt ценови граници за публичната ценова листа на куриера. ">
+			<tr data-search-bg="prices_econt public prices, econt price bands for the courier public price list. ">
 				<td><code>prices_econt</code></td>
-				<td><strong>Публични цени, Econt</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
+				<td><strong>Public prices, Econt</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="prices_use_public_speedy използване на публичните цени, speedy използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
+			<tr data-search-bg="prices_use_public_speedy use public prices, speedy use the courier public price list when the courier does not answer. ">
 				<td><code>prices_use_public_speedy</code></td>
-				<td><strong>Използване на публичните цени, Speedy</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
+				<td><strong>Use public prices, Speedy</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
-			<tr data-search-bg="prices_speedy публични цени, speedy ценови граници за публичната ценова листа на куриера. ">
+			<tr data-search-bg="prices_speedy public prices, speedy price bands for the courier public price list. ">
 				<td><code>prices_speedy</code></td>
-				<td><strong>Публични цени, Speedy</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
+				<td><strong>Public prices, Speedy</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="prices_use_public_pigeon използване на публичните цени, pigeon използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
+			<tr data-search-bg="prices_use_public_pigeon use public prices, pigeon use the courier public price list when the courier does not answer. ">
 				<td><code>prices_use_public_pigeon</code></td>
-				<td><strong>Използване на публичните цени, Pigeon</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
+				<td><strong>Use public prices, Pigeon</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
-			<tr data-search-bg="prices_pigeon публични цени, pigeon ценови граници за публичната ценова листа на куриера. ">
+			<tr data-search-bg="prices_pigeon public prices, pigeon price bands for the courier public price list. ">
 				<td><code>prices_pigeon</code></td>
-				<td><strong>Публични цени, Pigeon</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
-				<td>таблица с цени (JSON)</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="prices_use_public_cvc използване на публичните цени, cvc използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
-				<td><code>prices_use_public_cvc</code></td>
-				<td><strong>Използване на публичните цени, CVC</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
-				<td>да или не</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-bg="prices_cvc публични цени, cvc ценови граници за публичната ценова листа на куриера. ">
-				<td><code>prices_cvc</code></td>
-				<td><strong>Публични цени, CVC</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
+				<td><strong>Public prices, Pigeon</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr></tbody>
@@ -1258,9 +1104,9 @@ section{padding:20px 16px}
 			<caption>Waybill automation settings</caption>
 			<thead><tr><th scope="col">CLI name</th><th scope="col">Setting</th><th scope="col">Type</th><th scope="col">Default</th></tr></thead>
 			<tbody>
-			<tr data-search-en="automation_order_number order number on the waybill econt and speedy get it in their reference field, box now on the label, pigeon express in the note for the courier and cvc in front of the contents. the courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.">
+			<tr data-search-en="automation_order_number order number on the waybill econt and speedy get it in their reference field, box now on the label and pigeon express in the note for the courier. the courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.">
 				<td><code>automation_order_number</code></td>
-				<td><strong>Order number on the waybill</strong><div class="desc">Econt and Speedy get it in their reference field, BOX NOW on the label, Pigeon Express in the note for the courier and CVC in front of the contents.</div><div class="desc">The courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.</div></td>
+				<td><strong>Order number on the waybill</strong><div class="desc">Econt and Speedy get it in their reference field, BOX NOW on the label and Pigeon Express in the note for the courier.</div><div class="desc">The courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -1270,9 +1116,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="automation_returned when the parcel goes back to you refused by the customer or returned. orders that are processing or on hold and have an econt, speedy, box now or cvc waybill are checked every hour, and each change is noted on the order. pigeon express does not publish its statuses yet. for example cancelled or on hold. the note on the order says what the courier reported.">
+			<tr data-search-en="automation_returned when the parcel goes back to you refused by the customer or returned. orders that are processing or on hold and have an econt, speedy or box now waybill are checked every hour, and each change is noted on the order. pigeon express does not publish its statuses yet. for example cancelled or on hold. the note on the order says what the courier reported.">
 				<td><code>automation_returned</code></td>
-				<td><strong>When the parcel goes back to you</strong><div class="desc">Refused by the customer or returned. Orders that are processing or on hold and have an Econt, Speedy, BOX NOW or CVC waybill are checked every hour, and each change is noted on the order. Pigeon Express does not publish its statuses yet.</div><div class="desc">For example Cancelled or On hold. The note on the order says what the courier reported.</div><div class="choices">Choices: (empty) = Do not change; wc-pending = Pending payment; wc-processing = Processing; wc-on-hold = On hold; wc-completed = Completed; wc-cancelled = Cancelled; wc-refunded = Refunded; wc-failed = Failed; wc-nash-quick = Quick order; wc-checkout-draft = Draft</div></td>
+				<td><strong>When the parcel goes back to you</strong><div class="desc">Refused by the customer or returned. Orders that are processing or on hold and have an Econt, Speedy or BOX NOW waybill are checked every hour, and each change is noted on the order. Pigeon Express does not publish its statuses yet.</div><div class="desc">For example Cancelled or On hold. The note on the order says what the courier reported.</div><div class="choices">Choices: (empty) = Do not change; wc-pending = Pending payment; wc-processing = Processing; wc-on-hold = On hold; wc-completed = Completed; wc-cancelled = Cancelled; wc-refunded = Refunded; wc-failed = Failed; wc-nash-quick = Quick order; wc-checkout-draft = Draft</div></td>
 				<td>one choice</td>
 				<td><span class="muted">empty</span></td>
 			</tr></tbody>
@@ -1283,9 +1129,9 @@ section{padding:20px 16px}
 			<caption>Настройки на автоматизацията на товарителниците</caption>
 			<thead><tr><th scope="col">Име в командния ред</th><th scope="col">Настройка</th><th scope="col">Вид</th><th scope="col">По подразбиране</th></tr></thead>
 			<tbody>
-			<tr data-search-bg="automation_order_number номер на поръчката в товарителницата еконт и спиди го получават в полето си за референция, box now на етикета, pigeon express в бележката към куриера, а cvc пред съдържанието. куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.">
+			<tr data-search-bg="automation_order_number номер на поръчката в товарителницата econt и speedy го получават в полето за справка, box now - на етикета, а pigeon express - в бележката за куриера. куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.">
 				<td><code>automation_order_number</code></td>
-				<td><strong>Номер на поръчката в товарителницата</strong><div class="desc">Еконт и Спиди го получават в полето си за референция, BOX NOW на етикета, Pigeon Express в бележката към куриера, а CVC пред съдържанието.</div><div class="desc">Куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.</div></td>
+				<td><strong>Номер на поръчката в товарителницата</strong><div class="desc">Econt и Speedy го получават в полето за справка, BOX NOW - на етикета, а Pigeon Express - в бележката за куриера.</div><div class="desc">Куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -1295,9 +1141,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="automation_returned когато пратката се връща при вас отказана от клиента или върната. поръчките в обработка или задържани, които имат товарителница на еконт, спиди, box now или cvc, се проверяват всеки час и всяка промяна се записва в поръчката. pigeon express все още не публикува статусите си. например „отказана“ или „задържана“. бележката към поръчката казва какво е отчел куриерът.">
+			<tr data-search-bg="automation_returned когато пратката се връща при вас отказана от клиента или върната. поръчките в обработка или на задържане с товарителница от econt, speedy или box now се проверяват на всеки час и всяка промяна се записва в поръчката. pigeon express още не публикува статусите си. например „отказана“ или „задържана“. бележката към поръчката казва какво е отчел куриерът.">
 				<td><code>automation_returned</code></td>
-				<td><strong>Когато пратката се връща при Вас</strong><div class="desc">Отказана от клиента или върната. Поръчките в обработка или задържани, които имат товарителница на Еконт, Спиди, BOX NOW или CVC, се проверяват всеки час и всяка промяна се записва в поръчката. Pigeon Express все още не публикува статусите си.</div><div class="desc">Например „Отказана“ или „Задържана“. Бележката към поръчката казва какво е отчел куриерът.</div><div class="choices">Избор: (празно) = Без промяна; wc-pending = Чакащо плащане; wc-processing = Обработва се; wc-on-hold = На изчакване; wc-completed = Завършена; wc-cancelled = Отменена; wc-refunded = Възстановено; wc-failed = Неуспешна; wc-nash-quick = Бърза поръчка; wc-checkout-draft = Чернова</div></td>
+				<td><strong>Когато пратката се връща при Вас</strong><div class="desc">Отказана от клиента или върната. Поръчките в обработка или на задържане с товарителница от Econt, Speedy или BOX NOW се проверяват на всеки час и всяка промяна се записва в поръчката. Pigeon Express още не публикува статусите си.</div><div class="desc">Например „Отказана“ или „Задържана“. Бележката към поръчката казва какво е отчел куриерът.</div><div class="choices">Избор: (празно) = Без промяна; wc-pending = Чакащо плащане; wc-processing = Обработва се; wc-on-hold = На изчакване; wc-completed = Завършена; wc-cancelled = Отменена; wc-refunded = Възстановено; wc-failed = Неуспешна; wc-nash-quick = Бърза поръчка; wc-checkout-draft = Чернова</div></td>
 				<td>един избор</td>
 				<td><span class="muted">празно</span></td>
 			</tr></tbody>
@@ -1337,21 +1183,15 @@ section{padding:20px 16px}
 			<caption>Checkout settings</caption>
 			<thead><tr><th scope="col">CLI name</th><th scope="col">Setting</th><th scope="col">Type</th><th scope="col">Default</th></tr></thead>
 			<tbody>
-			<tr data-search-en="checkout_countries customer countries with bulgaria only, every order is for bulgaria and customers do not see the country field. bulgaria only also hides the country field. &quot;woocommerce settings&quot; keeps the countries of woocommerce &gt; settings &gt; general.">
+			<tr data-search-en="checkout_countries customer countries with bulgaria only, every order is for bulgaria and customers do not see the country field. &quot;as set in woocommerce&quot; keeps the countries of woocommerce &gt; settings &gt; general.">
 				<td><code>checkout_countries</code></td>
-				<td><strong>Customer countries</strong><div class="desc">With Bulgaria only, every order is for Bulgaria and customers do not see the country field.</div><div class="desc">Bulgaria only also hides the country field. &quot;WooCommerce settings&quot; keeps the countries of WooCommerce &gt; Settings &gt; General.</div><div class="choices">Choices: bg = Bulgaria only (country field hidden); bg_gr_ro = Bulgaria, Greece and Romania; woocommerce = As set in WooCommerce &gt; Settings &gt; General</div></td>
+				<td><strong>Customer countries</strong><div class="desc">With Bulgaria only, every order is for Bulgaria and customers do not see the country field.</div><div class="desc">&quot;As set in WooCommerce&quot; keeps the countries of WooCommerce &gt; Settings &gt; General.</div><div class="choices">Choices: bg = Bulgaria only (country field hidden); bg_gr_ro = Bulgaria, Greece and Romania; woocommerce = As set in WooCommerce &gt; Settings &gt; General</div></td>
 				<td>one choice</td>
 				<td><code>bg</code></td>
 			</tr>
-			<tr data-search-en="checkout_courier_logos courier logos show the courier logo next to each shipping option at checkout and in the cart. customers recognise the courier at a glance.">
-				<td><code>checkout_courier_logos</code></td>
-				<td><strong>Courier logos</strong><div class="desc">Show the courier logo next to each shipping option at checkout and in the cart.</div><div class="desc">Customers recognise the courier at a glance.</div></td>
-				<td>yes or no</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-en="checkout_transliteration transliterate addresses converts the address the customer typed when the order is placed, for example &quot;ruse, ul. tsar osvoboditel&quot; to &quot;русе, ул. цар освободител&quot;. labels use the converted address. orders also get a &quot;transliterate addresses&quot; action. couriers search addresses in cyrillic. addresses typed in latin letters are converted, so the parcel still finds the customer.">
+			<tr data-search-en="checkout_transliteration transliterate addresses converts the address when the order is placed, for example &quot;ruse, ul. tsar osvoboditel&quot; to &quot;русе, ул. цар освободител&quot;. waybills use the converted address. couriers search addresses in cyrillic, so latin addresses are converted. each order also has a &quot;transliterate addresses&quot; action.">
 				<td><code>checkout_transliteration</code></td>
-				<td><strong>Transliterate addresses</strong><div class="desc">Converts the address the customer typed when the order is placed, for example &quot;Ruse, ul. Tsar Osvoboditel&quot; to &quot;Русе, ул. Цар Освободител&quot;. Labels use the converted address. Orders also get a &quot;Transliterate addresses&quot; action.</div><div class="desc">Couriers search addresses in Cyrillic. Addresses typed in Latin letters are converted, so the parcel still finds the customer.</div><div class="choices">Choices: off = Off; cyrillic = Bulgarian addresses in Cyrillic; auto = Cyrillic in Bulgaria, Latin abroad</div></td>
+				<td><strong>Transliterate addresses</strong><div class="desc">Converts the address when the order is placed, for example &quot;Ruse, ul. Tsar Osvoboditel&quot; to &quot;Русе, ул. Цар Освободител&quot;. Waybills use the converted address.</div><div class="desc">Couriers search addresses in Cyrillic, so Latin addresses are converted. Each order also has a &quot;Transliterate addresses&quot; action.</div><div class="choices">Choices: off = Off; cyrillic = Bulgarian addresses in Cyrillic; auto = Cyrillic in Bulgaria, Latin abroad</div></td>
 				<td>one choice</td>
 				<td><code>off</code></td>
 			</tr>
@@ -1361,17 +1201,23 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="checkout_alternative_shipping_table alternative shipping options layout ( checkout ) make shipping options on 2 rows and full width in the checkout table. for themes with a narrow order summary: the shipping options take the full width.">
-				<td><code>checkout_alternative_shipping_table</code></td>
-				<td><strong>Alternative shipping options layout ( checkout )</strong><div class="desc">Make shipping options on 2 rows and full width in the checkout table.</div><div class="desc">For themes with a narrow order summary: the shipping options take the full width.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="company_fields company invoice fields add &quot;i want an invoice for a company&quot; to the checkout. when ticked, the customer fills in company name, eik, vat number, mol, town and address, and the invoice is made out to the company. the company details go on the invoice and into the nra audit file.">
-				<td><code>company_fields</code></td>
-				<td><strong>Company invoice fields</strong><div class="desc">Add &quot;I want an invoice for a company&quot; to the checkout. When ticked, the customer fills in company name, EIK, VAT number, MOL, town and address, and the invoice is made out to the company.</div><div class="desc">The company details go on the invoice and into the NRA audit file.</div></td>
+			<tr data-search-en="checkout_courier_logos courier logos show the courier logo next to each shipping option at checkout and in the cart. customers recognise the courier at a glance.">
+				<td><code>checkout_courier_logos</code></td>
+				<td><strong>Courier logos</strong><div class="desc">Show the courier logo next to each shipping option at checkout and in the cart.</div><div class="desc">Customers recognise the courier at a glance.</div></td>
 				<td>yes or no</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-en="company_fields company invoice fields add &quot;i want an invoice for a company&quot; to the checkout. when ticked, the customer fills in company name, eik, vat number, mol, town and address. the details go on the invoice and into the nra audit file. in a builder checkout of single field elements, the fields come after the billing fields unless you place them.">
+				<td><code>company_fields</code></td>
+				<td><strong>Company invoice fields</strong><div class="desc">Add &quot;I want an invoice for a company&quot; to the checkout. When ticked, the customer fills in company name, EIK, VAT number, MOL, town and address.</div><div class="desc">The details go on the invoice and into the NRA audit file. In a builder checkout of single field elements, the fields come after the billing fields unless you place them.</div></td>
+				<td>yes or no</td>
+				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-en="company_invoice_numbering invoice numbering own invoicing program: no invoice is made automatically. type the number from your program on the order screen and press &quot;make invoice&quot;. those orders stay out of the nra audit file and the monthly audit email. changing it later does not move invoices already made in or out of the nra audit file. ask your accountant which one fits your shop.">
+				<td><code>company_invoice_numbering</code></td>
+				<td><strong>Invoice numbering</strong><div class="desc">Own invoicing program: no invoice is made automatically. Type the number from your program on the order screen and press &quot;Make invoice&quot;. Those orders stay out of the NRA audit file and the monthly audit email.</div><div class="desc">Changing it later does not move invoices already made in or out of the NRA audit file. Ask your accountant which one fits your shop.</div><div class="choices">Choices: nra = Website invoices: in the NRA audit file; own = Own invoicing program: custom number, not in the NRA audit file</div></td>
+				<td>one choice</td>
+				<td><code>nra</code></td>
 			</tr>
 			<tr data-search-en="fields_classic_order_comments order notes classic checkout only. in the block checkout, turn order notes on or off in the checkout block settings. hidden: customers cannot leave a note with the order.">
 				<td><code>fields_classic_order_comments</code></td>
@@ -1379,9 +1225,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>default</code></td>
 			</tr>
-			<tr data-search-en="fields_layout fields order, visibility and width of every checkout field, and your own fields. the notes above the table say which checkouts follow which part.">
+			<tr data-search-en="fields_layout fields  ">
 				<td><code>fields_layout</code></td>
-				<td><strong>Fields</strong><div class="desc">Order, visibility and width of every checkout field, and your own fields.</div><div class="desc">The notes above the table say which checkouts follow which part.</div></td>
+				<td><strong>Fields</strong></td>
 				<td>field layout (JSON)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -1391,9 +1237,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>cards</code></td>
 			</tr>
-			<tr data-search-en="appearance_show_type delivery type show &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to your address&quot; under each option shows &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to an address&quot; under each option.">
+			<tr data-search-en="appearance_show_type delivery type show &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to your address&quot; under each option shows &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to your address&quot; under each option.">
 				<td><code>appearance_show_type</code></td>
-				<td><strong>Delivery type</strong><div class="desc">Show &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option</div><div class="desc">Shows &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To an address&quot; under each option.</div></td>
+				<td><strong>Delivery type</strong><div class="desc">Show &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option</div><div class="desc">Shows &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option.</div></td>
 				<td>yes or no</td>
 				<td><code>yes</code></td>
 			</tr>
@@ -1482,21 +1328,15 @@ section{padding:20px 16px}
 			<caption>Настройки на плащането</caption>
 			<thead><tr><th scope="col">Име в командния ред</th><th scope="col">Настройка</th><th scope="col">Вид</th><th scope="col">По подразбиране</th></tr></thead>
 			<tbody>
-			<tr data-search-bg="checkout_countries държави на клиентите при „само българия“ всяка поръчка е за българия и клиентите не виждат полето за държава. „само българия“ скрива и полето за държава. „настройки на woocommerce“ запазва държавите от woocommerce &gt; настройки &gt; общи.">
+			<tr data-search-bg="checkout_countries държави на клиентите при „само българия“ всяка поръчка е за българия и клиентите не виждат полето за държава. &quot;както е в woocommerce&quot; запазва държавите от woocommerce &gt; настройки &gt; общи.">
 				<td><code>checkout_countries</code></td>
-				<td><strong>Държави на клиентите</strong><div class="desc">При „Само България“ всяка поръчка е за България и клиентите не виждат полето за държава.</div><div class="desc">„Само България“ скрива и полето за държава. „Настройки на WooCommerce“ запазва държавите от WooCommerce &gt; Настройки &gt; Общи.</div><div class="choices">Избор: bg = Само България (полето за държава е скрито); bg_gr_ro = България, Гърция и Румъния; woocommerce = Както е зададено в WooCommerce &gt; Настройки &gt; Общи</div></td>
+				<td><strong>Държави на клиентите</strong><div class="desc">При „Само България“ всяка поръчка е за България и клиентите не виждат полето за държава.</div><div class="desc">&quot;Както е в WooCommerce&quot; запазва държавите от WooCommerce &gt; Настройки &gt; Общи.</div><div class="choices">Избор: bg = Само България (полето за държава е скрито); bg_gr_ro = България, Гърция и Румъния; woocommerce = Както е зададено в WooCommerce &gt; Настройки &gt; Общи</div></td>
 				<td>един избор</td>
 				<td><code>bg</code></td>
 			</tr>
-			<tr data-search-bg="checkout_courier_logos лога на куриерите показване на логото на куриера до всяка опция за доставка при плащане и в количката. клиентите разпознават куриера от пръв поглед.">
-				<td><code>checkout_courier_logos</code></td>
-				<td><strong>Лога на куриерите</strong><div class="desc">Показване на логото на куриера до всяка опция за доставка при плащане и в количката.</div><div class="desc">Клиентите разпознават куриера от пръв поглед.</div></td>
-				<td>да или не</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-bg="checkout_transliteration транслитерация на адресите преобразува адреса, който клиентът е въвел, при създаване на поръчката, например „ruse, ul. tsar osvoboditel“ в „русе, ул. цар освободител“. товарителниците използват преобразувания адрес. поръчките получават и действие „транслитерация на адресите“. куриерите търсят адресите на кирилица. адресите, написани на латиница, се преобразуват, така че пратката пак намира клиента.">
+			<tr data-search-bg="checkout_transliteration транслитерация на адресите превръща адреса при направата на поръчката, например &quot;ruse, ul. tsar osvoboditel&quot; в &quot;русе, ул. цар освободител&quot;. товарителниците използват превърнатия адрес. куриерите търсят адреси на кирилица, затова латинските адреси се превръщат. всяка поръчка има и действие &quot;транслитерирай адресите&quot;.">
 				<td><code>checkout_transliteration</code></td>
-				<td><strong>Транслитерация на адресите</strong><div class="desc">Преобразува адреса, който клиентът е въвел, при създаване на поръчката, например „Ruse, ul. Tsar Osvoboditel“ в „Русе, ул. Цар Освободител“. Товарителниците използват преобразувания адрес. Поръчките получават и действие „Транслитерация на адресите“.</div><div class="desc">Куриерите търсят адресите на кирилица. Адресите, написани на латиница, се преобразуват, така че пратката пак намира клиента.</div><div class="choices">Избор: off = Изключено; cyrillic = Българските адреси на кирилица; auto = Кирилица в България, латиница в чужбина</div></td>
+				<td><strong>Транслитерация на адресите</strong><div class="desc">Превръща адреса при направата на поръчката, например &quot;Ruse, ul. Tsar Osvoboditel&quot; в &quot;Русе, ул. Цар Освободител&quot;. Товарителниците използват превърнатия адрес.</div><div class="desc">Куриерите търсят адреси на кирилица, затова латинските адреси се превръщат. Всяка поръчка има и действие &quot;Транслитерирай адресите&quot;.</div><div class="choices">Избор: off = Изключено; cyrillic = Българските адреси на кирилица; auto = Кирилица в България, латиница в чужбина</div></td>
 				<td>един избор</td>
 				<td><code>off</code></td>
 			</tr>
@@ -1506,17 +1346,23 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="checkout_alternative_shipping_table алтернативно подреждане на опциите за доставка (плащане) опциите за доставка са на 2 реда и на цялата ширина на таблицата при плащане. за теми с тясна обобщена част на поръчката: опциите за доставка заемат цялата ширина.">
-				<td><code>checkout_alternative_shipping_table</code></td>
-				<td><strong>Алтернативно подреждане на опциите за доставка (плащане)</strong><div class="desc">Опциите за доставка са на 2 реда и на цялата ширина на таблицата при плащане.</div><div class="desc">За теми с тясна обобщена част на поръчката: опциите за доставка заемат цялата ширина.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="company_fields полета за фактура на фирма добавя „искам фактура на фирма“ към плащането. когато е отметнато, клиентът попълва име на фирмата, еик, ддс номер, мол, населено място и адрес, и фактурата се издава на фирмата. данните на фирмата влизат във фактурата и в одиторския файл за нап.">
-				<td><code>company_fields</code></td>
-				<td><strong>Полета за фактура на фирма</strong><div class="desc">Добавя „Искам фактура на фирма“ към плащането. Когато е отметнато, клиентът попълва име на фирмата, ЕИК, ДДС номер, МОЛ, населено място и адрес, и фактурата се издава на фирмата.</div><div class="desc">Данните на фирмата влизат във фактурата и в одиторския файл за НАП.</div></td>
+			<tr data-search-bg="checkout_courier_logos лога на куриерите показване на логото на куриера до всяка опция за доставка при плащане и в количката. клиентите разпознават куриера от пръв поглед.">
+				<td><code>checkout_courier_logos</code></td>
+				<td><strong>Лога на куриерите</strong><div class="desc">Показване на логото на куриера до всяка опция за доставка при плащане и в количката.</div><div class="desc">Клиентите разпознават куриера от пръв поглед.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-bg="company_fields полета за фактура на фирма добавя &quot;искам фактура за фирма&quot; към поръчката. когато е отметнато, клиентът попълва име на фирмата, еик, ддс номер, мол, град и адрес. данните отиват във фактурата и в одитния файл на нап. при конструиран касов процес от отделни полета полетата са след полетата за фактуриране, освен ако ги поставите сами.">
+				<td><code>company_fields</code></td>
+				<td><strong>Полета за фактура на фирма</strong><div class="desc">Добавя &quot;Искам фактура за фирма&quot; към поръчката. Когато е отметнато, клиентът попълва име на фирмата, ЕИК, ДДС номер, МОЛ, град и адрес.</div><div class="desc">Данните отиват във фактурата и в одитния файл на НАП. При конструиран касов процес от отделни полета полетата са след полетата за фактуриране, освен ако ги поставите сами.</div></td>
+				<td>да или не</td>
+				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-bg="company_invoice_numbering номериране на фактури собствена програма за фактуриране: фактурата не се създава автоматично. въведете номера от програмата си на екрана на поръчката и натиснете &quot;създай фактура&quot;. тези поръчки остават извън одитния файл на нап и месечния одитен имейл. промяната по-късно не премества фактурите, които вече са направени в или извън одитния файл на нап. попитайте счетоводителя си кой вариант подхожда на магазина ви.">
+				<td><code>company_invoice_numbering</code></td>
+				<td><strong>Номериране на фактури</strong><div class="desc">Собствена програма за фактуриране: фактурата не се създава автоматично. Въведете номера от програмата си на екрана на поръчката и натиснете &quot;Създай фактура&quot;. Тези поръчки остават извън одитния файл на НАП и месечния одитен имейл.</div><div class="desc">Промяната по-късно не премества фактурите, които вече са направени в или извън одитния файл на НАП. Попитайте счетоводителя си кой вариант подхожда на магазина ви.</div><div class="choices">Избор: nra = Фактури от сайта: в одитния файл на НАП; own = Собствена програма за фактуриране: ръчен номер, извън одитния файл на НАП</div></td>
+				<td>един избор</td>
+				<td><code>nra</code></td>
 			</tr>
 			<tr data-search-bg="fields_classic_order_comments бележки към поръчката само при класическото плащане. при блоковото плащане включете или изключете бележките в настройките на блока за плащане. скрито: клиентите не могат да оставят бележка към поръчката.">
 				<td><code>fields_classic_order_comments</code></td>
@@ -1524,9 +1370,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>default</code></td>
 			</tr>
-			<tr data-search-bg="fields_layout полета ред, видимост и ширина на всяко поле при плащане, както и ваши полета. бележките над таблицата казват кои видове плащане следват коя част.">
+			<tr data-search-bg="fields_layout полета  ">
 				<td><code>fields_layout</code></td>
-				<td><strong>Полета</strong><div class="desc">Ред, видимост и ширина на всяко поле при плащане, както и Ваши полета.</div><div class="desc">Бележките над таблицата казват кои видове плащане следват коя част.</div></td>
+				<td><strong>Полета</strong></td>
 				<td>разположение на полетата (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -1536,9 +1382,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>cards</code></td>
 			</tr>
-			<tr data-search-bg="appearance_show_type вид доставка показване на „до офис“, „до автомат за пратки“ или „до вашия адрес“ под всяка опция показва „до офис“, „до автомат за пратки“ или „до адрес“ под всяка опция.">
+			<tr data-search-bg="appearance_show_type вид доставка показване на „до офис“, „до автомат за пратки“ или „до вашия адрес“ под всяка опция показва &quot;до офис&quot;, &quot;до автомат за пратки&quot; или &quot;до адрес&quot; под всяка опция.">
 				<td><code>appearance_show_type</code></td>
-				<td><strong>Вид доставка</strong><div class="desc">Показване на „До офис“, „До автомат за пратки“ или „До вашия адрес“ под всяка опция</div><div class="desc">Показва „До офис“, „До автомат за пратки“ или „До адрес“ под всяка опция.</div></td>
+				<td><strong>Вид доставка</strong><div class="desc">Показване на „До офис“, „До автомат за пратки“ или „До вашия адрес“ под всяка опция</div><div class="desc">Показва &quot;До офис&quot;, &quot;До автомат за пратки&quot; или &quot;До адрес&quot; под всяка опция.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
@@ -1770,7 +1616,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-bg="quick_order_phone_country държава за телефона държавата, от която са телефоните. тя задава кода на държавата, с който номерата се проверяват и запазват. ">
 				<td><code>quick_order_phone_country</code></td>
-				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Албания (+355); AU = Австралия (+61); AT = Австрия (+43); BE = Белгия (+32); BR = Бразилия (+55); BG = България (+359); CA = Канада (+1); HR = Хърватия (+385); CY = Кипър (+357); CZ = Чехия (+420); DK = Дания (+45); EE = Естония (+372); FI = Финландия (+358); FR = Франция (+33); DE = Германия (+49); GR = Гърция (+30); HU = Унгария (+36); IS = Исландия (+354); IN = Индия (+91); IE = Ирландия (+353); IL = Израел (+972); IT = Италия (+39); JP = Япония (+81); LV = Латвия (+371); LT = Литва (+370); LU = Люксембург (+352); MT = Малта (+356); MX = Мексико (+52); NL = Нидерландия (+31); NZ = Нова Зеландия (+64); NO = Норвегия (+47); PL = Полша (+48); PT = Португалия (+351); RO = Румъния (+40); RS = Сърбия (+381); SK = Словакия (+421); SI = Словения (+386); ZA = Южна Африка (+27); ES = Испания (+34); SE = Швеция (+46); CH = Швейцария (+41); TR = Турция (+90); GB = Великобритания (+44); US = Съединени американски щати (+1)</div></td>
+				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Albania (+355); AU = Australia (+61); AT = Austria (+43); BE = Belgium (+32); BR = Brazil (+55); BG = Bulgaria (+359); CA = Canada (+1); HR = Croatia (+385); CY = Cyprus (+357); CZ = Czech Republic (+420); DK = Denmark (+45); EE = Estonia (+372); FI = Finland (+358); FR = France (+33); DE = Germany (+49); GR = Greece (+30); HU = Hungary (+36); IS = Iceland (+354); IN = India (+91); IE = Ireland (+353); IL = Israel (+972); IT = Italy (+39); JP = Japan (+81); LV = Latvia (+371); LT = Lithuania (+370); LU = Luxembourg (+352); MT = Malta (+356); MX = Mexico (+52); NL = Netherlands (+31); NZ = New Zealand (+64); NO = Norway (+47); PL = Poland (+48); PT = Portugal (+351); RO = Romania (+40); RS = Serbia (+381); SK = Slovakia (+421); SI = Slovenia (+386); ZA = South Africa (+27); ES = Spain (+34); SE = Sweden (+46); CH = Switzerland (+41); TR = Türkiye (+90); GB = United Kingdom (UK) (+44); US = United States (US) (+1)</div></td>
 				<td>един избор</td>
 				<td><code>AL</code></td>
 			</tr>
@@ -2057,9 +1903,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-en="invoice_remove_shipping remove delivery from documents this option will remove the delivery from invoices and xml file. use it when the courier issues its own receipt for the delivery charge.">
+			<tr data-search-en="invoice_remove_shipping remove delivery from documents removes delivery from invoices and the xml file for cash on delivery orders. use it when the courier issues its own document for the delivery price. ">
 				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Remove delivery from documents</strong><div class="desc">This option will remove the delivery from invoices and XML file.</div><div class="desc">Use it when the courier issues its own receipt for the delivery charge.</div></td>
+				<td><strong>Remove delivery from documents</strong><div class="desc">Removes delivery from invoices and the XML file for cash on delivery orders. Use it when the courier issues its own document for the delivery price.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -2069,9 +1915,9 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="invoice_next_invoice_separate_number next invoice/credit notice number leave empty to number invoices together with order documents. if it&#39; filled the invoices will have different number than the nra documents.">
+			<tr data-search-en="invoice_next_invoice_separate_number next invoice/credit notice number leave empty to number invoices together with order documents. also used when you make an invoice by hand. if it&#39; filled the invoices will have different number than the nra documents.">
 				<td><code>invoice_next_invoice_separate_number</code></td>
-				<td><strong>Next Invoice/Credit notice Number</strong><div class="desc">Leave empty to number invoices together with order documents.</div><div class="desc">If it&#39; filled the invoices will have different number than the NRA documents.</div></td>
+				<td><strong>Next Invoice/Credit notice Number</strong><div class="desc">Leave empty to number invoices together with order documents. Also used when you make an invoice by hand.</div><div class="desc">If it&#39; filled the invoices will have different number than the NRA documents.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -2137,7 +1983,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-en="invoice_digital_tax_classes tax classes for digital goods this option tells the plugin which of your tax classes are for digital goods. this affects the taxable location of the user as of 1st jan 2015. products in these tax classes count as digital goods for eu vat: the customer&#39;s country rate applies.">
 				<td><code>invoice_digital_tax_classes</code></td>
-				<td><strong>Tax Classes for Digital Goods</strong><div class="desc">This option tells the plugin which of your tax classes are for digital goods. This affects the taxable location of the user as of 1st Jan 2015.</div><div class="desc">Products in these tax classes count as digital goods for EU VAT: the customer&#39;s country rate applies.</div><div class="choices">Choices: standard = Standard; reduced-rate = Reduced rate; zero-rate = Zero rate</div></td>
+				<td><strong>Tax Classes for Digital Goods</strong><div class="desc">This option tells the plugin which of your tax classes are for digital goods. This affects the taxable location of the user as of 1st Jan 2015.</div><div class="desc">Products in these tax classes count as digital goods for EU VAT: the customer&#39;s country rate applies.</div><div class="choices">Choices: standard = Standard</div></td>
 				<td>one choice</td>
 				<td><code>standard</code></td>
 			</tr>
@@ -2195,12 +2041,6 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_cvc_is_courier is nashenski commerce - cvc courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_cvc_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - CVC courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
 			<tr data-search-en="cod_payment_type payment type the nra payment type of this payment method. manner of payment of the order according to the nra system.">
 				<td><code>cod_payment_type</code></td>
 				<td><strong>Payment Type</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">Manner of payment of the order according to the NRA system.</div><div class="choices">Choices: 1 = Released under Art. 3 payment without PPP; 2 = Virtual POS terminal; 3 = Cash on delivery with PPP; 4 = Payment service provider; 5 = Other; 6 = Reflected with receipt</div></td>
@@ -2229,7 +2069,7 @@ section{padding:20px 16px}
 				<td><code>pdf_logo_size</code></td>
 				<td><strong>Logo size</strong><div class="desc">How big the logo is at the top of the document.</div><div class="desc">Larger logos push the document down; Small keeps long orders on one page.</div><div class="choices">Choices: small = Small; medium = Medium; large = Large</div></td>
 				<td>one choice</td>
-				<td><code>small</code></td>
+				<td><code>medium</code></td>
 			</tr>
 			<tr data-search-en="pdf_show_site_details website details show the website name, address, email and phone under the logo turn off when your logo already has these details.">
 				<td><code>pdf_show_site_details</code></td>
@@ -2253,7 +2093,7 @@ section{padding:20px 16px}
 				<td><code>pdf_accent_color</code></td>
 				<td><strong>Accent colour</strong><div class="desc">Lines under the header and above the footer.</div><div class="desc">Dark text on a light table header prints best.</div></td>
 				<td>colour, e.g. #1d4ed8</td>
-				<td><code>#0c8f0a</code></td>
+				<td><code>#32a2c1</code></td>
 			</tr>
 			<tr data-search-en="pdf_text_color text colour pick a colour or type a hex code. dark text on a light table header prints best.">
 				<td><code>pdf_text_color</code></td>
@@ -2265,7 +2105,7 @@ section{padding:20px 16px}
 				<td><code>pdf_table_color</code></td>
 				<td><strong>Table header background</strong><div class="desc">Pick a colour or type a hex code.</div><div class="desc">Dark text on a light table header prints best.</div></td>
 				<td>colour, e.g. #1d4ed8</td>
-				<td><code>#e7f4e7</code></td>
+				<td><code>#ebf6f9</code></td>
 			</tr>
 			<tr data-search-en="pdf_font font both fonts print cyrillic and latin. both have cyrillic letters.">
 				<td><code>pdf_font</code></td>
@@ -2406,9 +2246,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-bg="invoice_remove_shipping без доставката в документите премахва доставката от фактурите и от xml файла. използвайте го, когато куриерът издава собствен документ за цената на доставката.">
+			<tr data-search-bg="invoice_remove_shipping без доставката в документите премахва доставката от фактурите и от xml файла при наложен платеж. използвайте го, когато куриерът издава собствен документ за цената на доставката. ">
 				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Без доставката в документите</strong><div class="desc">Премахва доставката от фактурите и от XML файла.</div><div class="desc">Използвайте го, когато куриерът издава собствен документ за цената на доставката.</div></td>
+				<td><strong>Без доставката в документите</strong><div class="desc">Премахва доставката от фактурите и от XML файла при наложен платеж. Използвайте го, когато куриерът издава собствен документ за цената на доставката.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -2418,9 +2258,9 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="invoice_next_invoice_separate_number следващ номер на фактура/кредитно известие оставете празно, за да се номерират фактурите заедно с документите за продажба. ако е попълнено, фактурите ще имат различна номерация от документите за нап.">
+			<tr data-search-bg="invoice_next_invoice_separate_number следващ номер на фактура/кредитно известие leave empty to number invoices together with order documents. also used when you make an invoice by hand. ако е попълнено, фактурите ще имат различна номерация от документите за нап.">
 				<td><code>invoice_next_invoice_separate_number</code></td>
-				<td><strong>Следващ номер на фактура/кредитно известие</strong><div class="desc">Оставете празно, за да се номерират фактурите заедно с документите за продажба.</div><div class="desc">Ако е попълнено, фактурите ще имат различна номерация от документите за НАП.</div></td>
+				<td><strong>Следващ номер на фактура/кредитно известие</strong><div class="desc">Leave empty to number invoices together with order documents. Also used when you make an invoice by hand.</div><div class="desc">Ако е попълнено, фактурите ще имат различна номерация от документите за НАП.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -2486,7 +2326,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-bg="invoice_digital_tax_classes данъчни класове за цифрови стоки показва кои данъчни класове са за цифрови стоки. от 1 януари 2015 г. това определя мястото на облагане според клиента. продуктите в тези данъчни класове се смятат за цифрови стоки за ддс в ес: прилага се ставката на държавата на клиента.">
 				<td><code>invoice_digital_tax_classes</code></td>
-				<td><strong>Данъчни класове за цифрови стоки</strong><div class="desc">Показва кои данъчни класове са за цифрови стоки. От 1 януари 2015 г. това определя мястото на облагане според клиента.</div><div class="desc">Продуктите в тези данъчни класове се смятат за цифрови стоки за ДДС в ЕС: прилага се ставката на държавата на клиента.</div><div class="choices">Избор: standard = Стандартна; reduced-rate = Намалена ставка; zero-rate = Нулева ставка</div></td>
+				<td><strong>Данъчни класове за цифрови стоки</strong><div class="desc">Показва кои данъчни класове са за цифрови стоки. От 1 януари 2015 г. това определя мястото на облагане според клиента.</div><div class="desc">Продуктите в тези данъчни класове се смятат за цифрови стоки за ДДС в ЕС: прилага се ставката на държавата на клиента.</div><div class="choices">Избор: standard = Стандартна</div></td>
 				<td>един избор</td>
 				<td><code>standard</code></td>
 			</tr>
@@ -2502,51 +2342,45 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="shippings_flat_rate_is_courier това ли е куриер с фиксирана цена? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_flat_rate_is_courier is flat rate courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_flat_rate_is_courier</code></td>
-				<td><strong>Това ли е куриер с фиксирана цена?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Flat rate courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_free_shipping_is_courier това ли е куриер с безплатна доставка? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_free_shipping_is_courier is free shipping courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_free_shipping_is_courier</code></td>
-				<td><strong>Това ли е куриер с безплатна доставка?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Free shipping courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_local_pickup_is_courier това ли е вземане от място? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_local_pickup_is_courier is local pickup courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_local_pickup_is_courier</code></td>
-				<td><strong>Това ли е вземане от място?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Local pickup courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_econt_is_courier това ли е куриерът econt от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_econt_is_courier is nashenski commerce - econt courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_econt_is_courier</code></td>
-				<td><strong>Това ли е куриерът Econt от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - Econt courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_speedy_is_courier това ли е куриерът speedy от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_speedy_is_courier is nashenski commerce - speedy courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_speedy_is_courier</code></td>
-				<td><strong>Това ли е куриерът Speedy от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - Speedy courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_boxnow_is_courier това ли е куриерът box now от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_boxnow_is_courier is nashenski commerce - box now courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_boxnow_is_courier</code></td>
-				<td><strong>Това ли е куриерът BOX NOW от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - BOX NOW courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_pigeon_is_courier това ли е куриерът pigeon express от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_pigeon_is_courier is nashenski commerce - pigeon express courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_pigeon_is_courier</code></td>
-				<td><strong>Това ли е куриерът Pigeon Express от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="shippings_nashenski_cvc_is_courier това ли е куриерът cvc от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_cvc_is_courier</code></td>
-				<td><strong>Това ли е куриерът CVC от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - Pigeon Express courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -2578,7 +2412,7 @@ section{padding:20px 16px}
 				<td><code>pdf_logo_size</code></td>
 				<td><strong>Размер на логото</strong><div class="desc">Колко голямо е логото в горната част на документа.</div><div class="desc">По-голямото лого избутва документа надолу; „Малко“ запазва дългите поръчки на една страница.</div><div class="choices">Избор: small = Малко; medium = Средно; large = Голямо</div></td>
 				<td>един избор</td>
-				<td><code>small</code></td>
+				<td><code>medium</code></td>
 			</tr>
 			<tr data-search-bg="pdf_show_site_details данни за сайта показване на името, адреса, имейла и телефона на сайта под логото изключете, когато логото ви вече съдържа тези данни.">
 				<td><code>pdf_show_site_details</code></td>
@@ -2602,7 +2436,7 @@ section{padding:20px 16px}
 				<td><code>pdf_accent_color</code></td>
 				<td><strong>Акцентен цвят</strong><div class="desc">Линиите под горния и над долния колонтитул.</div><div class="desc">Тъмен текст върху светла заглавна част на таблицата се отпечатва най-добре.</div></td>
 				<td>цвят, например #1d4ed8</td>
-				<td><code>#0c8f0a</code></td>
+				<td><code>#32a2c1</code></td>
 			</tr>
 			<tr data-search-bg="pdf_text_color цвят на текста изберете цвят или въведете шестнадесетичен код. тъмен текст върху светла заглавна част на таблицата се отпечатва най-добре.">
 				<td><code>pdf_text_color</code></td>
@@ -2614,7 +2448,7 @@ section{padding:20px 16px}
 				<td><code>pdf_table_color</code></td>
 				<td><strong>Фон на заглавния ред на таблицата</strong><div class="desc">Изберете цвят или въведете шестнадесетичен код.</div><div class="desc">Тъмен текст върху светла заглавна част на таблицата се отпечатва най-добре.</div></td>
 				<td>цвят, например #1d4ed8</td>
-				<td><code>#e7f4e7</code></td>
+				<td><code>#ebf6f9</code></td>
 			</tr>
 			<tr data-search-bg="pdf_font шрифт и двата шрифта поддържат кирилица и латиница. и двата имат кирилица.">
 				<td><code>pdf_font</code></td>
@@ -2824,9 +2658,9 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="nekorekten_api_key api ключ създайте ключ в профила си в nekorekten.com, в секцията „api keys“, и разрешете ip адреса на сървъра си. от профила ви в сайта на услугата.">
+			<tr data-search-bg="nekorekten_api_key api ключ create a key in your nekorekten.com profile under &quot;api keys&quot; and allow your server&#39;s ip address. от профила ви в сайта на услугата.">
 				<td><code>nekorekten_api_key</code></td>
-				<td><strong>API ключ</strong><div class="desc">Създайте ключ в профила си в nekorekten.com, в секцията „API keys“, и разрешете IP адреса на сървъра си.</div><div class="desc">От профила Ви в сайта на услугата.</div></td>
+				<td><strong>API ключ</strong><div class="desc">Create a key in your nekorekten.com profile under &quot;API keys&quot; and allow your server&#39;s IP address.</div><div class="desc">От профила Ви в сайта на услугата.</div></td>
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -2863,9 +2697,9 @@ section{padding:20px 16px}
 <p>Новите версии се показват в Табло &gt; Актуализации и в Добавки, както всяка друга актуализация. Бета версиите са по избор: инсталирайте „Nashenski Commerce Beta Updates“ от GitHub release и го деактивирайте, за да се върнете към версиите от WordPress.org.</p></div></section>
 <section id="settings-ref" aria-labelledby="settings-ref-h"><h2 id="settings-ref-h"><span data-l="en">Settings reference</span><span data-l="bg">Справка за настройките</span></h2><div data-l="en">
 <p>Every setting, page by page, with the name the command line uses (see the WP-CLI reference). The search box filters every table on this page. The list is built from the same definitions as the settings screens, so it also includes the settings of couriers that are off.</p>
-<p class="note">204 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
+<p class="note">189 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
 <p>Всяка настройка, страница по страница, с името, което ползва командният ред (вижте справката за WP-CLI). Полето за търсене филтрира всяка таблица на тази страница. Списъкът е изграден от същите определения като екраните с настройки, затова включва и настройките на изключените куриери.</p>
-<p class="note">204 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
+<p class="note">189 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
 <input id="filter" type="search" data-ph-en="Search the settings, e.g. econt, invoice, speedy" data-ph-bg="Търсене в настройките, например econt, фактура, speedy" aria-label="Search the settings / Търсене в настройките">
 		<div class="table-wrap settings-wrap" data-l="en">
 		<table class="settings">
@@ -2893,12 +2727,6 @@ section{padding:20px 16px}
 			<tr data-search-en="apis_enable_pigeon pigeon express delivery to pigeon express offices, lockers and addresses ">
 				<td><code>apis_enable_pigeon</code></td>
 				<td><strong>Pigeon Express</strong><div class="desc">Delivery to Pigeon Express offices, lockers and addresses</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="apis_enable_cvc cvc delivery to cvc offices and addresses ">
-				<td><code>apis_enable_cvc</code></td>
-				<td><strong>CVC</strong><div class="desc">Delivery to CVC offices and addresses</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -2950,9 +2778,9 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="automation_order_number order number on the waybill econt and speedy get it in their reference field, box now on the label, pigeon express in the note for the courier and cvc in front of the contents. the courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.">
+			<tr data-search-en="automation_order_number order number on the waybill econt and speedy get it in their reference field, box now on the label and pigeon express in the note for the courier. the courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.">
 				<td><code>automation_order_number</code></td>
-				<td><strong>Order number on the waybill</strong><div class="desc">Econt and Speedy get it in their reference field, BOX NOW on the label, Pigeon Express in the note for the courier and CVC in front of the contents.</div><div class="desc">The courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.</div></td>
+				<td><strong>Order number on the waybill</strong><div class="desc">Econt and Speedy get it in their reference field, BOX NOW on the label and Pigeon Express in the note for the courier.</div><div class="desc">The courier prints it on the waybill, so whoever packs or delivers the parcel knows which order it is.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -2962,9 +2790,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="automation_returned when the parcel goes back to you refused by the customer or returned. orders that are processing or on hold and have an econt, speedy, box now or cvc waybill are checked every hour, and each change is noted on the order. pigeon express does not publish its statuses yet. for example cancelled or on hold. the note on the order says what the courier reported.">
+			<tr data-search-en="automation_returned when the parcel goes back to you refused by the customer or returned. orders that are processing or on hold and have an econt, speedy or box now waybill are checked every hour, and each change is noted on the order. pigeon express does not publish its statuses yet. for example cancelled or on hold. the note on the order says what the courier reported.">
 				<td><code>automation_returned</code></td>
-				<td><strong>When the parcel goes back to you</strong><div class="desc">Refused by the customer or returned. Orders that are processing or on hold and have an Econt, Speedy, BOX NOW or CVC waybill are checked every hour, and each change is noted on the order. Pigeon Express does not publish its statuses yet.</div><div class="desc">For example Cancelled or On hold. The note on the order says what the courier reported.</div><div class="choices">Choices: (empty) = Do not change; wc-pending = Pending payment; wc-processing = Processing; wc-on-hold = On hold; wc-completed = Completed; wc-cancelled = Cancelled; wc-refunded = Refunded; wc-failed = Failed; wc-nash-quick = Quick order; wc-checkout-draft = Draft</div></td>
+				<td><strong>When the parcel goes back to you</strong><div class="desc">Refused by the customer or returned. Orders that are processing or on hold and have an Econt, Speedy or BOX NOW waybill are checked every hour, and each change is noted on the order. Pigeon Express does not publish its statuses yet.</div><div class="desc">For example Cancelled or On hold. The note on the order says what the courier reported.</div><div class="choices">Choices: (empty) = Do not change; wc-pending = Pending payment; wc-processing = Processing; wc-on-hold = On hold; wc-completed = Completed; wc-cancelled = Cancelled; wc-refunded = Refunded; wc-failed = Failed; wc-nash-quick = Quick order; wc-checkout-draft = Draft</div></td>
 				<td>one choice</td>
 				<td><span class="muted">empty</span></td>
 			</tr></tbody>
@@ -2996,12 +2824,6 @@ section{padding:20px 16px}
 			<tr data-search-bg="apis_enable_pigeon pigeon express доставка до офиси, шкафчета и адреси на pigeon express ">
 				<td><code>apis_enable_pigeon</code></td>
 				<td><strong>Pigeon Express</strong><div class="desc">Доставка до офиси, шкафчета и адреси на Pigeon Express</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="apis_enable_cvc cvc доставка до офиси и адреси на cvc ">
-				<td><code>apis_enable_cvc</code></td>
-				<td><strong>CVC</strong><div class="desc">Доставка до офиси и адреси на CVC</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -3053,9 +2875,9 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="automation_order_number номер на поръчката в товарителницата еконт и спиди го получават в полето си за референция, box now на етикета, pigeon express в бележката към куриера, а cvc пред съдържанието. куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.">
+			<tr data-search-bg="automation_order_number номер на поръчката в товарителницата econt и speedy го получават в полето за справка, box now - на етикета, а pigeon express - в бележката за куриера. куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.">
 				<td><code>automation_order_number</code></td>
-				<td><strong>Номер на поръчката в товарителницата</strong><div class="desc">Еконт и Спиди го получават в полето си за референция, BOX NOW на етикета, Pigeon Express в бележката към куриера, а CVC пред съдържанието.</div><div class="desc">Куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.</div></td>
+				<td><strong>Номер на поръчката в товарителницата</strong><div class="desc">Econt и Speedy го получават в полето за справка, BOX NOW - на етикета, а Pigeon Express - в бележката за куриера.</div><div class="desc">Куриерът го отпечатва в товарителницата, така че който опакова или доставя пратката, знае коя е поръчката.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -3065,9 +2887,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="automation_returned когато пратката се връща при вас отказана от клиента или върната. поръчките в обработка или задържани, които имат товарителница на еконт, спиди, box now или cvc, се проверяват всеки час и всяка промяна се записва в поръчката. pigeon express все още не публикува статусите си. например „отказана“ или „задържана“. бележката към поръчката казва какво е отчел куриерът.">
+			<tr data-search-bg="automation_returned когато пратката се връща при вас отказана от клиента или върната. поръчките в обработка или на задържане с товарителница от econt, speedy или box now се проверяват на всеки час и всяка промяна се записва в поръчката. pigeon express още не публикува статусите си. например „отказана“ или „задържана“. бележката към поръчката казва какво е отчел куриерът.">
 				<td><code>automation_returned</code></td>
-				<td><strong>Когато пратката се връща при Вас</strong><div class="desc">Отказана от клиента или върната. Поръчките в обработка или задържани, които имат товарителница на Еконт, Спиди, BOX NOW или CVC, се проверяват всеки час и всяка промяна се записва в поръчката. Pigeon Express все още не публикува статусите си.</div><div class="desc">Например „Отказана“ или „Задържана“. Бележката към поръчката казва какво е отчел куриерът.</div><div class="choices">Избор: (празно) = Без промяна; wc-pending = Чакащо плащане; wc-processing = Обработва се; wc-on-hold = На изчакване; wc-completed = Завършена; wc-cancelled = Отменена; wc-refunded = Възстановено; wc-failed = Неуспешна; wc-nash-quick = Бърза поръчка; wc-checkout-draft = Чернова</div></td>
+				<td><strong>Когато пратката се връща при Вас</strong><div class="desc">Отказана от клиента или върната. Поръчките в обработка или на задържане с товарителница от Econt, Speedy или BOX NOW се проверяват на всеки час и всяка промяна се записва в поръчката. Pigeon Express още не публикува статусите си.</div><div class="desc">Например „Отказана“ или „Задържана“. Бележката към поръчката казва какво е отчел куриерът.</div><div class="choices">Избор: (празно) = Без промяна; wc-pending = Чакащо плащане; wc-processing = Обработва се; wc-on-hold = На изчакване; wc-completed = Завършена; wc-cancelled = Отменена; wc-refunded = Възстановено; wc-failed = Неуспешна; wc-nash-quick = Бърза поръчка; wc-checkout-draft = Чернова</div></td>
 				<td>един избор</td>
 				<td><span class="muted">празно</span></td>
 			</tr></tbody>
@@ -3324,9 +3146,9 @@ section{padding:20px 16px}
 				<td>number</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="boxnow_price_free_shipping_over free shipping over  free shipping over total cart price.">
+			<tr data-search-en="boxnow_price_free_shipping_over free shipping over  free shipping at or above total cart price.">
 				<td><code>boxnow_price_free_shipping_over</code></td>
-				<td><strong>Free shipping over</strong><div class="desc">Free shipping over total cart price.</div></td>
+				<td><strong>Free shipping over</strong><div class="desc">Free shipping at or above total cart price.</div></td>
 				<td>number</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -3340,7 +3162,7 @@ section{padding:20px 16px}
 				<td><code>pigeon_env</code></td>
 				<td><strong>Environment</strong><div class="desc">Select used environment.</div><div class="desc">Demo works with the courier&#39;s test system and nothing is really shipped. Switch to Live with your real login before you start sending.</div><div class="choices">Choices: live = Live; sandbox = Sandbox</div></td>
 				<td>one choice</td>
-				<td><code>live</code></td>
+				<td><code>sandbox</code></td>
 			</tr>
 			<tr data-search-en="pigeon_api_key api key given by pigeon express for your account. enter your api key.">
 				<td><code>pigeon_api_key</code></td>
@@ -3432,72 +3254,6 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="cvc_token api token given by cvc for your account. enter your token.">
-				<td><code>cvc_token</code></td>
-				<td><strong>API Token</strong><div class="desc">Given by CVC for your account.</div><div class="desc">Enter your token.</div></td>
-				<td>text</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_name name sender contact on the waybill. enter sender name.">
-				<td><code>cvc_sender_name</code></td>
-				<td><strong>Name</strong><div class="desc">Sender contact on the waybill.</div><div class="desc">Enter sender name.</div></td>
-				<td>text</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_phone phone sender phone on the waybill. enter sender phone.">
-				<td><code>cvc_sender_phone</code></td>
-				<td><strong>Phone</strong><div class="desc">Sender phone on the waybill.</div><div class="desc">Enter sender phone.</div></td>
-				<td>text</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_email e-mail sender email on the waybill. enter sender email.">
-				<td><code>cvc_sender_email</code></td>
-				<td><strong>E-mail</strong><div class="desc">Sender email on the waybill.</div><div class="desc">Enter sender email.</div></td>
-				<td>email address</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_ppp cash on delivery as ppp. enable ">
-				<td><code>cvc_sender_ppp</code></td>
-				<td><strong>Cash on delivery as PPP.</strong><div class="desc">Enable</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_contract_pay pay by contract enable ">
-				<td><code>cvc_sender_contract_pay</code></td>
-				<td><strong>Pay by contract</strong><div class="desc">Enable</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_force_variations_in_desc force variations in label add additional variations information. please use this option only if you want the variation data to be available in the label print and it&#39;s missing. use it only when the waybill contents miss sizes or colours of the products.">
-				<td><code>cvc_sender_force_variations_in_desc</code></td>
-				<td><strong>Force variations in label</strong><div class="desc">Add additional variations information. Please use this option only if you want the variation data to be available in the label print and it&#39;s missing.</div><div class="desc">Use it only when the waybill contents miss sizes or colours of the products.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_label_after_checkout generate label after checkout this option will try to generate your label immediately after user checkout. also, will add the tracking number in the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
-				<td><code>cvc_sender_label_after_checkout</code></td>
-				<td><strong>Generate label after checkout</strong><div class="desc">This option will try to generate your label immediately after user checkout. Also, will add the tracking number in the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_city city  where your parcels start. prices are calculated from here.">
-				<td><code>cvc_sender_city</code></td>
-				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
-				<td>one choice</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="cvc_sender_send_from send from select from where you will send the packages and save to show more options. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
-				<td><code>cvc_sender_send_from</code></td>
-				<td><strong>Send From</strong><div class="desc">Select from where you will send the packages and save to show more options.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
-				<td>one choice</td>
-				<td><code>office</code></td>
-			</tr>
-			<tr data-search-en="cvc_sender_office office  where your parcels start. prices are calculated from here.">
-				<td><code>cvc_sender_office</code></td>
-				<td><strong>Office</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
-				<td>one choice</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
 			<tr data-search-en="prices_use_public_econt use public prices, econt use the courier public price list when the courier does not answer. ">
 				<td><code>prices_use_public_econt</code></td>
 				<td><strong>Use public prices, Econt</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
@@ -3531,18 +3287,6 @@ section{padding:20px 16px}
 			<tr data-search-en="prices_pigeon public prices, pigeon price bands for the courier public price list. ">
 				<td><code>prices_pigeon</code></td>
 				<td><strong>Public prices, Pigeon</strong><div class="desc">Price bands for the courier public price list.</div></td>
-				<td>price table (JSON)</td>
-				<td><span class="muted">empty</span></td>
-			</tr>
-			<tr data-search-en="prices_use_public_cvc use public prices, cvc use the courier public price list when the courier does not answer. ">
-				<td><code>prices_use_public_cvc</code></td>
-				<td><strong>Use public prices, Cvc</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
-				<td>yes or no</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-en="prices_cvc public prices, cvc price bands for the courier public price list. ">
-				<td><code>prices_cvc</code></td>
-				<td><strong>Public prices, Cvc</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>price table (JSON)</td>
 				<td><span class="muted">empty</span></td>
 			</tr></tbody>
@@ -3715,9 +3459,9 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="speedy_send_from изпращане от изберете откъде ще изпращате пратките и запазете, за да се покажат повече опции. ако изберете „адрес“, ще се използва адресът от профила. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
+			<tr data-search-bg="speedy_send_from изпращане от select from where you will send the packages and save to show more options. if you choose &quot;address&quot; the profile address will be used. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>speedy_send_from</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да се покажат повече опции. Ако изберете „Адрес“, ще се използва адресът от профила.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Select from where you will send the packages and save to show more options. If you choose &quot;Address&quot; the profile address will be used.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
@@ -3799,9 +3543,9 @@ section{padding:20px 16px}
 				<td>число</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="boxnow_price_free_shipping_over безплатна доставка над  безплатна доставка над тази сума на количката.">
+			<tr data-search-bg="boxnow_price_free_shipping_over безплатна доставка над  безплатна доставка при обща стойност на количката от тази сума нагоре.">
 				<td><code>boxnow_price_free_shipping_over</code></td>
-				<td><strong>Безплатна доставка над</strong><div class="desc">Безплатна доставка над тази сума на количката.</div></td>
+				<td><strong>Безплатна доставка над</strong><div class="desc">Безплатна доставка при обща стойност на количката от тази сума нагоре.</div></td>
 				<td>число</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -3815,7 +3559,7 @@ section{padding:20px 16px}
 				<td><code>pigeon_env</code></td>
 				<td><strong>Среда</strong><div class="desc">Изберете средата.</div><div class="desc">Демо работи с тестовата система на куриера и нищо не се изпраща наистина. Преминете на „Реална среда“ с истинските си данни за вход, преди да започнете да изпращате.</div><div class="choices">Избор: live = Реална среда; sandbox = Тестова среда</div></td>
 				<td>един избор</td>
-				<td><code>live</code></td>
+				<td><code>sandbox</code></td>
 			</tr>
 			<tr data-search-bg="pigeon_api_key api ключ предоставя се от pigeon express за профила ви. въведете api ключа си.">
 				<td><code>pigeon_api_key</code></td>
@@ -3907,117 +3651,39 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="cvc_token api токен предоставя се от cvc за профила ви. въведете токена.">
-				<td><code>cvc_token</code></td>
-				<td><strong>API токен</strong><div class="desc">Предоставя се от CVC за профила Ви.</div><div class="desc">Въведете токена.</div></td>
-				<td>текст</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_name име лице за контакт на подателя в товарителницата. въведете име на подателя.">
-				<td><code>cvc_sender_name</code></td>
-				<td><strong>Име</strong><div class="desc">Лице за контакт на подателя в товарителницата.</div><div class="desc">Въведете име на подателя.</div></td>
-				<td>текст</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_phone телефон телефон на подателя в товарителницата. въведете телефон на подателя.">
-				<td><code>cvc_sender_phone</code></td>
-				<td><strong>Телефон</strong><div class="desc">Телефон на подателя в товарителницата.</div><div class="desc">Въведете телефон на подателя.</div></td>
-				<td>текст</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_email имейл имейл на подателя в товарителницата. въведете имейл на подателя.">
-				<td><code>cvc_sender_email</code></td>
-				<td><strong>Имейл</strong><div class="desc">Имейл на подателя в товарителницата.</div><div class="desc">Въведете имейл на подателя.</div></td>
-				<td>имейл адрес</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_ppp наложен платеж като ппп. включване ">
-				<td><code>cvc_sender_ppp</code></td>
-				<td><strong>Наложен платеж като ППП.</strong><div class="desc">Включване</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_contract_pay плащане по договор включване ">
-				<td><code>cvc_sender_contract_pay</code></td>
-				<td><strong>Плащане по договор</strong><div class="desc">Включване</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_force_variations_in_desc вариациите в товарителницата добавя данни за вариациите. използвайте само ако данните за вариацията липсват при печат на товарителницата. използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.">
-				<td><code>cvc_sender_force_variations_in_desc</code></td>
-				<td><strong>Вариациите в товарителницата</strong><div class="desc">Добавя данни за вариациите. Използвайте само ако данните за вариацията липсват при печат на товарителницата.</div><div class="desc">Използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_label_after_checkout създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
-				<td><code>cvc_sender_label_after_checkout</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_city град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
-				<td><code>cvc_sender_city</code></td>
-				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
-				<td>един избор</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_send_from изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
-				<td><code>cvc_sender_send_from</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
-				<td>един избор</td>
-				<td><code>office</code></td>
-			</tr>
-			<tr data-search-bg="cvc_sender_office офис  откъдето тръгват пратките ви. цените се изчисляват оттук.">
-				<td><code>cvc_sender_office</code></td>
-				<td><strong>Офис</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
-				<td>един избор</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="prices_use_public_econt използване на публичните цени, econt използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
+			<tr data-search-bg="prices_use_public_econt use public prices, econt use the courier public price list when the courier does not answer. ">
 				<td><code>prices_use_public_econt</code></td>
-				<td><strong>Използване на публичните цени, Econt</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
+				<td><strong>Use public prices, Econt</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
-			<tr data-search-bg="prices_econt публични цени, econt ценови граници за публичната ценова листа на куриера. ">
+			<tr data-search-bg="prices_econt public prices, econt price bands for the courier public price list. ">
 				<td><code>prices_econt</code></td>
-				<td><strong>Публични цени, Econt</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
+				<td><strong>Public prices, Econt</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="prices_use_public_speedy използване на публичните цени, speedy използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
+			<tr data-search-bg="prices_use_public_speedy use public prices, speedy use the courier public price list when the courier does not answer. ">
 				<td><code>prices_use_public_speedy</code></td>
-				<td><strong>Използване на публичните цени, Speedy</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
+				<td><strong>Use public prices, Speedy</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
-			<tr data-search-bg="prices_speedy публични цени, speedy ценови граници за публичната ценова листа на куриера. ">
+			<tr data-search-bg="prices_speedy public prices, speedy price bands for the courier public price list. ">
 				<td><code>prices_speedy</code></td>
-				<td><strong>Публични цени, Speedy</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
+				<td><strong>Public prices, Speedy</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="prices_use_public_pigeon използване на публичните цени, pigeon използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
+			<tr data-search-bg="prices_use_public_pigeon use public prices, pigeon use the courier public price list when the courier does not answer. ">
 				<td><code>prices_use_public_pigeon</code></td>
-				<td><strong>Използване на публичните цени, Pigeon</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
+				<td><strong>Use public prices, Pigeon</strong><div class="desc">Use the courier public price list when the courier does not answer.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
-			<tr data-search-bg="prices_pigeon публични цени, pigeon ценови граници за публичната ценова листа на куриера. ">
+			<tr data-search-bg="prices_pigeon public prices, pigeon price bands for the courier public price list. ">
 				<td><code>prices_pigeon</code></td>
-				<td><strong>Публични цени, Pigeon</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
-				<td>таблица с цени (JSON)</td>
-				<td><span class="muted">празно</span></td>
-			</tr>
-			<tr data-search-bg="prices_use_public_cvc използване на публичните цени, cvc използване на публичната ценова листа на куриера, когато куриерът не отговаря. ">
-				<td><code>prices_use_public_cvc</code></td>
-				<td><strong>Използване на публичните цени, CVC</strong><div class="desc">Използване на публичната ценова листа на куриера, когато куриерът не отговаря.</div></td>
-				<td>да или не</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-bg="prices_cvc публични цени, cvc ценови граници за публичната ценова листа на куриера. ">
-				<td><code>prices_cvc</code></td>
-				<td><strong>Публични цени, CVC</strong><div class="desc">Ценови граници за публичната ценова листа на куриера.</div></td>
+				<td><strong>Public prices, Pigeon</strong><div class="desc">Price bands for the courier public price list.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr></tbody>
@@ -4028,21 +3694,15 @@ section{padding:20px 16px}
 			<caption>Checkout</caption>
 			<thead><tr><th scope="col">CLI name</th><th scope="col">Setting</th><th scope="col">Type</th><th scope="col">Default</th></tr></thead>
 			<tbody>
-			<tr data-search-en="checkout_countries customer countries with bulgaria only, every order is for bulgaria and customers do not see the country field. bulgaria only also hides the country field. &quot;woocommerce settings&quot; keeps the countries of woocommerce &gt; settings &gt; general.">
+			<tr data-search-en="checkout_countries customer countries with bulgaria only, every order is for bulgaria and customers do not see the country field. &quot;as set in woocommerce&quot; keeps the countries of woocommerce &gt; settings &gt; general.">
 				<td><code>checkout_countries</code></td>
-				<td><strong>Customer countries</strong><div class="desc">With Bulgaria only, every order is for Bulgaria and customers do not see the country field.</div><div class="desc">Bulgaria only also hides the country field. &quot;WooCommerce settings&quot; keeps the countries of WooCommerce &gt; Settings &gt; General.</div><div class="choices">Choices: bg = Bulgaria only (country field hidden); bg_gr_ro = Bulgaria, Greece and Romania; woocommerce = As set in WooCommerce &gt; Settings &gt; General</div></td>
+				<td><strong>Customer countries</strong><div class="desc">With Bulgaria only, every order is for Bulgaria and customers do not see the country field.</div><div class="desc">&quot;As set in WooCommerce&quot; keeps the countries of WooCommerce &gt; Settings &gt; General.</div><div class="choices">Choices: bg = Bulgaria only (country field hidden); bg_gr_ro = Bulgaria, Greece and Romania; woocommerce = As set in WooCommerce &gt; Settings &gt; General</div></td>
 				<td>one choice</td>
 				<td><code>bg</code></td>
 			</tr>
-			<tr data-search-en="checkout_courier_logos courier logos show the courier logo next to each shipping option at checkout and in the cart. customers recognise the courier at a glance.">
-				<td><code>checkout_courier_logos</code></td>
-				<td><strong>Courier logos</strong><div class="desc">Show the courier logo next to each shipping option at checkout and in the cart.</div><div class="desc">Customers recognise the courier at a glance.</div></td>
-				<td>yes or no</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-en="checkout_transliteration transliterate addresses converts the address the customer typed when the order is placed, for example &quot;ruse, ul. tsar osvoboditel&quot; to &quot;русе, ул. цар освободител&quot;. labels use the converted address. orders also get a &quot;transliterate addresses&quot; action. couriers search addresses in cyrillic. addresses typed in latin letters are converted, so the parcel still finds the customer.">
+			<tr data-search-en="checkout_transliteration transliterate addresses converts the address when the order is placed, for example &quot;ruse, ul. tsar osvoboditel&quot; to &quot;русе, ул. цар освободител&quot;. waybills use the converted address. couriers search addresses in cyrillic, so latin addresses are converted. each order also has a &quot;transliterate addresses&quot; action.">
 				<td><code>checkout_transliteration</code></td>
-				<td><strong>Transliterate addresses</strong><div class="desc">Converts the address the customer typed when the order is placed, for example &quot;Ruse, ul. Tsar Osvoboditel&quot; to &quot;Русе, ул. Цар Освободител&quot;. Labels use the converted address. Orders also get a &quot;Transliterate addresses&quot; action.</div><div class="desc">Couriers search addresses in Cyrillic. Addresses typed in Latin letters are converted, so the parcel still finds the customer.</div><div class="choices">Choices: off = Off; cyrillic = Bulgarian addresses in Cyrillic; auto = Cyrillic in Bulgaria, Latin abroad</div></td>
+				<td><strong>Transliterate addresses</strong><div class="desc">Converts the address when the order is placed, for example &quot;Ruse, ul. Tsar Osvoboditel&quot; to &quot;Русе, ул. Цар Освободител&quot;. Waybills use the converted address.</div><div class="desc">Couriers search addresses in Cyrillic, so Latin addresses are converted. Each order also has a &quot;Transliterate addresses&quot; action.</div><div class="choices">Choices: off = Off; cyrillic = Bulgarian addresses in Cyrillic; auto = Cyrillic in Bulgaria, Latin abroad</div></td>
 				<td>one choice</td>
 				<td><code>off</code></td>
 			</tr>
@@ -4052,17 +3712,23 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="checkout_alternative_shipping_table alternative shipping options layout ( checkout ) make shipping options on 2 rows and full width in the checkout table. for themes with a narrow order summary: the shipping options take the full width.">
-				<td><code>checkout_alternative_shipping_table</code></td>
-				<td><strong>Alternative shipping options layout ( checkout )</strong><div class="desc">Make shipping options on 2 rows and full width in the checkout table.</div><div class="desc">For themes with a narrow order summary: the shipping options take the full width.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="company_fields company invoice fields add &quot;i want an invoice for a company&quot; to the checkout. when ticked, the customer fills in company name, eik, vat number, mol, town and address, and the invoice is made out to the company. the company details go on the invoice and into the nra audit file.">
-				<td><code>company_fields</code></td>
-				<td><strong>Company invoice fields</strong><div class="desc">Add &quot;I want an invoice for a company&quot; to the checkout. When ticked, the customer fills in company name, EIK, VAT number, MOL, town and address, and the invoice is made out to the company.</div><div class="desc">The company details go on the invoice and into the NRA audit file.</div></td>
+			<tr data-search-en="checkout_courier_logos courier logos show the courier logo next to each shipping option at checkout and in the cart. customers recognise the courier at a glance.">
+				<td><code>checkout_courier_logos</code></td>
+				<td><strong>Courier logos</strong><div class="desc">Show the courier logo next to each shipping option at checkout and in the cart.</div><div class="desc">Customers recognise the courier at a glance.</div></td>
 				<td>yes or no</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-en="company_fields company invoice fields add &quot;i want an invoice for a company&quot; to the checkout. when ticked, the customer fills in company name, eik, vat number, mol, town and address. the details go on the invoice and into the nra audit file. in a builder checkout of single field elements, the fields come after the billing fields unless you place them.">
+				<td><code>company_fields</code></td>
+				<td><strong>Company invoice fields</strong><div class="desc">Add &quot;I want an invoice for a company&quot; to the checkout. When ticked, the customer fills in company name, EIK, VAT number, MOL, town and address.</div><div class="desc">The details go on the invoice and into the NRA audit file. In a builder checkout of single field elements, the fields come after the billing fields unless you place them.</div></td>
+				<td>yes or no</td>
+				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-en="company_invoice_numbering invoice numbering own invoicing program: no invoice is made automatically. type the number from your program on the order screen and press &quot;make invoice&quot;. those orders stay out of the nra audit file and the monthly audit email. changing it later does not move invoices already made in or out of the nra audit file. ask your accountant which one fits your shop.">
+				<td><code>company_invoice_numbering</code></td>
+				<td><strong>Invoice numbering</strong><div class="desc">Own invoicing program: no invoice is made automatically. Type the number from your program on the order screen and press &quot;Make invoice&quot;. Those orders stay out of the NRA audit file and the monthly audit email.</div><div class="desc">Changing it later does not move invoices already made in or out of the NRA audit file. Ask your accountant which one fits your shop.</div><div class="choices">Choices: nra = Website invoices: in the NRA audit file; own = Own invoicing program: custom number, not in the NRA audit file</div></td>
+				<td>one choice</td>
+				<td><code>nra</code></td>
 			</tr>
 			<tr data-search-en="fields_classic_order_comments order notes classic checkout only. in the block checkout, turn order notes on or off in the checkout block settings. hidden: customers cannot leave a note with the order.">
 				<td><code>fields_classic_order_comments</code></td>
@@ -4070,9 +3736,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>default</code></td>
 			</tr>
-			<tr data-search-en="fields_layout fields order, visibility and width of every checkout field, and your own fields. the notes above the table say which checkouts follow which part.">
+			<tr data-search-en="fields_layout fields  ">
 				<td><code>fields_layout</code></td>
-				<td><strong>Fields</strong><div class="desc">Order, visibility and width of every checkout field, and your own fields.</div><div class="desc">The notes above the table say which checkouts follow which part.</div></td>
+				<td><strong>Fields</strong></td>
 				<td>field layout (JSON)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -4082,9 +3748,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>cards</code></td>
 			</tr>
-			<tr data-search-en="appearance_show_type delivery type show &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to your address&quot; under each option shows &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to an address&quot; under each option.">
+			<tr data-search-en="appearance_show_type delivery type show &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to your address&quot; under each option shows &quot;to an office&quot;, &quot;to a parcel locker&quot; or &quot;to your address&quot; under each option.">
 				<td><code>appearance_show_type</code></td>
-				<td><strong>Delivery type</strong><div class="desc">Show &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option</div><div class="desc">Shows &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To an address&quot; under each option.</div></td>
+				<td><strong>Delivery type</strong><div class="desc">Show &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option</div><div class="desc">Shows &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option.</div></td>
 				<td>yes or no</td>
 				<td><code>yes</code></td>
 			</tr>
@@ -4173,21 +3839,15 @@ section{padding:20px 16px}
 			<caption>Плащане</caption>
 			<thead><tr><th scope="col">Име в командния ред</th><th scope="col">Настройка</th><th scope="col">Вид</th><th scope="col">По подразбиране</th></tr></thead>
 			<tbody>
-			<tr data-search-bg="checkout_countries държави на клиентите при „само българия“ всяка поръчка е за българия и клиентите не виждат полето за държава. „само българия“ скрива и полето за държава. „настройки на woocommerce“ запазва държавите от woocommerce &gt; настройки &gt; общи.">
+			<tr data-search-bg="checkout_countries държави на клиентите при „само българия“ всяка поръчка е за българия и клиентите не виждат полето за държава. &quot;както е в woocommerce&quot; запазва държавите от woocommerce &gt; настройки &gt; общи.">
 				<td><code>checkout_countries</code></td>
-				<td><strong>Държави на клиентите</strong><div class="desc">При „Само България“ всяка поръчка е за България и клиентите не виждат полето за държава.</div><div class="desc">„Само България“ скрива и полето за държава. „Настройки на WooCommerce“ запазва държавите от WooCommerce &gt; Настройки &gt; Общи.</div><div class="choices">Избор: bg = Само България (полето за държава е скрито); bg_gr_ro = България, Гърция и Румъния; woocommerce = Както е зададено в WooCommerce &gt; Настройки &gt; Общи</div></td>
+				<td><strong>Държави на клиентите</strong><div class="desc">При „Само България“ всяка поръчка е за България и клиентите не виждат полето за държава.</div><div class="desc">&quot;Както е в WooCommerce&quot; запазва държавите от WooCommerce &gt; Настройки &gt; Общи.</div><div class="choices">Избор: bg = Само България (полето за държава е скрито); bg_gr_ro = България, Гърция и Румъния; woocommerce = Както е зададено в WooCommerce &gt; Настройки &gt; Общи</div></td>
 				<td>един избор</td>
 				<td><code>bg</code></td>
 			</tr>
-			<tr data-search-bg="checkout_courier_logos лога на куриерите показване на логото на куриера до всяка опция за доставка при плащане и в количката. клиентите разпознават куриера от пръв поглед.">
-				<td><code>checkout_courier_logos</code></td>
-				<td><strong>Лога на куриерите</strong><div class="desc">Показване на логото на куриера до всяка опция за доставка при плащане и в количката.</div><div class="desc">Клиентите разпознават куриера от пръв поглед.</div></td>
-				<td>да или не</td>
-				<td><code>yes</code></td>
-			</tr>
-			<tr data-search-bg="checkout_transliteration транслитерация на адресите преобразува адреса, който клиентът е въвел, при създаване на поръчката, например „ruse, ul. tsar osvoboditel“ в „русе, ул. цар освободител“. товарителниците използват преобразувания адрес. поръчките получават и действие „транслитерация на адресите“. куриерите търсят адресите на кирилица. адресите, написани на латиница, се преобразуват, така че пратката пак намира клиента.">
+			<tr data-search-bg="checkout_transliteration транслитерация на адресите превръща адреса при направата на поръчката, например &quot;ruse, ul. tsar osvoboditel&quot; в &quot;русе, ул. цар освободител&quot;. товарителниците използват превърнатия адрес. куриерите търсят адреси на кирилица, затова латинските адреси се превръщат. всяка поръчка има и действие &quot;транслитерирай адресите&quot;.">
 				<td><code>checkout_transliteration</code></td>
-				<td><strong>Транслитерация на адресите</strong><div class="desc">Преобразува адреса, който клиентът е въвел, при създаване на поръчката, например „Ruse, ul. Tsar Osvoboditel“ в „Русе, ул. Цар Освободител“. Товарителниците използват преобразувания адрес. Поръчките получават и действие „Транслитерация на адресите“.</div><div class="desc">Куриерите търсят адресите на кирилица. Адресите, написани на латиница, се преобразуват, така че пратката пак намира клиента.</div><div class="choices">Избор: off = Изключено; cyrillic = Българските адреси на кирилица; auto = Кирилица в България, латиница в чужбина</div></td>
+				<td><strong>Транслитерация на адресите</strong><div class="desc">Превръща адреса при направата на поръчката, например &quot;Ruse, ul. Tsar Osvoboditel&quot; в &quot;Русе, ул. Цар Освободител&quot;. Товарителниците използват превърнатия адрес.</div><div class="desc">Куриерите търсят адреси на кирилица, затова латинските адреси се превръщат. Всяка поръчка има и действие &quot;Транслитерирай адресите&quot;.</div><div class="choices">Избор: off = Изключено; cyrillic = Българските адреси на кирилица; auto = Кирилица в България, латиница в чужбина</div></td>
 				<td>един избор</td>
 				<td><code>off</code></td>
 			</tr>
@@ -4197,17 +3857,23 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="checkout_alternative_shipping_table алтернативно подреждане на опциите за доставка (плащане) опциите за доставка са на 2 реда и на цялата ширина на таблицата при плащане. за теми с тясна обобщена част на поръчката: опциите за доставка заемат цялата ширина.">
-				<td><code>checkout_alternative_shipping_table</code></td>
-				<td><strong>Алтернативно подреждане на опциите за доставка (плащане)</strong><div class="desc">Опциите за доставка са на 2 реда и на цялата ширина на таблицата при плащане.</div><div class="desc">За теми с тясна обобщена част на поръчката: опциите за доставка заемат цялата ширина.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="company_fields полета за фактура на фирма добавя „искам фактура на фирма“ към плащането. когато е отметнато, клиентът попълва име на фирмата, еик, ддс номер, мол, населено място и адрес, и фактурата се издава на фирмата. данните на фирмата влизат във фактурата и в одиторския файл за нап.">
-				<td><code>company_fields</code></td>
-				<td><strong>Полета за фактура на фирма</strong><div class="desc">Добавя „Искам фактура на фирма“ към плащането. Когато е отметнато, клиентът попълва име на фирмата, ЕИК, ДДС номер, МОЛ, населено място и адрес, и фактурата се издава на фирмата.</div><div class="desc">Данните на фирмата влизат във фактурата и в одиторския файл за НАП.</div></td>
+			<tr data-search-bg="checkout_courier_logos лога на куриерите показване на логото на куриера до всяка опция за доставка при плащане и в количката. клиентите разпознават куриера от пръв поглед.">
+				<td><code>checkout_courier_logos</code></td>
+				<td><strong>Лога на куриерите</strong><div class="desc">Показване на логото на куриера до всяка опция за доставка при плащане и в количката.</div><div class="desc">Клиентите разпознават куриера от пръв поглед.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-bg="company_fields полета за фактура на фирма добавя &quot;искам фактура за фирма&quot; към поръчката. когато е отметнато, клиентът попълва име на фирмата, еик, ддс номер, мол, град и адрес. данните отиват във фактурата и в одитния файл на нап. при конструиран касов процес от отделни полета полетата са след полетата за фактуриране, освен ако ги поставите сами.">
+				<td><code>company_fields</code></td>
+				<td><strong>Полета за фактура на фирма</strong><div class="desc">Добавя &quot;Искам фактура за фирма&quot; към поръчката. Когато е отметнато, клиентът попълва име на фирмата, ЕИК, ДДС номер, МОЛ, град и адрес.</div><div class="desc">Данните отиват във фактурата и в одитния файл на НАП. При конструиран касов процес от отделни полета полетата са след полетата за фактуриране, освен ако ги поставите сами.</div></td>
+				<td>да или не</td>
+				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-bg="company_invoice_numbering номериране на фактури собствена програма за фактуриране: фактурата не се създава автоматично. въведете номера от програмата си на екрана на поръчката и натиснете &quot;създай фактура&quot;. тези поръчки остават извън одитния файл на нап и месечния одитен имейл. промяната по-късно не премества фактурите, които вече са направени в или извън одитния файл на нап. попитайте счетоводителя си кой вариант подхожда на магазина ви.">
+				<td><code>company_invoice_numbering</code></td>
+				<td><strong>Номериране на фактури</strong><div class="desc">Собствена програма за фактуриране: фактурата не се създава автоматично. Въведете номера от програмата си на екрана на поръчката и натиснете &quot;Създай фактура&quot;. Тези поръчки остават извън одитния файл на НАП и месечния одитен имейл.</div><div class="desc">Промяната по-късно не премества фактурите, които вече са направени в или извън одитния файл на НАП. Попитайте счетоводителя си кой вариант подхожда на магазина ви.</div><div class="choices">Избор: nra = Фактури от сайта: в одитния файл на НАП; own = Собствена програма за фактуриране: ръчен номер, извън одитния файл на НАП</div></td>
+				<td>един избор</td>
+				<td><code>nra</code></td>
 			</tr>
 			<tr data-search-bg="fields_classic_order_comments бележки към поръчката само при класическото плащане. при блоковото плащане включете или изключете бележките в настройките на блока за плащане. скрито: клиентите не могат да оставят бележка към поръчката.">
 				<td><code>fields_classic_order_comments</code></td>
@@ -4215,9 +3881,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>default</code></td>
 			</tr>
-			<tr data-search-bg="fields_layout полета ред, видимост и ширина на всяко поле при плащане, както и ваши полета. бележките над таблицата казват кои видове плащане следват коя част.">
+			<tr data-search-bg="fields_layout полета  ">
 				<td><code>fields_layout</code></td>
-				<td><strong>Полета</strong><div class="desc">Ред, видимост и ширина на всяко поле при плащане, както и Ваши полета.</div><div class="desc">Бележките над таблицата казват кои видове плащане следват коя част.</div></td>
+				<td><strong>Полета</strong></td>
 				<td>разположение на полетата (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -4227,9 +3893,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>cards</code></td>
 			</tr>
-			<tr data-search-bg="appearance_show_type вид доставка показване на „до офис“, „до автомат за пратки“ или „до вашия адрес“ под всяка опция показва „до офис“, „до автомат за пратки“ или „до адрес“ под всяка опция.">
+			<tr data-search-bg="appearance_show_type вид доставка показване на „до офис“, „до автомат за пратки“ или „до вашия адрес“ под всяка опция показва &quot;до офис&quot;, &quot;до автомат за пратки&quot; или &quot;до адрес&quot; под всяка опция.">
 				<td><code>appearance_show_type</code></td>
-				<td><strong>Вид доставка</strong><div class="desc">Показване на „До офис“, „До автомат за пратки“ или „До вашия адрес“ под всяка опция</div><div class="desc">Показва „До офис“, „До автомат за пратки“ или „До адрес“ под всяка опция.</div></td>
+				<td><strong>Вид доставка</strong><div class="desc">Показване на „До офис“, „До автомат за пратки“ или „До вашия адрес“ под всяка опция</div><div class="desc">Показва &quot;До офис&quot;, &quot;До автомат за пратки&quot; или &quot;До адрес&quot; под всяка опция.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
 			</tr>
@@ -4417,7 +4083,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-bg="quick_order_phone_country държава за телефона държавата, от която са телефоните. тя задава кода на държавата, с който номерата се проверяват и запазват. ">
 				<td><code>quick_order_phone_country</code></td>
-				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Албания (+355); AU = Австралия (+61); AT = Австрия (+43); BE = Белгия (+32); BR = Бразилия (+55); BG = България (+359); CA = Канада (+1); HR = Хърватия (+385); CY = Кипър (+357); CZ = Чехия (+420); DK = Дания (+45); EE = Естония (+372); FI = Финландия (+358); FR = Франция (+33); DE = Германия (+49); GR = Гърция (+30); HU = Унгария (+36); IS = Исландия (+354); IN = Индия (+91); IE = Ирландия (+353); IL = Израел (+972); IT = Италия (+39); JP = Япония (+81); LV = Латвия (+371); LT = Литва (+370); LU = Люксембург (+352); MT = Малта (+356); MX = Мексико (+52); NL = Нидерландия (+31); NZ = Нова Зеландия (+64); NO = Норвегия (+47); PL = Полша (+48); PT = Португалия (+351); RO = Румъния (+40); RS = Сърбия (+381); SK = Словакия (+421); SI = Словения (+386); ZA = Южна Африка (+27); ES = Испания (+34); SE = Швеция (+46); CH = Швейцария (+41); TR = Турция (+90); GB = Великобритания (+44); US = Съединени американски щати (+1)</div></td>
+				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Albania (+355); AU = Australia (+61); AT = Austria (+43); BE = Belgium (+32); BR = Brazil (+55); BG = Bulgaria (+359); CA = Canada (+1); HR = Croatia (+385); CY = Cyprus (+357); CZ = Czech Republic (+420); DK = Denmark (+45); EE = Estonia (+372); FI = Finland (+358); FR = France (+33); DE = Germany (+49); GR = Greece (+30); HU = Hungary (+36); IS = Iceland (+354); IN = India (+91); IE = Ireland (+353); IL = Israel (+972); IT = Italy (+39); JP = Japan (+81); LV = Latvia (+371); LT = Lithuania (+370); LU = Luxembourg (+352); MT = Malta (+356); MX = Mexico (+52); NL = Netherlands (+31); NZ = New Zealand (+64); NO = Norway (+47); PL = Poland (+48); PT = Portugal (+351); RO = Romania (+40); RS = Serbia (+381); SK = Slovakia (+421); SI = Slovenia (+386); ZA = South Africa (+27); ES = Spain (+34); SE = Sweden (+46); CH = Switzerland (+41); TR = Türkiye (+90); GB = United Kingdom (UK) (+44); US = United States (US) (+1)</div></td>
 				<td>един избор</td>
 				<td><code>AL</code></td>
 			</tr>
@@ -4664,9 +4330,9 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-en="invoice_remove_shipping remove delivery from documents this option will remove the delivery from invoices and xml file. use it when the courier issues its own receipt for the delivery charge.">
+			<tr data-search-en="invoice_remove_shipping remove delivery from documents removes delivery from invoices and the xml file for cash on delivery orders. use it when the courier issues its own document for the delivery price. ">
 				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Remove delivery from documents</strong><div class="desc">This option will remove the delivery from invoices and XML file.</div><div class="desc">Use it when the courier issues its own receipt for the delivery charge.</div></td>
+				<td><strong>Remove delivery from documents</strong><div class="desc">Removes delivery from invoices and the XML file for cash on delivery orders. Use it when the courier issues its own document for the delivery price.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -4676,9 +4342,9 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="invoice_next_invoice_separate_number next invoice/credit notice number leave empty to number invoices together with order documents. if it&#39; filled the invoices will have different number than the nra documents.">
+			<tr data-search-en="invoice_next_invoice_separate_number next invoice/credit notice number leave empty to number invoices together with order documents. also used when you make an invoice by hand. if it&#39; filled the invoices will have different number than the nra documents.">
 				<td><code>invoice_next_invoice_separate_number</code></td>
-				<td><strong>Next Invoice/Credit notice Number</strong><div class="desc">Leave empty to number invoices together with order documents.</div><div class="desc">If it&#39; filled the invoices will have different number than the NRA documents.</div></td>
+				<td><strong>Next Invoice/Credit notice Number</strong><div class="desc">Leave empty to number invoices together with order documents. Also used when you make an invoice by hand.</div><div class="desc">If it&#39; filled the invoices will have different number than the NRA documents.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -4744,7 +4410,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-en="invoice_digital_tax_classes tax classes for digital goods this option tells the plugin which of your tax classes are for digital goods. this affects the taxable location of the user as of 1st jan 2015. products in these tax classes count as digital goods for eu vat: the customer&#39;s country rate applies.">
 				<td><code>invoice_digital_tax_classes</code></td>
-				<td><strong>Tax Classes for Digital Goods</strong><div class="desc">This option tells the plugin which of your tax classes are for digital goods. This affects the taxable location of the user as of 1st Jan 2015.</div><div class="desc">Products in these tax classes count as digital goods for EU VAT: the customer&#39;s country rate applies.</div><div class="choices">Choices: standard = Standard; reduced-rate = Reduced rate; zero-rate = Zero rate</div></td>
+				<td><strong>Tax Classes for Digital Goods</strong><div class="desc">This option tells the plugin which of your tax classes are for digital goods. This affects the taxable location of the user as of 1st Jan 2015.</div><div class="desc">Products in these tax classes count as digital goods for EU VAT: the customer&#39;s country rate applies.</div><div class="choices">Choices: standard = Standard</div></td>
 				<td>one choice</td>
 				<td><code>standard</code></td>
 			</tr>
@@ -4802,12 +4468,6 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_cvc_is_courier is nashenski commerce - cvc courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_cvc_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - CVC courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
 			<tr data-search-en="cod_payment_type payment type the nra payment type of this payment method. manner of payment of the order according to the nra system.">
 				<td><code>cod_payment_type</code></td>
 				<td><strong>Payment Type</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">Manner of payment of the order according to the NRA system.</div><div class="choices">Choices: 1 = Released under Art. 3 payment without PPP; 2 = Virtual POS terminal; 3 = Cash on delivery with PPP; 4 = Payment service provider; 5 = Other; 6 = Reflected with receipt</div></td>
@@ -4836,7 +4496,7 @@ section{padding:20px 16px}
 				<td><code>pdf_logo_size</code></td>
 				<td><strong>Logo size</strong><div class="desc">How big the logo is at the top of the document.</div><div class="desc">Larger logos push the document down; Small keeps long orders on one page.</div><div class="choices">Choices: small = Small; medium = Medium; large = Large</div></td>
 				<td>one choice</td>
-				<td><code>small</code></td>
+				<td><code>medium</code></td>
 			</tr>
 			<tr data-search-en="pdf_show_site_details website details show the website name, address, email and phone under the logo turn off when your logo already has these details.">
 				<td><code>pdf_show_site_details</code></td>
@@ -4860,7 +4520,7 @@ section{padding:20px 16px}
 				<td><code>pdf_accent_color</code></td>
 				<td><strong>Accent colour</strong><div class="desc">Lines under the header and above the footer.</div><div class="desc">Dark text on a light table header prints best.</div></td>
 				<td>colour, e.g. #1d4ed8</td>
-				<td><code>#0c8f0a</code></td>
+				<td><code>#32a2c1</code></td>
 			</tr>
 			<tr data-search-en="pdf_text_color text colour pick a colour or type a hex code. dark text on a light table header prints best.">
 				<td><code>pdf_text_color</code></td>
@@ -4872,7 +4532,7 @@ section{padding:20px 16px}
 				<td><code>pdf_table_color</code></td>
 				<td><strong>Table header background</strong><div class="desc">Pick a colour or type a hex code.</div><div class="desc">Dark text on a light table header prints best.</div></td>
 				<td>colour, e.g. #1d4ed8</td>
-				<td><code>#e7f4e7</code></td>
+				<td><code>#ebf6f9</code></td>
 			</tr>
 			<tr data-search-en="pdf_font font both fonts print cyrillic and latin. both have cyrillic letters.">
 				<td><code>pdf_font</code></td>
@@ -5013,9 +4673,9 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-bg="invoice_remove_shipping без доставката в документите премахва доставката от фактурите и от xml файла. използвайте го, когато куриерът издава собствен документ за цената на доставката.">
+			<tr data-search-bg="invoice_remove_shipping без доставката в документите премахва доставката от фактурите и от xml файла при наложен платеж. използвайте го, когато куриерът издава собствен документ за цената на доставката. ">
 				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Без доставката в документите</strong><div class="desc">Премахва доставката от фактурите и от XML файла.</div><div class="desc">Използвайте го, когато куриерът издава собствен документ за цената на доставката.</div></td>
+				<td><strong>Без доставката в документите</strong><div class="desc">Премахва доставката от фактурите и от XML файла при наложен платеж. Използвайте го, когато куриерът издава собствен документ за цената на доставката.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -5025,9 +4685,9 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="invoice_next_invoice_separate_number следващ номер на фактура/кредитно известие оставете празно, за да се номерират фактурите заедно с документите за продажба. ако е попълнено, фактурите ще имат различна номерация от документите за нап.">
+			<tr data-search-bg="invoice_next_invoice_separate_number следващ номер на фактура/кредитно известие leave empty to number invoices together with order documents. also used when you make an invoice by hand. ако е попълнено, фактурите ще имат различна номерация от документите за нап.">
 				<td><code>invoice_next_invoice_separate_number</code></td>
-				<td><strong>Следващ номер на фактура/кредитно известие</strong><div class="desc">Оставете празно, за да се номерират фактурите заедно с документите за продажба.</div><div class="desc">Ако е попълнено, фактурите ще имат различна номерация от документите за НАП.</div></td>
+				<td><strong>Следващ номер на фактура/кредитно известие</strong><div class="desc">Leave empty to number invoices together with order documents. Also used when you make an invoice by hand.</div><div class="desc">Ако е попълнено, фактурите ще имат различна номерация от документите за НАП.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -5093,7 +4753,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-bg="invoice_digital_tax_classes данъчни класове за цифрови стоки показва кои данъчни класове са за цифрови стоки. от 1 януари 2015 г. това определя мястото на облагане според клиента. продуктите в тези данъчни класове се смятат за цифрови стоки за ддс в ес: прилага се ставката на държавата на клиента.">
 				<td><code>invoice_digital_tax_classes</code></td>
-				<td><strong>Данъчни класове за цифрови стоки</strong><div class="desc">Показва кои данъчни класове са за цифрови стоки. От 1 януари 2015 г. това определя мястото на облагане според клиента.</div><div class="desc">Продуктите в тези данъчни класове се смятат за цифрови стоки за ДДС в ЕС: прилага се ставката на държавата на клиента.</div><div class="choices">Избор: standard = Стандартна; reduced-rate = Намалена ставка; zero-rate = Нулева ставка</div></td>
+				<td><strong>Данъчни класове за цифрови стоки</strong><div class="desc">Показва кои данъчни класове са за цифрови стоки. От 1 януари 2015 г. това определя мястото на облагане според клиента.</div><div class="desc">Продуктите в тези данъчни класове се смятат за цифрови стоки за ДДС в ЕС: прилага се ставката на държавата на клиента.</div><div class="choices">Избор: standard = Стандартна</div></td>
 				<td>един избор</td>
 				<td><code>standard</code></td>
 			</tr>
@@ -5109,51 +4769,45 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="shippings_flat_rate_is_courier това ли е куриер с фиксирана цена? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_flat_rate_is_courier is flat rate courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_flat_rate_is_courier</code></td>
-				<td><strong>Това ли е куриер с фиксирана цена?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Flat rate courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_free_shipping_is_courier това ли е куриер с безплатна доставка? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_free_shipping_is_courier is free shipping courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_free_shipping_is_courier</code></td>
-				<td><strong>Това ли е куриер с безплатна доставка?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Free shipping courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_local_pickup_is_courier това ли е вземане от място? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_local_pickup_is_courier is local pickup courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_local_pickup_is_courier</code></td>
-				<td><strong>Това ли е вземане от място?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Local pickup courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_econt_is_courier това ли е куриерът econt от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_econt_is_courier is nashenski commerce - econt courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_econt_is_courier</code></td>
-				<td><strong>Това ли е куриерът Econt от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - Econt courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_speedy_is_courier това ли е куриерът speedy от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_speedy_is_courier is nashenski commerce - speedy courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_speedy_is_courier</code></td>
-				<td><strong>Това ли е куриерът Speedy от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - Speedy courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_boxnow_is_courier това ли е куриерът box now от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_boxnow_is_courier is nashenski commerce - box now courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_boxnow_is_courier</code></td>
-				<td><strong>Това ли е куриерът BOX NOW от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - BOX NOW courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_pigeon_is_courier това ли е куриерът pigeon express от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_nashenski_pigeon_is_courier is nashenski commerce - pigeon express courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
 				<td><code>shippings_nashenski_pigeon_is_courier</code></td>
-				<td><strong>Това ли е куриерът Pigeon Express от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="shippings_nashenski_cvc_is_courier това ли е куриерът cvc от нашенски комерс? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_cvc_is_courier</code></td>
-				<td><strong>Това ли е куриерът CVC от Нашенски Комерс?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Nashenski Commerce - Pigeon Express courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -5185,7 +4839,7 @@ section{padding:20px 16px}
 				<td><code>pdf_logo_size</code></td>
 				<td><strong>Размер на логото</strong><div class="desc">Колко голямо е логото в горната част на документа.</div><div class="desc">По-голямото лого избутва документа надолу; „Малко“ запазва дългите поръчки на една страница.</div><div class="choices">Избор: small = Малко; medium = Средно; large = Голямо</div></td>
 				<td>един избор</td>
-				<td><code>small</code></td>
+				<td><code>medium</code></td>
 			</tr>
 			<tr data-search-bg="pdf_show_site_details данни за сайта показване на името, адреса, имейла и телефона на сайта под логото изключете, когато логото ви вече съдържа тези данни.">
 				<td><code>pdf_show_site_details</code></td>
@@ -5209,7 +4863,7 @@ section{padding:20px 16px}
 				<td><code>pdf_accent_color</code></td>
 				<td><strong>Акцентен цвят</strong><div class="desc">Линиите под горния и над долния колонтитул.</div><div class="desc">Тъмен текст върху светла заглавна част на таблицата се отпечатва най-добре.</div></td>
 				<td>цвят, например #1d4ed8</td>
-				<td><code>#0c8f0a</code></td>
+				<td><code>#32a2c1</code></td>
 			</tr>
 			<tr data-search-bg="pdf_text_color цвят на текста изберете цвят или въведете шестнадесетичен код. тъмен текст върху светла заглавна част на таблицата се отпечатва най-добре.">
 				<td><code>pdf_text_color</code></td>
@@ -5221,7 +4875,7 @@ section{padding:20px 16px}
 				<td><code>pdf_table_color</code></td>
 				<td><strong>Фон на заглавния ред на таблицата</strong><div class="desc">Изберете цвят или въведете шестнадесетичен код.</div><div class="desc">Тъмен текст върху светла заглавна част на таблицата се отпечатва най-добре.</div></td>
 				<td>цвят, например #1d4ed8</td>
-				<td><code>#e7f4e7</code></td>
+				<td><code>#ebf6f9</code></td>
 			</tr>
 			<tr data-search-bg="pdf_font шрифт и двата шрифта поддържат кирилица и латиница. и двата имат кирилица.">
 				<td><code>pdf_font</code></td>
@@ -5393,9 +5047,9 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="nekorekten_api_key api ключ създайте ключ в профила си в nekorekten.com, в секцията „api keys“, и разрешете ip адреса на сървъра си. от профила ви в сайта на услугата.">
+			<tr data-search-bg="nekorekten_api_key api ключ create a key in your nekorekten.com profile under &quot;api keys&quot; and allow your server&#39;s ip address. от профила ви в сайта на услугата.">
 				<td><code>nekorekten_api_key</code></td>
-				<td><strong>API ключ</strong><div class="desc">Създайте ключ в профила си в nekorekten.com, в секцията „API keys“, и разрешете IP адреса на сървъра си.</div><div class="desc">От профила Ви в сайта на услугата.</div></td>
+				<td><strong>API ключ</strong><div class="desc">Create a key in your nekorekten.com profile under &quot;API keys&quot; and allow your server&#39;s IP address.</div><div class="desc">От профила Ви в сайта на услугата.</div></td>
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -5421,7 +5075,7 @@ section{padding:20px 16px}
 <h3>Commands</h3>
 <div class="cli">
 <div class="cmd"><code>wp nashenski setting list [--tab=&lt;tab&gt;] [--format=&lt;table|csv|json|yaml&gt;]</code>
-<p>Every setting with its current value and default. <code>--tab</code> takes a tab name: settings (Overview), automation, econt, speedy, boxnow, pigeon, cvc, prices, shipping, fields, checkout, documents, connectix, nepostop, nekorekten, quick_order, abandoned_carts. Secret values show as (set) or (empty).</p>
+<p>Every setting with its current value and default. <code>--tab</code> takes a tab name: settings (Overview), automation, econt, speedy, boxnow, pigeon, prices, shipping, fields, checkout, documents, connectix, nepostop, nekorekten, quick_order, abandoned_carts. Secret values show as (set) or (empty).</p>
 <pre><code>wp nashenski setting list --tab=econt
 wp nashenski setting list --format=json</code></pre></div>
 <div class="cmd"><code>wp nashenski setting get &lt;name&gt;</code>
@@ -5438,7 +5092,7 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <p>Puts the setting back to its default, as the table shows it.</p>
 <pre><code>wp nashenski setting reset apis_enable_econt</code></pre></div>
 <div class="cmd"><code>wp nashenski courier reload &lt;courier&gt;</code>
-<p>Downloads the offices, cities and profile again, as "Reload offices and cities" does. The courier is econt, speedy, boxnow, pigeon or cvc.</p>
+<p>Downloads the offices, cities and profile again, as "Reload offices and cities" does. The courier is econt, speedy, boxnow or pigeon.</p>
 <pre><code>wp nashenski courier reload econt</code></pre></div>
 <div class="cmd"><code>wp nashenski courier check &lt;courier&gt;</code>
 <p>Checks the courier login now and prints whether it works. The same check runs when you save the courier tab.</p>
@@ -5449,7 +5103,7 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <li>A value that fails its check is not saved, and the command says why. A value that passes is saved even when the courier then refuses the login, as on the settings screen; the courier tab shows the refusal, and <code>wp nashenski courier check &lt;courier&gt;</code> shows it in the terminal.</li>
 <li>The commands run as the site's command line user; WP-CLI does not ask for a login. Keep passwords out of the command line: use <code>-</code> and standard input.</li>
 <li>Not in the command line yet: the actions on the order screen and the Exports page (labels, courier requests, reports, invoices, exports), and the Abandoned carts list. Use the screens for those.</li>
-<li>Settings added by other code through the <code>nashenski/admin/get_tabs_items</code> filter are not listed.</li>
+<li>Settings added by other code through the <code>nashenski_admin_get_tabs_items</code> filter are not listed.</li>
 </ul></div><div data-l="bg">
 <p>Настройките могат да се четат и променят от командния ред с WP-CLI. Командите ползват същите определения и проверки като екраните с настройки. Изпълнете ги на сайта, от папката на WordPress:</p>
 <pre><code>wp nashenski setting list --tab=econt</code></pre>
@@ -5458,7 +5112,7 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <h3>Команди</h3>
 <div class="cli">
 <div class="cmd"><code>wp nashenski setting list [--tab=&lt;tab&gt;] [--format=&lt;table|csv|json|yaml&gt;]</code>
-<p>Всяка настройка с текущата си стойност и стойността по подразбиране. <code>--tab</code> приема име на раздел: settings (Общ преглед), automation, econt, speedy, boxnow, pigeon, cvc, prices, shipping, fields, checkout, documents, connectix, nepostop, nekorekten, quick_order, abandoned_carts. Тайните стойности се показват като (set), ако са попълнени, или (empty), ако са празни.</p>
+<p>Всяка настройка с текущата си стойност и стойността по подразбиране. <code>--tab</code> приема име на раздел: settings (Общ преглед), automation, econt, speedy, boxnow, pigeon, prices, shipping, fields, checkout, documents, connectix, nepostop, nekorekten, quick_order, abandoned_carts. Тайните стойности се показват като (set), ако са попълнени, или (empty), ако са празни.</p>
 <pre><code>wp nashenski setting list --tab=econt
 wp nashenski setting list --format=json</code></pre></div>
 <div class="cmd"><code>wp nashenski setting get &lt;name&gt;</code>
@@ -5475,7 +5129,7 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <p>Връща настройката към стойността по подразбиране, както я показва таблицата.</p>
 <pre><code>wp nashenski setting reset apis_enable_econt</code></pre></div>
 <div class="cmd"><code>wp nashenski courier reload &lt;courier&gt;</code>
-<p>Изтегля отново офисите, населените места и профила, както го прави „Презареждане на офиси и населени места“. Куриерът е econt, speedy, boxnow, pigeon или cvc.</p>
+<p>Изтегля отново офисите, населените места и профила, както го прави „Презареждане на офиси и населени места“. Куриерът е econt, speedy, boxnow или pigeon.</p>
 <pre><code>wp nashenski courier reload econt</code></pre></div>
 <div class="cmd"><code>wp nashenski courier check &lt;courier&gt;</code>
 <p>Проверява входа на куриера сега и показва дали работи. Същата проверка се прави, когато запазите раздела на куриера.</p>
@@ -5486,15 +5140,15 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <li>Стойност, която не минава проверката, не се запазва и командата казва защо. Стойност, която минава, се запазва, дори куриерът после да откаже входа, както на екрана с настройки; разделът на куриера показва отказа, а <code>wp nashenski courier check &lt;courier&gt;</code> го показва в терминала.</li>
 <li>Командите се изпълняват като потребителя на командния ред на сайта; WP-CLI не иска вход. Не слагайте пароли в командния ред: използвайте <code>-</code> и стандартния вход.</li>
 <li>Все още не са в командния ред: действията в екрана на поръчката и на страницата Експорти (етикети, заявки за куриер, сигнали, фактури, експорти) и списъкът с изоставени колички. За тях използвайте екраните.</li>
-<li>Настройки, добавени от друг код чрез филтъра <code>nashenski/admin/get_tabs_items</code>, не са в списъка.</li>
+<li>Настройки, добавени от друг код чрез филтъра <code>nashenski_admin_get_tabs_items</code>, не са в списъка.</li>
 </ul></div></section>
 <section id="developers" aria-labelledby="developers-h"><h2 id="developers-h"><span data-l="en">For developers</span><span data-l="bg">За разработчици</span></h2><div data-l="en">
-<p>A few hooks, found in the code. Each name is the one used in the source at version 0.19.8.</p></div><div data-l="bg">
-<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.19.8.</p></div><div class="table-wrap" data-l="en"><table>
+<p>A few hooks, found in the code. Each name is the one used in the source at version 0.21.3. Since 0.21.0 the names use underscores; the old names with slashes still work but are deprecated.</p></div><div data-l="bg">
+<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.21.3. От 0.21.0 имената са с долни черти; старите имена с наклонени черти още работят, но са остарели.</p></div><div class="table-wrap" data-l="en"><table>
 <thead><tr><th>Hook</th><th>Type</th><th>What it does</th></tr></thead>
-<tbody><tr><td><code>nashenski/admin/get_tabs_items</code></td><td>filter</td><td>Change the list of settings tabs</td></tr><tr><td><code>nashenski/admin/nra/fields</code></td><td>filter</td><td>Add fields to the Documents tab</td></tr><tr><td><code>nashenski/admin/settings/afte_save_fields/{Tab class}</code></td><td>action</td><td>Runs after a tab is saved (login checks and profile data); also run by the command line</td></tr><tr><td><code>nashenski/admin/export/orders</code>, <code>nashenski/admin/export/refunded_orders</code></td><td>filter</td><td>Change the orders of an NRA export month</td></tr><tr><td><code>nashenski/econt/default_weight</code>, <code>nashenski/econt/min_pack_weight</code></td><td>filter</td><td>Default and minimum parcel weight for Econt labels</td></tr><tr><td><code>nashenski/boxnow/create_label</code>, <code>nashenski/cvc/create_label</code></td><td>filter</td><td>Change the label request body before it is sent</td></tr><tr><td><code>nashenski/before-init-classes</code>, <code>nashenski/init-classes</code></td><td>action</td><td>Before and after the plugin's classes are loaded</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
+<tbody><tr><td><code>nashenski_admin_get_tabs_items</code></td><td>filter</td><td>Change the list of settings tabs</td></tr><tr><td><code>nashenski_admin_nra_fields</code></td><td>filter</td><td>Add fields to the Documents tab</td></tr><tr><td><code>nashenski_admin_settings_after_save_fields_{Tab class}</code></td><td>action</td><td>Runs after a tab is saved (login checks and profile data); also run by the command line</td></tr><tr><td><code>nashenski_admin_export_orders</code>, <code>nashenski_admin_export_refunded_orders</code></td><td>filter</td><td>Change the orders of an NRA export month</td></tr><tr><td><code>nashenski_econt_default_weight</code>, <code>nashenski_econt_min_pack_weight</code></td><td>filter</td><td>Default and minimum parcel weight for Econt labels</td></tr><tr><td><code>nashenski_boxnow_create_label</code></td><td>filter</td><td>Change the label request body before it is sent</td></tr><tr><td><code>nashenski_before_init_classes</code>, <code>nashenski_init_classes</code></td><td>action</td><td>Before and after the plugin's classes are loaded</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Кука</th><th>Вид</th><th>Какво прави</th></tr></thead>
-<tbody><tr><td><code>nashenski/admin/get_tabs_items</code></td><td>филтър</td><td>Промяна на списъка с раздели с настройки</td></tr><tr><td><code>nashenski/admin/nra/fields</code></td><td>филтър</td><td>Добавяне на полета в раздел Документи</td></tr><tr><td><code>nashenski/admin/settings/afte_save_fields/{Tab class}</code></td><td>действие</td><td>Изпълнява се след запазване на раздел (проверки на входа и данни на профила); изпълнява се и от командния ред</td></tr><tr><td><code>nashenski/admin/export/orders</code>, <code>nashenski/admin/export/refunded_orders</code></td><td>филтър</td><td>Промяна на поръчките за месец на експорт за НАП</td></tr><tr><td><code>nashenski/econt/default_weight</code>, <code>nashenski/econt/min_pack_weight</code></td><td>филтър</td><td>Стандартно и минимално тегло на пратката за етикетите на Econt</td></tr><tr><td><code>nashenski/boxnow/create_label</code>, <code>nashenski/cvc/create_label</code></td><td>филтър</td><td>Промяна на заявката за етикет, преди да се изпрати</td></tr><tr><td><code>nashenski/before-init-classes</code>, <code>nashenski/init-classes</code></td><td>действие</td><td>Преди и след зареждането на класовете на добавката</td></tr></tbody></table></div></section>
+<tbody><tr><td><code>nashenski_admin_get_tabs_items</code></td><td>филтър</td><td>Промяна на списъка с раздели с настройки</td></tr><tr><td><code>nashenski_admin_nra_fields</code></td><td>филтър</td><td>Добавяне на полета в раздел Документи</td></tr><tr><td><code>nashenski_admin_settings_after_save_fields_{Tab class}</code></td><td>действие</td><td>Изпълнява се след запазване на раздел (проверки на входа и данни на профила); изпълнява се и от командния ред</td></tr><tr><td><code>nashenski_admin_export_orders</code>, <code>nashenski_admin_export_refunded_orders</code></td><td>филтър</td><td>Промяна на поръчките за месец на експорт за НАП</td></tr><tr><td><code>nashenski_econt_default_weight</code>, <code>nashenski_econt_min_pack_weight</code></td><td>филтър</td><td>Стандартно и минимално тегло на пратката за етикетите на Econt</td></tr><tr><td><code>nashenski_boxnow_create_label</code></td><td>филтър</td><td>Промяна на заявката за етикет, преди да се изпрати</td></tr><tr><td><code>nashenski_before_init_classes</code>, <code>nashenski_init_classes</code></td><td>действие</td><td>Преди и след зареждането на класовете на добавката</td></tr></tbody></table></div></section>
 <section id="troubleshooting" aria-labelledby="troubleshooting-h"><h2 id="troubleshooting-h"><span data-l="en">Troubleshooting</span><span data-l="bg">Отстраняване на проблеми</span></h2><div data-l="en">
 <p>Each entry gives what you see, the likely cause and the fix. Screen and setting names are the ones on the screens. Where a cause is not confirmed in the code or on a site, the entry says so.</p>
 <div class="ts-group"><h3>Couriers and logins</h3>
@@ -5708,10 +5362,10 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <p>The plugin contacts a service only after you turn it on and enter your own account details for it. Nothing is sent to us. Each service below is listed with the data it gets.</p></div><div data-l="bg">
 <p>Добавката се свързва с една услуга само след като я включите и въведете собствените си данни за нея. Нищо не се изпраща до нас. Всяка услуга е описана по-долу с данните, които получава.</p></div><div class="table-wrap" data-l="en"><table>
 <thead><tr><th>Service</th><th>What is sent, and when</th></tr></thead>
-<tbody><tr><td>Courier websites (public price lists)</td><td>Only a normal page request, when you press "Check the courier website" and once a week: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com, cvc.bg</td></tr><tr><td>Econt</td><td>Prices, labels, offices, cities, shipment status and courier requests: the receiver's name, phone, address or office, the parcel details and the cash on delivery amount. Hosts: ee.econt.com, demo.econt.com</td></tr><tr><td>Econt and Speedy office maps</td><td>Only when the customer presses "Choose on the map". The town is sent (Speedy: only the town number). Speedy's map uses Google Maps.</td></tr><tr><td>Speedy</td><td>Same purpose and data as Econt. Hosts: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Lockers, labels and status. Hosts: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Offices, lockers, prices, labels and status. Hosts: api.pigeonexpress.com, api-demo.pigeonexpress.com. Without a login, the public list of offices and lockers is loaded (nothing about the customer is sent)</td></tr><tr><td>CVC</td><td>Offices, prices, labels and status. Host: lox.e-cvc.bg</td></tr><tr><td>nekorekten.com</td><td>The customer's phone number for a lookup; and, only when you press "Send report", the report with the name, phone and email of that order. Host: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>The customer's phone number, and shipment data when tracking is on. Hosts: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>The customer's phone number, and labels when that option is on. Host: nepostop.com</td></tr><tr><td>EU VIES</td><td>The VAT number a company customer enters at checkout. Host: ec.europa.eu</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
+<tbody><tr><td>Courier websites (public price lists)</td><td>Only a normal page request, when you press "Check the courier website" and once a week: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Prices, labels, offices, cities, shipment status and courier requests: the receiver's name, phone, address or office, the parcel details and the cash on delivery amount. Hosts: ee.econt.com, demo.econt.com</td></tr><tr><td>Econt and Speedy office maps</td><td>Only when the customer presses "Choose on the map". The town is sent (Speedy: only the town number). Speedy's map uses Google Maps.</td></tr><tr><td>Speedy</td><td>Same purpose and data as Econt. Hosts: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Lockers, labels and status. Hosts: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Offices, lockers, prices, labels and status. Hosts: api.pigeonexpress.com, api-demo.pigeonexpress.com. Without a login, the public list of offices and lockers is loaded (nothing about the customer is sent)</td></tr><tr><td>nekorekten.com</td><td>The customer's phone number for a lookup; and, only when you press "Send report", the report with the name, phone and email of that order. Host: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>The customer's phone number, and shipment data when tracking is on. Hosts: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>The customer's phone number, and labels when that option is on. Host: nepostop.com</td></tr><tr><td>EU VIES</td><td>The VAT number a company customer enters at checkout. Host: ec.europa.eu</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Услуга</th><th>Какво се изпраща и кога</th></tr></thead>
-<tbody><tr><td>Сайтове на куриерите (публични ценови листи)</td><td>Само обикновена заявка за страница, когато натиснете „Проверка в сайта на куриера“ и веднъж седмично: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com, cvc.bg</td></tr><tr><td>Econt</td><td>Цени, товарителници, офиси, населени места, статус на пратка и заявки за куриер: името, телефонът, адресът или офисът на получателя, данните за пратката и сумата на наложения платеж. Хостове: ee.econt.com, demo.econt.com</td></tr><tr><td>Картите на офисите на Econt и Speedy</td><td>Само когато клиентът натисне „Избор на картата“. Населеното място се изпраща (при Speedy: само номерът на населеното място). Картата на Speedy използва Google Maps.</td></tr><tr><td>Speedy</td><td>Същата цел и данни като при Econt. Хостове: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Автомати, товарителници и статус. Хостове: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Офиси, автомати, цени, товарителници и статус. Хостове: api.pigeonexpress.com, api-demo.pigeonexpress.com. Без вход се зарежда публичният списък с офиси и автомати (нищо за клиента не се изпраща)</td></tr><tr><td>CVC</td><td>Офиси, цени, товарителници и статус. Хост: lox.e-cvc.bg</td></tr><tr><td>nekorekten.com</td><td>Телефонният номер на клиента за проверка; и, само когато натиснете „Изпрати сигнал“, сигналът с името, телефона и имейла на поръчката. Хост: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>Телефонният номер на клиента и данните за пратката, когато проследяването е включено. Хостове: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>Телефонният номер на клиента и товарителниците, когато тази опция е включена. Хост: nepostop.com</td></tr><tr><td>EU VIES</td><td>ДДС номерът, който фирмен клиент въвежда при плащане. Хост: ec.europa.eu</td></tr></tbody></table></div><div data-l="en"><p>Terms and privacy links of each service are in the readme file of the plugin.</p></div><div data-l="bg"><p>Линковете към условията и политиката за поверителност на всяка услуга са в readme файла на добавката.</p></div></section>
-<p class="note"><span data-l="en">Built from the plugin source at version 0.19.8. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.19.8. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
+<tbody><tr><td>Сайтове на куриерите (публични ценови листи)</td><td>Само обикновена заявка за страница, когато натиснете „Проверка в сайта на куриера“ и веднъж седмично: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Цени, товарителници, офиси, населени места, статус на пратка и заявки за куриер: името, телефонът, адресът или офисът на получателя, данните за пратката и сумата на наложения платеж. Хостове: ee.econt.com, demo.econt.com</td></tr><tr><td>Картите на офисите на Econt и Speedy</td><td>Само когато клиентът натисне „Избор на картата“. Населеното място се изпраща (при Speedy: само номерът на населеното място). Картата на Speedy използва Google Maps.</td></tr><tr><td>Speedy</td><td>Същата цел и данни като при Econt. Хостове: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Автомати, товарителници и статус. Хостове: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Офиси, автомати, цени, товарителници и статус. Хостове: api.pigeonexpress.com, api-demo.pigeonexpress.com. Без вход се зарежда публичният списък с офиси и автомати (нищо за клиента не се изпраща)</td></tr><tr><td>nekorekten.com</td><td>Телефонният номер на клиента за проверка; и, само когато натиснете „Изпрати сигнал“, сигналът с името, телефона и имейла на поръчката. Хост: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>Телефонният номер на клиента и данните за пратката, когато проследяването е включено. Хостове: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>Телефонният номер на клиента и товарителниците, когато тази опция е включена. Хост: nepostop.com</td></tr><tr><td>EU VIES</td><td>ДДС номерът, който фирмен клиент въвежда при плащане. Хост: ec.europa.eu</td></tr></tbody></table></div><div data-l="en"><p>Terms and privacy links of each service are in the readme file of the plugin.</p></div><div data-l="bg"><p>Линковете към условията и политиката за поверителност на всяка услуга са в readme файла на добавката.</p></div></section>
+<p class="note"><span data-l="en">Built from the plugin source at version 0.21.3. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.21.3. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
 </main>
 </div>
 <script>
