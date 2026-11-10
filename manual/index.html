@@ -96,7 +96,7 @@ section{padding:20px 16px}
 <div class="layout">
 <aside id="side">
 	<div class="brand"><img class="mark" src="img/logo.png" alt="" width="34" height="34"><strong><span data-l="en">Nashenski Commerce</span><span data-l="bg">Нашенски Комерс</span></strong></div>
-	<p class="version"><span data-l="en">Manual for version 0.21.4, built 2026-11-07</span><span data-l="bg">Ръководство за версия 0.21.4, изградено на 2026-11-07</span></p>
+	<p class="version"><span data-l="en">Manual for version 0.21.5, built 2026-11-10</span><span data-l="bg">Ръководство за версия 0.21.5, изградено на 2026-11-10</span></p>
 	<div class="lang-switch lang-switch-side" role="group" aria-label="Language / Език">
 		<button type="button" data-set-lang="en" aria-pressed="true">EN</button>
 		<button type="button" data-set-lang="bg" aria-pressed="false">BG</button>
@@ -117,7 +117,7 @@ section{padding:20px 16px}
 <section id="overview" aria-labelledby="overview-h"><h2 id="overview-h"><span data-l="en">What it is</span><span data-l="bg">Какво е</span></h2><div data-l="en">
 <p>Nashenski Commerce adds what a Bulgarian online store needs to WooCommerce: the couriers Econt, Speedy, BOX NOW and Pigeon Express, invoices and the documents of Ordinance N-18 (the light regime), the customer checks before cash on delivery, quick orders, abandoned carts and the EU withdrawal function.</p>
 <p>Everything runs on your own site. Prices, labels and documents are made by your site and sent only to the services you turn on. The plugin is free, and it is a self-contained fork of Bulgarisation for WooCommerce 4.0.13.</p>
-<div class="callout"><strong>Version 0.21.4.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab, and invoice numbering sits under "When to generate invoices?" in Documents and stays visible when invoices are off.</div>
+<div class="callout"><strong>Version 0.21.5.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab, and invoice numbering sits under "When to generate invoices?" in Documents and stays visible when invoices are off.</div>
 <h3>Requirements</h3>
 <ul>
 <li>WordPress 6.5 or newer, tested up to 7.1.</li>
@@ -128,7 +128,7 @@ section{padding:20px 16px}
 <h3>What is inside</h3></div><div data-l="bg">
 <p>Nashenski Commerce добавя към WooCommerce това, от което се нуждае българският онлайн магазин: куриерите Econt, Speedy, BOX NOW и Pigeon Express, фактури и документите по Наредба Н-18 (облекчения режим), проверките на клиентите преди наложен платеж, бързи поръчки, изоставени колички и функцията за отказ от договор от ЕС.</p>
 <p>Всичко работи във вашия собствен сайт. Цените, товарителниците и документите се създават от сайта ви и се изпращат само до услугите, които включите. Добавката е безплатна и е самостоятелно копие (fork) на Bulgarisation for WooCommerce 4.0.13.</p>
-<div class="callout"><strong>Версия 0.21.4.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел, а номерацията на фактурите е под „Кога да се издават фактури?“ в Документи и се вижда и когато фактурите са изключени.</div>
+<div class="callout"><strong>Версия 0.21.5.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел, а номерацията на фактурите е под „Кога да се издават фактури?“ в Документи и се вижда и когато фактурите са изключени.</div>
 <h3>Изисквания</h3>
 <ul>
 <li>WordPress 6.5 или по-нов, тестван до 7.1.</li>
@@ -144,6 +144,7 @@ section{padding:20px 16px}
 <section id="start" aria-labelledby="start-h"><h2 id="start-h"><span data-l="en">Install and first steps</span><span data-l="bg">Инсталиране и първи стъпки</span></h2><div data-l="en">
 <ol class="steps">
 <li><strong>Install and activate</strong> Nashenski Commerce. WooCommerce must be active. The plugin imports nothing by itself.</li>
+<li><strong>Run the setup.</strong> A notice opens a short setup: company details, VAT (registered at 20%, registered with some goods at 9%, or not registered), invoices, the couriers and delivery types with an optional free shipping total, and the look of the checkout. It adds the VAT rates, the zone "Bulgaria" and the shipping methods for you, so the steps below become checks. Help &gt; "Run the setup again" opens it later; it never adds a tax rate or shipping method twice. Moving from another plugin? Import first (Help).</li>
 <li><strong>Open the settings.</strong> WooCommerce &gt; Settings &gt; Nashenski Commerce. Turn on the couriers you work with, invoices and the customer checks you need, and save.</li>
 <li><strong>Enter the courier logins</strong> on each courier tab. Demo logins only reach the courier's test system, where nothing is really shipped. When the courier accepts the login, the other options unlock.</li>
 <li><strong>Fill in the sender</strong> ("Where you send from") on each courier tab.</li>
@@ -155,6 +156,7 @@ section{padding:20px 16px}
 <p>The Help tab has the recommended settings (tick the ones you want and apply them; nothing else changes) and the import from other plugins.</p></div><div data-l="bg">
 <ol class="steps">
 <li><strong>Инсталирайте и активирайте</strong> Нашенски Комерс. WooCommerce трябва да е активен. Добавката сама по себе си не импортира нищо.</li>
+<li><strong>Пуснете настройката.</strong> Известие отваря кратка настройка: данни на фирмата, ДДС (регистрирани с 20%, регистрирани с някои стоки с 9% или без регистрация), фактури, куриерите и видовете доставка с праг за безплатна доставка по избор и вида на поръчката. Тя добавя ставките по ДДС, зоната „България“ и методите за доставка вместо вас, така че стъпките по-долу стават проверки. Помощ &gt; „Пусни настройката отново“ я отваря по-късно; тя никога не добавя данъчна ставка или метод за доставка два пъти. Минавате от друга добавка? Първо импортирайте (Помощ).</li>
 <li><strong>Отворете настройките.</strong> WooCommerce &gt; Настройки &gt; Нашенски Комерс. Включете куриерите, с които работите, фактурите и проверките на клиенти, които ви трябват, и запазете.</li>
 <li><strong>Въведете данните за вход на куриерите</strong> в раздела на всеки куриер. Демо входовете работят само с тестовата система на куриера, където нищо не се изпраща реално. Когато куриерът приеме входа, другите опции се отключват.</li>
 <li><strong>Попълнете подателя</strong> („Откъде изпращате“) в раздела на всеки куриер.</li>
@@ -1160,7 +1162,8 @@ section{padding:20px 16px}
 <li><strong>Order notes.</strong> Classic checkout only. The block checkout has its own switch.</li>
 <li><strong>Checkout fields.</strong> The field editor sets the order of the fields, their width, whether each is required, optional or hidden, and adds your own fields. It applies to the classic, block and page builder checkouts.</li>
 <li><strong>Field conditions.</strong> In the Condition column pick "Show when..." or "Hide when..." and add conditions on the value of other fields. For example: for a "Company" field pick "Show when...", then "Invoice for a company" "is" "Yes". Pick "Always shown" to remove the rule. Conditions in one group must all be true (and). "Add alternative (or)" adds another group: one true group is enough (or). The classic checkout follows every condition; the block checkout follows conditions on your own fields that read your own fields (not "greater" or "less").</li>
-<li><strong>Look of the options.</strong> Cards or a plain list, and the colours, borders, corners and spacing of the options and fields. Empty settings follow the design tokens of TokenForge or another token-based CSS framework, or your theme.</li>
+<li><strong>Look of the options.</strong> Cards, buttons side by side (the fields of the chosen option open under the row) or a plain list, and the colours, borders, corners and spacing of the options and fields. Empty settings follow the design tokens of TokenForge or another token-based CSS framework, or your theme.</li>
+<li><strong>Free shipping hint and bar.</strong> "Free shipping hint" shows "Free shipping over" and the total under each option that is not free yet. "Free shipping progress bar" shows above the options how much more the customer needs to buy. Both use the "Free shipping over" total of the shipping methods and are off until you turn them on.</li>
 </ul>
 <h3>EU withdrawal function</h3>
 <p>The "withdraw from contract here" function that Directive 2011/83/EU (Article 11a) asks for, applied from 19 June 2026. It is built on WooCommerce's own withdrawal form, so it needs WooCommerce 11.1 or newer. Turn it on in Checkout. A link appears on every page, on each order in My Account, on the order page and in the order emails during the withdrawal period. Place the link yourself with the shortcode <code>[nashenski_withdrawal_link]</code>; add <code>button="yes"</code> to make it a button. Requests show in the orders list ("Withdrawal" column) and on the order, with everything the customer submitted. Mention the withdrawal function in your terms.</p></div><div data-l="bg">
@@ -1174,7 +1177,8 @@ section{padding:20px 16px}
 <li><strong>Бележки към поръчката.</strong> Само при класическото плащане. Блоковото плащане има собствен превключвател.</li>
 <li><strong>Полета при плащане.</strong> Редакторът на полетата задава реда на полетата, ширината им, дали всяко е задължително, незадължително или скрито, и добавя ваши полета. Важи за класическото, блоковото плащане и за плащането с page builder.</li>
 <li><strong>Условия за полета.</strong> В колоната „Условие“ изберете „Показвай, когато...“ или „Скривай, когато...“ и добавете условия по стойността на други полета. Например: за поле „Фирма“ изберете „Показвай, когато...“, полето „Фактура за фирма“ „е“ „Да“. Изберете „Винаги се показва“, за да махнете правилото. Условията в една група трябва да са верни едновременно (и). „Добави алтернатива (или)“ добавя нова група: една вярна група е достатъчна (или). Класическото плащане следва всяко условие; блоковото плащане следва условията на вашите полета, които четат ваши полета (не „по-голямо“ и „по-малко“).</li>
-<li><strong>Вид на опциите.</strong> Карти или прост списък, както и цветовете, рамките, закръгленията и разстоянията на опциите и полетата. Празните настройки следват дизайнерските токени на TokenForge или друга CSS рамка с токени, или темата ви.</li>
+<li><strong>Вид на опциите.</strong> Карти, бутони един до друг (полетата на избраната опция се отварят под реда) или прост списък, както и цветовете, рамките, закръгленията и разстоянията на опциите и полетата. Празните настройки следват дизайнерските токени на TokenForge или друга CSS рамка с токени, или темата ви.</li>
+<li><strong>Безплатна доставка: подсказка и лента.</strong> „Подсказка за безплатна доставка“ показва „Безплатна доставка над“ и сумата под всяка опция, която още не е безплатна. „Лента до безплатна доставка“ показва над опциите колко още трябва да купи клиентът. И двете използват сумата „Безплатна доставка над“ на методите за доставка и са изключени, докато не ги включите.</li>
 </ul>
 <h3>Функция за отказ от ЕС</h3>
 <p>Функцията „Оттегляне от договора тук“, която изисква Директива 2011/83/ЕС (член 11а), приложима от 19 юни 2026 г. Изгражда се върху собствения формуляр за отказ на WooCommerce, затова изисква WooCommerce 11.1 или по-нов. Включете я в Плащане. Линк се появява на всяка страница, при всяка поръчка в Моят акаунт, на страницата на поръчката и в имейлите за поръчки през периода за отказ. Поставете линка сами с кода <code>[nashenski_withdrawal_link]</code>; добавете <code>button="yes"</code>, за да стане бутон. Заявките се показват в списъка с поръчки (колона „Отказ“) и в самата поръчка, с всичко, което клиентът е изпратил. Споменете функцията за отказ в общите условия.</p></div>
@@ -1231,9 +1235,9 @@ section{padding:20px 16px}
 				<td>field layout (JSON)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="appearance_layout layout cards with a border, or the plain list of your theme. cards make the chosen courier stand out.">
+			<tr data-search-en="appearance_layout layout cards with a border, buttons side by side, or the plain list of your theme. cards make the chosen courier stand out. side by side saves space when there are few options.">
 				<td><code>appearance_layout</code></td>
-				<td><strong>Layout</strong><div class="desc">Cards with a border, or the plain list of your theme.</div><div class="desc">Cards make the chosen courier stand out.</div><div class="choices">Choices: cards = Cards: each option in its own box, the chosen one opens its office or address fields; plain = Plain: keep the look of the theme or builder</div></td>
+				<td><strong>Layout</strong><div class="desc">Cards with a border, buttons side by side, or the plain list of your theme.</div><div class="desc">Cards make the chosen courier stand out. Side by side saves space when there are few options.</div><div class="choices">Choices: cards = Cards: each option in its own box, the chosen one opens its office or address fields; buttons = Side by side: the options as buttons in a row, the fields of the chosen one below them; plain = Plain: keep the look of the theme or builder</div></td>
 				<td>one choice</td>
 				<td><code>cards</code></td>
 			</tr>
@@ -1242,6 +1246,18 @@ section{padding:20px 16px}
 				<td><strong>Delivery type</strong><div class="desc">Show &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option</div><div class="desc">Shows &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option.</div></td>
 				<td>yes or no</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-en="appearance_free_over_label free shipping hint show &quot;free shipping over&quot; and the amount under each option that is not free yet uses the &quot;free shipping over&quot; total of each shipping method. customers see what they need to spend to ship for free.">
+				<td><code>appearance_free_over_label</code></td>
+				<td><strong>Free shipping hint</strong><div class="desc">Show &quot;Free shipping over&quot; and the amount under each option that is not free yet</div><div class="desc">Uses the &quot;Free shipping over&quot; total of each shipping method. Customers see what they need to spend to ship for free.</div></td>
+				<td>yes or no</td>
+				<td><code>no</code></td>
+			</tr>
+			<tr data-search-en="appearance_free_progress free shipping progress bar show above the shipping options how much more the customer needs to buy for free shipping on the cart and checkout. uses the option offered that is closest to free shipping.">
+				<td><code>appearance_free_progress</code></td>
+				<td><strong>Free shipping progress bar</strong><div class="desc">Show above the shipping options how much more the customer needs to buy for free shipping</div><div class="desc">On the cart and checkout. Uses the option offered that is closest to free shipping.</div></td>
+				<td>yes or no</td>
+				<td><code>no</code></td>
 			</tr>
 			<tr data-search-en="appearance_accent accent colour border of the chosen option, focus ring and buttons. any css colour, for example #1a7f37 or var(--primary).">
 				<td><code>appearance_accent</code></td>
@@ -1376,9 +1392,9 @@ section{padding:20px 16px}
 				<td>разположение на полетата (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="appearance_layout подреждане карти с рамка или обикновеният списък на темата ви. картите открояват избрания куриер.">
+			<tr data-search-bg="appearance_layout подреждане карти с рамка, бутони един до друг или обикновеният списък на темата ви. картите открояват избрания куриер. една до друга пести място, когато опциите са малко.">
 				<td><code>appearance_layout</code></td>
-				<td><strong>Подреждане</strong><div class="desc">Карти с рамка или обикновеният списък на темата Ви.</div><div class="desc">Картите открояват избрания куриер.</div><div class="choices">Избор: cards = Карти: всяка опция в отделна рамка, избраната отваря полетата за офис или адрес; plain = Обикновено: запазва вида на темата или конструктора</div></td>
+				<td><strong>Подреждане</strong><div class="desc">Карти с рамка, бутони един до друг или обикновеният списък на темата Ви.</div><div class="desc">Картите открояват избрания куриер. Една до друга пести място, когато опциите са малко.</div><div class="choices">Избор: cards = Карти: всяка опция в отделна рамка, избраната отваря полетата за офис или адрес; buttons = Една до друга: опциите като бутони в ред, полетата на избраната под тях; plain = Обикновено: запазва вида на темата или конструктора</div></td>
 				<td>един избор</td>
 				<td><code>cards</code></td>
 			</tr>
@@ -1387,6 +1403,18 @@ section{padding:20px 16px}
 				<td><strong>Вид доставка</strong><div class="desc">Показване на „До офис“, „До автомат за пратки“ или „До вашия адрес“ под всяка опция</div><div class="desc">Показва &quot;До офис&quot;, &quot;До автомат за пратки&quot; или &quot;До адрес&quot; под всяка опция.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-bg="appearance_free_over_label подсказка за безплатна доставка показвай „безплатна доставка над“ и сумата под всяка опция, която още не е безплатна използва сумата „безплатна доставка над“ на всеки метод за доставка. клиентите виждат колко трябва да похарчат, за да получат безплатна доставка.">
+				<td><code>appearance_free_over_label</code></td>
+				<td><strong>Подсказка за безплатна доставка</strong><div class="desc">Показвай „Безплатна доставка над“ и сумата под всяка опция, която още не е безплатна</div><div class="desc">Използва сумата „Безплатна доставка над“ на всеки метод за доставка. Клиентите виждат колко трябва да похарчат, за да получат безплатна доставка.</div></td>
+				<td>да или не</td>
+				<td><code>no</code></td>
+			</tr>
+			<tr data-search-bg="appearance_free_progress лента до безплатна доставка показвай над опциите за доставка колко още трябва да купи клиентът за безплатна доставка в количката и при поръчката. използва предложената опция, която е най-близо до безплатна доставка.">
+				<td><code>appearance_free_progress</code></td>
+				<td><strong>Лента до безплатна доставка</strong><div class="desc">Показвай над опциите за доставка колко още трябва да купи клиентът за безплатна доставка</div><div class="desc">В количката и при поръчката. Използва предложената опция, която е най-близо до безплатна доставка.</div></td>
+				<td>да или не</td>
+				<td><code>no</code></td>
 			</tr>
 			<tr data-search-bg="appearance_accent акцентен цвят рамката на избраната опция, рамката при фокус и бутоните. всеки css цвят, например #1a7f37 или var(--primary).">
 				<td><code>appearance_accent</code></td>
@@ -2684,7 +2712,7 @@ section{padding:20px 16px}
 <h3>Recommended settings</h3>
 <p>On the Help tab, a list of settings that suit most Bulgarian stores, each with its current and recommended value. Only the rows you tick are applied.</p>
 <h3>Moving from another plugin</h3>
-<p>Nashenski Commerce is based on Bulgarisation for WooCommerce 4.0.13. The Help tab imports from it, and from the mreja.net plugins (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping for Econt and for Speedy, Econt Delivery and Speedy Shipping. The import takes over the courier logins, sender details, the waybill numbers of your orders, the shipping zone methods and, from the N-18 plugin, the company details and document numbers. The order documents and invoices of Bulgarisation for WooCommerce move into the private documents folder and open from the order as before. Each import switches the old plugin off. Econt Delivery and Drusoft Shipping use a different Econt key: enter your Econt username and password after the import.</p>
+<p>Nashenski Commerce is based on Bulgarisation for WooCommerce 4.0.13. The Help tab imports from it, and from the mreja.net plugins (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping for Econt and for Speedy, Econt Delivery and Speedy Shipping. The import takes over the courier logins, sender details, the waybill numbers of your orders, the shipping zone methods with the mreja.net free shipping totals and, from the N-18 plugin, the company details and document numbers. The order documents and invoices of Bulgarisation for WooCommerce move into the private documents folder and open from the order as before. Each import switches the old plugin off. Econt Delivery and Drusoft Shipping use a different Econt key: enter your Econt username and password after the import.</p>
 <h3>Updates</h3>
 <p>New versions show up in Dashboard &gt; Updates and on the Plugins screen, like any other plugin update. Betas are opt in: install "Nashenski Commerce Beta Updates" from the GitHub release, and deactivate it to go back to the WordPress.org versions.</p></div><div data-l="bg">
 <h3>Математически невъзможни цени</h3>
@@ -2692,14 +2720,14 @@ section{padding:20px 16px}
 <h3>Препоръчителни настройки</h3>
 <p>В раздел Помощ има списък с настройки, които подхождат на повечето български магазини, всяка с текущата и препоръчителната си стойност. Прилагат се само отбелязаните редове.</p>
 <h3>Преминаване от друга добавка</h3>
-<p>Нашенски Комерс се основава на Bulgarisation for WooCommerce 4.0.13. Разделът Помощ импортира от нея и от добавките на mreja.net (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping за Econt и за Speedy, Econt Delivery и Speedy Shipping. Импортът взема входовете на куриерите, данните на подателя, номерата на товарителниците на поръчките, методите в зоните за доставка и от добавката за Н-18 - данните на фирмата и номерата на документите. Документите и фактурите от Bulgarisation for WooCommerce се преместват в частната папка за документи и се отварят от поръчката както преди. Всеки импорт изключва старата добавка. Econt Delivery и Drusoft Shipping ползват друг ключ за Econt: след импорта въведете вашия потребител и парола за Econt.</p>
+<p>Нашенски Комерс се основава на Bulgarisation for WooCommerce 4.0.13. Разделът Помощ импортира от нея и от добавките на mreja.net (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping за Econt и за Speedy, Econt Delivery и Speedy Shipping. Импортът взема входовете на куриерите, данните на подателя, номерата на товарителниците на поръчките, методите в зоните за доставка с праговете за безплатна доставка от mreja.net и от добавката за Н-18 - данните на фирмата и номерата на документите. Документите и фактурите от Bulgarisation for WooCommerce се преместват в частната папка за документи и се отварят от поръчката както преди. Всеки импорт изключва старата добавка. Econt Delivery и Drusoft Shipping ползват друг ключ за Econt: след импорта въведете вашия потребител и парола за Econt.</p>
 <h3>Актуализации</h3>
 <p>Новите версии се показват в Табло &gt; Актуализации и в Добавки, както всяка друга актуализация. Бета версиите са по избор: инсталирайте „Nashenski Commerce Beta Updates“ от GitHub release и го деактивирайте, за да се върнете към версиите от WordPress.org.</p></div></section>
 <section id="settings-ref" aria-labelledby="settings-ref-h"><h2 id="settings-ref-h"><span data-l="en">Settings reference</span><span data-l="bg">Справка за настройките</span></h2><div data-l="en">
 <p>Every setting, page by page, with the name the command line uses (see the WP-CLI reference). The search box filters every table on this page. The list is built from the same definitions as the settings screens, so it also includes the settings of couriers that are off.</p>
-<p class="note">189 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
+<p class="note">191 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
 <p>Всяка настройка, страница по страница, с името, което ползва командният ред (вижте справката за WP-CLI). Полето за търсене филтрира всяка таблица на тази страница. Списъкът е изграден от същите определения като екраните с настройки, затова включва и настройките на изключените куриери.</p>
-<p class="note">189 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
+<p class="note">191 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
 <input id="filter" type="search" data-ph-en="Search the settings, e.g. econt, invoice, speedy" data-ph-bg="Търсене в настройките, например econt, фактура, speedy" aria-label="Search the settings / Търсене в настройките">
 		<div class="table-wrap settings-wrap" data-l="en">
 		<table class="settings">
@@ -3742,9 +3770,9 @@ section{padding:20px 16px}
 				<td>field layout (JSON)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="appearance_layout layout cards with a border, or the plain list of your theme. cards make the chosen courier stand out.">
+			<tr data-search-en="appearance_layout layout cards with a border, buttons side by side, or the plain list of your theme. cards make the chosen courier stand out. side by side saves space when there are few options.">
 				<td><code>appearance_layout</code></td>
-				<td><strong>Layout</strong><div class="desc">Cards with a border, or the plain list of your theme.</div><div class="desc">Cards make the chosen courier stand out.</div><div class="choices">Choices: cards = Cards: each option in its own box, the chosen one opens its office or address fields; plain = Plain: keep the look of the theme or builder</div></td>
+				<td><strong>Layout</strong><div class="desc">Cards with a border, buttons side by side, or the plain list of your theme.</div><div class="desc">Cards make the chosen courier stand out. Side by side saves space when there are few options.</div><div class="choices">Choices: cards = Cards: each option in its own box, the chosen one opens its office or address fields; buttons = Side by side: the options as buttons in a row, the fields of the chosen one below them; plain = Plain: keep the look of the theme or builder</div></td>
 				<td>one choice</td>
 				<td><code>cards</code></td>
 			</tr>
@@ -3753,6 +3781,18 @@ section{padding:20px 16px}
 				<td><strong>Delivery type</strong><div class="desc">Show &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option</div><div class="desc">Shows &quot;To an office&quot;, &quot;To a parcel locker&quot; or &quot;To your address&quot; under each option.</div></td>
 				<td>yes or no</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-en="appearance_free_over_label free shipping hint show &quot;free shipping over&quot; and the amount under each option that is not free yet uses the &quot;free shipping over&quot; total of each shipping method. customers see what they need to spend to ship for free.">
+				<td><code>appearance_free_over_label</code></td>
+				<td><strong>Free shipping hint</strong><div class="desc">Show &quot;Free shipping over&quot; and the amount under each option that is not free yet</div><div class="desc">Uses the &quot;Free shipping over&quot; total of each shipping method. Customers see what they need to spend to ship for free.</div></td>
+				<td>yes or no</td>
+				<td><code>no</code></td>
+			</tr>
+			<tr data-search-en="appearance_free_progress free shipping progress bar show above the shipping options how much more the customer needs to buy for free shipping on the cart and checkout. uses the option offered that is closest to free shipping.">
+				<td><code>appearance_free_progress</code></td>
+				<td><strong>Free shipping progress bar</strong><div class="desc">Show above the shipping options how much more the customer needs to buy for free shipping</div><div class="desc">On the cart and checkout. Uses the option offered that is closest to free shipping.</div></td>
+				<td>yes or no</td>
+				<td><code>no</code></td>
 			</tr>
 			<tr data-search-en="appearance_accent accent colour border of the chosen option, focus ring and buttons. any css colour, for example #1a7f37 or var(--primary).">
 				<td><code>appearance_accent</code></td>
@@ -3887,9 +3927,9 @@ section{padding:20px 16px}
 				<td>разположение на полетата (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="appearance_layout подреждане карти с рамка или обикновеният списък на темата ви. картите открояват избрания куриер.">
+			<tr data-search-bg="appearance_layout подреждане карти с рамка, бутони един до друг или обикновеният списък на темата ви. картите открояват избрания куриер. една до друга пести място, когато опциите са малко.">
 				<td><code>appearance_layout</code></td>
-				<td><strong>Подреждане</strong><div class="desc">Карти с рамка или обикновеният списък на темата Ви.</div><div class="desc">Картите открояват избрания куриер.</div><div class="choices">Избор: cards = Карти: всяка опция в отделна рамка, избраната отваря полетата за офис или адрес; plain = Обикновено: запазва вида на темата или конструктора</div></td>
+				<td><strong>Подреждане</strong><div class="desc">Карти с рамка, бутони един до друг или обикновеният списък на темата Ви.</div><div class="desc">Картите открояват избрания куриер. Една до друга пести място, когато опциите са малко.</div><div class="choices">Избор: cards = Карти: всяка опция в отделна рамка, избраната отваря полетата за офис или адрес; buttons = Една до друга: опциите като бутони в ред, полетата на избраната под тях; plain = Обикновено: запазва вида на темата или конструктора</div></td>
 				<td>един избор</td>
 				<td><code>cards</code></td>
 			</tr>
@@ -3898,6 +3938,18 @@ section{padding:20px 16px}
 				<td><strong>Вид доставка</strong><div class="desc">Показване на „До офис“, „До автомат за пратки“ или „До вашия адрес“ под всяка опция</div><div class="desc">Показва &quot;До офис&quot;, &quot;До автомат за пратки&quot; или &quot;До адрес&quot; под всяка опция.</div></td>
 				<td>да или не</td>
 				<td><code>yes</code></td>
+			</tr>
+			<tr data-search-bg="appearance_free_over_label подсказка за безплатна доставка показвай „безплатна доставка над“ и сумата под всяка опция, която още не е безплатна използва сумата „безплатна доставка над“ на всеки метод за доставка. клиентите виждат колко трябва да похарчат, за да получат безплатна доставка.">
+				<td><code>appearance_free_over_label</code></td>
+				<td><strong>Подсказка за безплатна доставка</strong><div class="desc">Показвай „Безплатна доставка над“ и сумата под всяка опция, която още не е безплатна</div><div class="desc">Използва сумата „Безплатна доставка над“ на всеки метод за доставка. Клиентите виждат колко трябва да похарчат, за да получат безплатна доставка.</div></td>
+				<td>да или не</td>
+				<td><code>no</code></td>
+			</tr>
+			<tr data-search-bg="appearance_free_progress лента до безплатна доставка показвай над опциите за доставка колко още трябва да купи клиентът за безплатна доставка в количката и при поръчката. използва предложената опция, която е най-близо до безплатна доставка.">
+				<td><code>appearance_free_progress</code></td>
+				<td><strong>Лента до безплатна доставка</strong><div class="desc">Показвай над опциите за доставка колко още трябва да купи клиентът за безплатна доставка</div><div class="desc">В количката и при поръчката. Използва предложената опция, която е най-близо до безплатна доставка.</div></td>
+				<td>да или не</td>
+				<td><code>no</code></td>
 			</tr>
 			<tr data-search-bg="appearance_accent акцентен цвят рамката на избраната опция, рамката при фокус и бутоните. всеки css цвят, например #1a7f37 или var(--primary).">
 				<td><code>appearance_accent</code></td>
@@ -5143,8 +5195,8 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <li>Настройки, добавени от друг код чрез филтъра <code>nashenski_admin_get_tabs_items</code>, не са в списъка.</li>
 </ul></div></section>
 <section id="developers" aria-labelledby="developers-h"><h2 id="developers-h"><span data-l="en">For developers</span><span data-l="bg">За разработчици</span></h2><div data-l="en">
-<p>A few hooks, found in the code. Each name is the one used in the source at version 0.21.4. Since 0.21.0 the names use underscores; the old names with slashes still work but are deprecated.</p></div><div data-l="bg">
-<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.21.4. От 0.21.0 имената са с долни черти; старите имена с наклонени черти още работят, но са остарели.</p></div><div class="table-wrap" data-l="en"><table>
+<p>A few hooks, found in the code. Each name is the one used in the source at version 0.21.5. Since 0.21.0 the names use underscores; the old names with slashes still work but are deprecated.</p></div><div data-l="bg">
+<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.21.5. От 0.21.0 имената са с долни черти; старите имена с наклонени черти още работят, но са остарели.</p></div><div class="table-wrap" data-l="en"><table>
 <thead><tr><th>Hook</th><th>Type</th><th>What it does</th></tr></thead>
 <tbody><tr><td><code>nashenski_admin_get_tabs_items</code></td><td>filter</td><td>Change the list of settings tabs</td></tr><tr><td><code>nashenski_admin_nra_fields</code></td><td>filter</td><td>Add fields to the Documents tab</td></tr><tr><td><code>nashenski_admin_settings_after_save_fields_{Tab class}</code></td><td>action</td><td>Runs after a tab is saved (login checks and profile data); also run by the command line</td></tr><tr><td><code>nashenski_admin_export_orders</code>, <code>nashenski_admin_export_refunded_orders</code></td><td>filter</td><td>Change the orders of an NRA export month</td></tr><tr><td><code>nashenski_econt_default_weight</code>, <code>nashenski_econt_min_pack_weight</code></td><td>filter</td><td>Default and minimum parcel weight for Econt labels</td></tr><tr><td><code>nashenski_boxnow_create_label</code></td><td>filter</td><td>Change the label request body before it is sent</td></tr><tr><td><code>nashenski_before_init_classes</code>, <code>nashenski_init_classes</code></td><td>action</td><td>Before and after the plugin's classes are loaded</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Кука</th><th>Вид</th><th>Какво прави</th></tr></thead>
@@ -5365,7 +5417,7 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <tbody><tr><td>Courier websites (public price lists)</td><td>Only a normal page request, when you press "Check the courier website" and once a week: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Prices, labels, offices, cities, shipment status and courier requests: the receiver's name, phone, address or office, the parcel details and the cash on delivery amount. Hosts: ee.econt.com, demo.econt.com</td></tr><tr><td>Econt and Speedy office maps</td><td>Only when the customer presses "Choose on the map". The town is sent (Speedy: only the town number). Speedy's map uses Google Maps.</td></tr><tr><td>Speedy</td><td>Same purpose and data as Econt. Hosts: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Lockers, labels and status. Hosts: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Offices, lockers, prices, labels and status. Hosts: api.pigeonexpress.com, api-demo.pigeonexpress.com. Without a login, the public list of offices and lockers is loaded (nothing about the customer is sent)</td></tr><tr><td>nekorekten.com</td><td>The customer's phone number for a lookup; and, only when you press "Send report", the report with the name, phone and email of that order. Host: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>The customer's phone number, and shipment data when tracking is on. Hosts: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>The customer's phone number, and labels when that option is on. Host: nepostop.com</td></tr><tr><td>EU VIES</td><td>The VAT number a company customer enters at checkout. Host: ec.europa.eu</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Услуга</th><th>Какво се изпраща и кога</th></tr></thead>
 <tbody><tr><td>Сайтове на куриерите (публични ценови листи)</td><td>Само обикновена заявка за страница, когато натиснете „Проверка в сайта на куриера“ и веднъж седмично: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Цени, товарителници, офиси, населени места, статус на пратка и заявки за куриер: името, телефонът, адресът или офисът на получателя, данните за пратката и сумата на наложения платеж. Хостове: ee.econt.com, demo.econt.com</td></tr><tr><td>Картите на офисите на Econt и Speedy</td><td>Само когато клиентът натисне „Избор на картата“. Населеното място се изпраща (при Speedy: само номерът на населеното място). Картата на Speedy използва Google Maps.</td></tr><tr><td>Speedy</td><td>Същата цел и данни като при Econt. Хостове: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Автомати, товарителници и статус. Хостове: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Офиси, автомати, цени, товарителници и статус. Хостове: api.pigeonexpress.com, api-demo.pigeonexpress.com. Без вход се зарежда публичният списък с офиси и автомати (нищо за клиента не се изпраща)</td></tr><tr><td>nekorekten.com</td><td>Телефонният номер на клиента за проверка; и, само когато натиснете „Изпрати сигнал“, сигналът с името, телефона и имейла на поръчката. Хост: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>Телефонният номер на клиента и данните за пратката, когато проследяването е включено. Хостове: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>Телефонният номер на клиента и товарителниците, когато тази опция е включена. Хост: nepostop.com</td></tr><tr><td>EU VIES</td><td>ДДС номерът, който фирмен клиент въвежда при плащане. Хост: ec.europa.eu</td></tr></tbody></table></div><div data-l="en"><p>Terms and privacy links of each service are in the readme file of the plugin.</p></div><div data-l="bg"><p>Линковете към условията и политиката за поверителност на всяка услуга са в readme файла на добавката.</p></div></section>
-<p class="note"><span data-l="en">Built from the plugin source at version 0.21.4. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.21.4. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
+<p class="note"><span data-l="en">Built from the plugin source at version 0.21.5. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.21.5. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
 </main>
 </div>
 <script>
