@@ -96,7 +96,7 @@ section{padding:20px 16px}
 <div class="layout">
 <aside id="side">
 	<div class="brand"><img class="mark" src="img/logo.png" alt="" width="34" height="34"><strong><span data-l="en">Nashenski Commerce</span><span data-l="bg">Нашенски Комерс</span></strong></div>
-	<p class="version"><span data-l="en">Manual for version 0.21.6, built 2026-11-10</span><span data-l="bg">Ръководство за версия 0.21.6, изградено на 2026-11-10</span></p>
+	<p class="version"><span data-l="en">Manual for version 0.21.8, built 2026-11-11</span><span data-l="bg">Ръководство за версия 0.21.8, изградено на 2026-11-11</span></p>
 	<div class="lang-switch lang-switch-side" role="group" aria-label="Language / Език">
 		<button type="button" data-set-lang="en" aria-pressed="true">EN</button>
 		<button type="button" data-set-lang="bg" aria-pressed="false">BG</button>
@@ -117,7 +117,7 @@ section{padding:20px 16px}
 <section id="overview" aria-labelledby="overview-h"><h2 id="overview-h"><span data-l="en">What it is</span><span data-l="bg">Какво е</span></h2><div data-l="en">
 <p>Nashenski Commerce adds what a Bulgarian online store needs to WooCommerce: the couriers Econt, Speedy, BOX NOW and Pigeon Express, invoices and the documents of Ordinance N-18 (the light regime), the customer checks before cash on delivery, quick orders, abandoned carts and the EU withdrawal function.</p>
 <p>Everything runs on your own site. Prices, labels and documents are made by your site and sent only to the services you turn on. The plugin is free, and it is a self-contained fork of Bulgarisation for WooCommerce 4.0.13.</p>
-<div class="callout"><strong>Version 0.21.6.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab, and invoice numbering sits under "When to generate invoices?" in Documents and stays visible when invoices are off.</div>
+<div class="callout"><strong>Version 0.21.8.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab, and invoice numbering sits under "When to generate invoices?" in Documents and stays visible when invoices are off.</div>
 <h3>Requirements</h3>
 <ul>
 <li>WordPress 6.5 or newer, tested up to 7.1.</li>
@@ -128,7 +128,7 @@ section{padding:20px 16px}
 <h3>What is inside</h3></div><div data-l="bg">
 <p>Nashenski Commerce добавя към WooCommerce това, от което се нуждае българският онлайн магазин: куриерите Econt, Speedy, BOX NOW и Pigeon Express, фактури и документите по Наредба Н-18 (облекчения режим), проверките на клиентите преди наложен платеж, бързи поръчки, изоставени колички и функцията за отказ от договор от ЕС.</p>
 <p>Всичко работи във вашия собствен сайт. Цените, товарителниците и документите се създават от сайта ви и се изпращат само до услугите, които включите. Добавката е безплатна и е самостоятелно копие (fork) на Bulgarisation for WooCommerce 4.0.13.</p>
-<div class="callout"><strong>Версия 0.21.6.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел, а номерацията на фактурите е под „Кога да се издават фактури?“ в Документи и се вижда и когато фактурите са изключени.</div>
+<div class="callout"><strong>Версия 0.21.8.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел, а номерацията на фактурите е под „Кога да се издават фактури?“ в Документи и се вижда и когато фактурите са изключени.</div>
 <h3>Изисквания</h3>
 <ul>
 <li>WordPress 6.5 или по-нов, тестван до 7.1.</li>
@@ -982,6 +982,18 @@ section{padding:20px 16px}
 <h3>Shipping methods in zones</h3>
 <p>Courier methods are WooCommerce shipping methods, added to a shipping zone in WooCommerce &gt; Settings &gt; Shipping. Add one method per delivery type. The methods are named after the courier, and the cart and checkout show the courier logo next to each option (turn the logo off on the Checkout page).</p>
 <p>Each method can have a free shipping amount and a fixed price. A method with no courier login uses the public price list of its courier. Review or test before payment is also set on the method and goes on every label.</p>
+<h3>Who pays the courier</h3>
+<p>"Customer pays the courier" on each Econt, Speedy and Pigeon Express method lists the payment methods for which the customer pays the delivery to the courier on delivery, for example cash on delivery. For those, the checkout, the cart, the emails, My Account and the order screen show the price for information only ("6,50 €, paid to the courier on delivery, not included in the total"). The delivery is not in the order total, on the documents or in the NRA audit file, and the waybill is paid by the receiver. With any other payment method you collect the delivery: it is in the total and on the documents, the sender pays the courier, and cash on delivery collects the whole order total.</p>
+<ul>
+<li>The total follows the payment method the customer picks at checkout, in the classic, block and page builder checkouts. If the payment method changes after the price was calculated, the customer is asked to check the new total before placing the order.</li>
+<li>Free shipping (free over a total, or a free shipping coupon) is always yours: no price to the courier and no info text. Deliveries abroad, and Speedy or Pigeon Express with a fixed price, are always collected by you.</li>
+<li>BOX NOW cannot charge the customer, so it has no list: you always collect the delivery.</li>
+<li>The courier box on the order screen can still change who pays for one waybill. It does not change the order total. On an order whose customer pays the courier, a waybill paid by the sender changes nothing: you pay the courier. A fixed price you collect in the cash on delivery amount makes it an order you collected once the courier accepts the waybill, while it has no documents; a later waybill paid by the receiver puts it back. Once the order has documents, a fixed price waybill is refused. Choosing the receiver as payer on an order you collected shows a warning.</li>
+<li>New Econt, Speedy and Pigeon Express methods start with cash on delivery in the list. A cart whose goods cost nothing (a free sample, a 100% coupon) is always yours to collect.</li>
+<li>Shipping methods of other plugins keep "Is ... courier?" in Documents &gt; Shipping on documents: with cash on delivery, their delivery is left out of documents and the NRA file.</li>
+<li>Each order keeps what was decided at checkout. The setting replaces "Remove delivery from documents" (Documents): on the update to 0.21.8 every Econt and Speedy method marked as a courier (on by default) and every Pigeon Express method get cash on delivery in their list, whatever that setting was, so cash on delivery orders keep the same money flow. Pigeon Express cash on delivery waybills stay paid by the receiver, and the documents now leave that delivery out to match. Orders made before keep their documents as they were: when "Remove delivery from documents" was on, the update turns on "Is ... courier?" for every shipping method, which now carries that rule for them.</li>
+<li>Quick orders and orders made on the order screen are decided the same way once they have a shipping method and a payment method, and again when the payment method changes on the order screen, until the order has documents. A checkout order keeps its checkout decision: when its payment method is changed on the order screen, a notice asks you to check the delivery line and the waybill by hand. A waybill made there for an order whose customer pays the courier shows its price for information only; amounts you type by hand are not changed.</li>
+</ul>
 <h3>Live prices and the public price list</h3>
 <p>With a login, the courier calculates the price for the order. Without one, or when the courier does not answer, the public price list is used. The list is built in and editable on each courier tab, under "Public prices". Press "Check the courier website" to compare the list with the courier's published prices: you see what changed, and new prices are filled in only when you choose. The check also runs once a week. When a courier publishes new prices, a notice says so; save that courier's prices or press Dismiss.</p>
 <p>The price table has one band per weight step, with the price for an office, a locker and an address, plus the over-weight price per kilogram and the cash on delivery fee.</p>
@@ -998,6 +1010,18 @@ section{padding:20px 16px}
 <h3>Методи за доставка в зоните</h3>
 <p>Методите на куриерите са методи за доставка на WooCommerce и се добавят към зона за доставка в WooCommerce &gt; Настройки &gt; Доставка. По един метод за всеки вид доставка. Методите носят името на куриера, а количката и плащането показват лого на куриера до всяка опция (изключете логото в раздел Плащане).</p>
 <p>Всеки метод може да има безплатна сума за доставка и фиксирана цена. Метод без вход на куриера ползва публичната ценова листа на куриера. Преглед или тест преди плащане също се задава в метода и се добавя към всяка товарителница.</p>
+<h3>Кой плаща на куриера</h3>
+<p>„Клиентът плаща на куриера“ във всеки метод на Еконт, Спиди и Pigeon Express изброява методите на плащане, при които клиентът плаща доставката на куриера при получаване, например наложен платеж. При тях плащането, количката, имейлите, Моят профил и екранът на поръчката показват цената само за сведение („6,50 €, плаща се на куриера при доставка, не е включена в общата сума“). Доставката не влиза в общата сума на поръчката, в документите и във файла за НАП, а товарителницата се плаща от получателя. При всеки друг метод на плащане доставката се събира от вас: тя е в общата сума и в документите, подателят плаща на куриера, а наложеният платеж събира цялата сума на поръчката.</p>
+<ul>
+<li>Общата сума следва метода на плащане, който клиентът избере, в класическото, блоковото и page builder плащането. Ако методът на плащане се смени след изчисляването на цената, клиентът трябва да провери новата сума, преди да направи поръчката.</li>
+<li>Безплатната доставка (над сума или с купон за безплатна доставка) винаги е за ваша сметка: няма цена към куриера и няма пояснение. Доставките в чужбина и Спиди или Pigeon Express с фиксирана цена винаги се събират от вас.</li>
+<li>BOX NOW не може да таксува клиента, затова няма списък: доставката винаги се събира от вас.</li>
+<li>Полето на куриера в поръчката пак може да смени платеца за една товарителница. Това не променя общата сума на поръчката. При поръчка, в която клиентът плаща на куриера, товарителница, платена от подателя, не променя нищо: вие плащате на куриера. Фиксирана цена, която събирате в сумата на наложения платеж, прави поръчката такава със събрана от вас доставка, щом куриерът приеме товарителницата, докато няма документи; следваща товарителница, платена от получателя, я връща както е била. Щом поръчката има документи, товарителница с фиксирана цена се отказва. Изборът на получателя за платец при поръчка, в която вие сте събрали доставката, показва предупреждение.</li>
+<li>Новите методи на Еконт, Спиди и Pigeon Express започват с наложен платеж в списъка. Количка, в която стоките не струват нищо (безплатна мостра, купон за 100%), винаги се събира от вас.</li>
+<li>Методите за доставка на други добавки запазват „... куриер ли е?“ в Документи &gt; Доставка в документите: при наложен платеж доставката им не влиза в документите и във файла за НАП.</li>
+<li>Всяка поръчка пази решението, взето при плащане. Настройката заменя „Без доставката в документите“ (Документи): при обновяване до 0.21.8 всеки метод на Еконт и Спиди, отбелязан като куриер (по подразбиране), и всеки метод на Pigeon Express получават наложения платеж в списъка си, каквато и да е била тази настройка, така че парите при наложен платеж вървят както досега. Товарителниците с наложен платеж на Pigeon Express остават платени от получателя, а документите вече не включват тази доставка, за да съвпадат с тях. Поръчките отпреди запазват документите си както са били: ако „Без доставката в документите“ е била включена, обновяването включва „... куриер ли е?“ за всеки метод за доставка, който вече носи това правило за тях.</li>
+<li>Бързите поръчки и поръчките, създадени в екрана на поръчката, се решават по същия начин, щом имат метод за доставка и метод на плащане, и отново, когато методът на плащане се смени в екрана на поръчката, докато поръчката няма документи. Поръчка от плащането запазва решението си: когато методът ѝ на плащане се смени в екрана на поръчката, известие ви моли да проверите на ръка реда за доставка и товарителницата. Товарителница, създадена там за поръчка, при която клиентът плаща на куриера, показва цената си само за сведение; сумите, които въвеждате на ръка, не се променят.</li>
+</ul>
 <h3>Живи цени и публична ценова листа</h3>
 <p>С вход куриерът изчислява цената за поръчката. Без вход или когато куриерът не отговаря, се ползва публичната ценова листа. Листата е вградена и може да се редактира в раздела на всеки куриер, под „Публични цени“. Натиснете „Проверка в сайта на куриера“, за да сравните листата с публикуваните цени на куриера: виждате какво е променено, а новите цени се попълват само когато вие изберете. Проверката се прави и веднъж седмично. Когато куриер публикува нови цени, се показва известие: запазете цените на този куриер или натиснете „Скриване“.</p>
 <p>Ценовата таблица има по един ред за всяка стъпка по тегло, с цената за офис, автомат и адрес, плюс цената за превишено тегло за килограм и таксата за наложен платеж.</p>
@@ -1825,7 +1849,7 @@ section{padding:20px 16px}
 <h3>The PDF look</h3>
 <p>The logo, colours, font, text size, paper and spacing are set under "PDF appearance". The phone, email and website lines are optional.</p>
 <h3>Company, VAT and refunds</h3>
-<p>The company details are printed on invoices and used in the NRA audit file, so fill them in before the first invoice. Choose the VAT group that matches your sales (A, B, D, or combined for the group that is decided for each product), and the return method for cancelled orders. The VIES option checks a company's VAT number with the European VIES system when the order is placed; it shows only when the PHP SOAP extension is on. If VIES cannot be reached, the customer is asked to try again. The company VAT number is optional at checkout unless you tick "VAT number required on checkout?". A store registered under Article 113(9) of the VAT Act gets invoices, invoice copies, credit notes and pro formas without a VAT column; the invoice also carries the Article 113(9) text. This works only with WooCommerce taxes turned off.</p>
+<p>The company details are printed on invoices and used in the NRA audit file, so fill them in before the first invoice. Choose the VAT group that matches your sales (A, B, D, or combined for the group that is decided for each product), and the return method for cancelled orders. The VIES option checks a company's VAT number with the European VIES system when the order is placed; it shows only when the PHP SOAP extension is on. If VIES cannot be reached, the customer is asked to try again. The company VAT number is optional at checkout unless you tick "VAT number required on checkout?". A store registered under Article 113(9) of the VAT Act gets invoices, invoice copies, credit notes and pro formas without a VAT column; the invoice also carries the Article 113(9) text. This works only with WooCommerce taxes turned off. A delivery with no VAT, on an order with no VAT at all, is printed at 0% with its full price. A delivery the customer paid to the courier is not on the documents or in the NRA audit file, because you did not collect it (see Who pays the courier); credit notes follow their order.</p>
 <h3>Copies, the accountant and clean-up</h3>
 <p>Copies can go to your accountant by email, and the monthly NRA audit file too. "Delete order documents after (days)" removes the order document PDFs of older orders, in batches, once a day. Invoices, credit notes and the NRA files stay.</p></div><div data-l="bg">
 <h3>Номерация и фактури на ръка</h3>
@@ -1833,7 +1857,7 @@ section{padding:20px 16px}
 <h3>Видът на PDF</h3>
 <p>Логото, цветовете, шрифтът, размерът на текста, хартията и разстоянията се задават в „Вид на PDF“. Редовете за телефон, имейл и уебсайт са по избор.</p>
 <h3>Фирма, ДДС и възстановявания</h3>
-<p>Данните на фирмата се печатат във фактурите и се ползват във файла за НАП, затова ги попълнете преди първата фактура. Изберете ДДС групата, която съответства на продажбите ви (A, B, D или комбинирана за групата, която се определя за всеки продукт), и метода на връщане при отменени поръчки. Опцията VIES проверява ДДС номера на фирмата в европейската система VIES при направена поръчка; показва се само когато PHP разширението SOAP е включено. Ако VIES не отговаря, клиентът вижда молба да опита отново. ДДС номерът на фирмата не е задължителен при плащане, освен ако отметнете „Задължителен ДДС номер при плащане?“. Магазин, регистриран по чл. 113, ал. 9 от ЗДДС, получава фактури, копия на фактури, кредитни известия и проформи без колона за ДДС; фактурата носи и текста за чл. 113, ал. 9. Това работи само при изключени данъци на WooCommerce.</p>
+<p>Данните на фирмата се печатат във фактурите и се ползват във файла за НАП, затова ги попълнете преди първата фактура. Изберете ДДС групата, която съответства на продажбите ви (A, B, D или комбинирана за групата, която се определя за всеки продукт), и метода на връщане при отменени поръчки. Опцията VIES проверява ДДС номера на фирмата в европейската система VIES при направена поръчка; показва се само когато PHP разширението SOAP е включено. Ако VIES не отговаря, клиентът вижда молба да опита отново. ДДС номерът на фирмата не е задължителен при плащане, освен ако отметнете „Задължителен ДДС номер при плащане?“. Магазин, регистриран по чл. 113, ал. 9 от ЗДДС, получава фактури, копия на фактури, кредитни известия и проформи без колона за ДДС; фактурата носи и текста за чл. 113, ал. 9. Това работи само при изключени данъци на WooCommerce. Доставка без ДДС в поръчка изцяло без ДДС се отпечатва с 0% и с пълната си цена. Доставка, платена от клиента на куриера, не е в документите и във файла за НАП, защото не сте я събрали вие (вижте Кой плаща на куриера); кредитните известия следват поръчката си.</p>
 <h3>Копия, счетоводителят и почистване</h3>
 <p>Копията могат да отиват при счетоводителя ви по имейл, както и месечният файл за НАП. „Изтриване на документите на поръчките след (дни)“ премахва PDF файловете на документите към по-старите поръчки, на партиди, веднъж на ден. Фактурите, кредитните известия и файловете за НАП остават.</p></div>
 		<div class="table-wrap settings-wrap" data-l="en">
@@ -1931,12 +1955,6 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-en="invoice_remove_shipping remove delivery from documents removes delivery from invoices and the xml file for cash on delivery orders. use it when the courier issues its own document for the delivery price. ">
-				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Remove delivery from documents</strong><div class="desc">Removes delivery from invoices and the XML file for cash on delivery orders. Use it when the courier issues its own document for the delivery price.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
 			<tr data-search-en="invoice_next_invoice_number next nra document number the number of the next order document, 10 digits. the document number of the next order.">
 				<td><code>invoice_next_invoice_number</code></td>
 				<td><strong>Next NRA Document Number</strong><div class="desc">The number of the next order document, 10 digits.</div><div class="desc">The document number of the next order.</div></td>
@@ -2027,47 +2045,41 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="shippings_flat_rate_is_courier is flat rate courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
+			<tr data-search-en="shippings_flat_rate_is_courier is flat rate courier? enable for shipping methods of other plugins. yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the nra file. econt, speedy and pigeon express of nashenski commerce use &quot;customer pays the courier&quot; on each method instead.">
 				<td><code>shippings_flat_rate_is_courier</code></td>
-				<td><strong>Is Flat rate courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
+				<td><strong>Is Flat rate courier?</strong><div class="desc">Enable</div><div class="desc">For shipping methods of other plugins. Yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the NRA file. Econt, Speedy and Pigeon Express of Nashenski Commerce use &quot;Customer pays the courier&quot; on each method instead.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_free_shipping_is_courier is free shipping courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
+			<tr data-search-en="shippings_free_shipping_is_courier is free shipping courier? enable for shipping methods of other plugins. yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the nra file. econt, speedy and pigeon express of nashenski commerce use &quot;customer pays the courier&quot; on each method instead.">
 				<td><code>shippings_free_shipping_is_courier</code></td>
-				<td><strong>Is Free shipping courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
+				<td><strong>Is Free shipping courier?</strong><div class="desc">Enable</div><div class="desc">For shipping methods of other plugins. Yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the NRA file. Econt, Speedy and Pigeon Express of Nashenski Commerce use &quot;Customer pays the courier&quot; on each method instead.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_local_pickup_is_courier is local pickup courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
+			<tr data-search-en="shippings_local_pickup_is_courier is local pickup courier? enable for shipping methods of other plugins. yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the nra file. econt, speedy and pigeon express of nashenski commerce use &quot;customer pays the courier&quot; on each method instead.">
 				<td><code>shippings_local_pickup_is_courier</code></td>
-				<td><strong>Is Local pickup courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
+				<td><strong>Is Local pickup courier?</strong><div class="desc">Enable</div><div class="desc">For shipping methods of other plugins. Yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the NRA file. Econt, Speedy and Pigeon Express of Nashenski Commerce use &quot;Customer pays the courier&quot; on each method instead.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_econt_is_courier is nashenski commerce - econt courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_econt_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Econt courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
+			<tr data-search-en="bacs_payment_type payment type the nra payment type of this payment method. manner of payment of the order according to the nra system.">
+				<td><code>bacs_payment_type</code></td>
+				<td><strong>Payment Type</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">Manner of payment of the order according to the NRA system.</div><div class="choices">Choices: 1 = Released under Art. 3 payment without PPP; 2 = Virtual POS terminal; 3 = Cash on delivery with PPP; 4 = Payment service provider; 5 = Other; 6 = Reflected with receipt</div></td>
+				<td>one choice</td>
+				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_speedy_is_courier is nashenski commerce - speedy courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_speedy_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Speedy courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
+			<tr data-search-en="bacs_virtual_pos_number virtual pos № the number of the virtual pos terminal from your bank. needed in the nra audit file for card payments.">
+				<td><code>bacs_virtual_pos_number</code></td>
+				<td><strong>Virtual POS №</strong><div class="desc">The number of the virtual POS terminal from your bank.</div><div class="desc">Needed in the NRA audit file for card payments.</div></td>
+				<td>text</td>
+				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_boxnow_is_courier is nashenski commerce - box now courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_boxnow_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - BOX NOW courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="shippings_nashenski_pigeon_is_courier is nashenski commerce - pigeon express courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_pigeon_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Pigeon Express courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
+			<tr data-search-en="bacs_identifier identifier the identifier of the payment provider, if it gave you one. goes into the nra audit file with each payment.">
+				<td><code>bacs_identifier</code></td>
+				<td><strong>Identifier</strong><div class="desc">The identifier of the payment provider, if it gave you one.</div><div class="desc">Goes into the NRA audit file with each payment.</div></td>
+				<td>text</td>
+				<td><span class="muted">empty</span></td>
 			</tr>
 			<tr data-search-en="cod_payment_type payment type the nra payment type of this payment method. manner of payment of the order according to the nra system.">
 				<td><code>cod_payment_type</code></td>
@@ -2274,12 +2286,6 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-bg="invoice_remove_shipping без доставката в документите премахва доставката от фактурите и от xml файла при наложен платеж. използвайте го, когато куриерът издава собствен документ за цената на доставката. ">
-				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Без доставката в документите</strong><div class="desc">Премахва доставката от фактурите и от XML файла при наложен платеж. Използвайте го, когато куриерът издава собствен документ за цената на доставката.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
 			<tr data-search-bg="invoice_next_invoice_number следващ номер на документ за нап номерът на следващия документ за продажба, 10 цифри. номерът на документа за следващата поръчка.">
 				<td><code>invoice_next_invoice_number</code></td>
 				<td><strong>Следващ номер на документ за НАП</strong><div class="desc">Номерът на следващия документ за продажба, 10 цифри.</div><div class="desc">Номерът на документа за следващата поръчка.</div></td>
@@ -2370,47 +2376,41 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="shippings_flat_rate_is_courier is flat rate courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_flat_rate_is_courier is flat rate courier? включване за методи за доставка на други добавки. да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за нап. еконт, спиди и pigeon express на нашенски комерс ползват вместо това „клиентът плаща на куриера“ във всеки метод.">
 				<td><code>shippings_flat_rate_is_courier</code></td>
-				<td><strong>Is Flat rate courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Flat rate courier?</strong><div class="desc">Включване</div><div class="desc">За методи за доставка на други добавки. Да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за НАП. Еконт, Спиди и Pigeon Express на Нашенски Комерс ползват вместо това „Клиентът плаща на куриера“ във всеки метод.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_free_shipping_is_courier is free shipping courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_free_shipping_is_courier is free shipping courier? включване за методи за доставка на други добавки. да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за нап. еконт, спиди и pigeon express на нашенски комерс ползват вместо това „клиентът плаща на куриера“ във всеки метод.">
 				<td><code>shippings_free_shipping_is_courier</code></td>
-				<td><strong>Is Free shipping courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Free shipping courier?</strong><div class="desc">Включване</div><div class="desc">За методи за доставка на други добавки. Да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за НАП. Еконт, Спиди и Pigeon Express на Нашенски Комерс ползват вместо това „Клиентът плаща на куриера“ във всеки метод.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_local_pickup_is_courier is local pickup courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_local_pickup_is_courier is local pickup courier? включване за методи за доставка на други добавки. да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за нап. еконт, спиди и pigeon express на нашенски комерс ползват вместо това „клиентът плаща на куриера“ във всеки метод.">
 				<td><code>shippings_local_pickup_is_courier</code></td>
-				<td><strong>Is Local pickup courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Local pickup courier?</strong><div class="desc">Включване</div><div class="desc">За методи за доставка на други добавки. Да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за НАП. Еконт, Спиди и Pigeon Express на Нашенски Комерс ползват вместо това „Клиентът плаща на куриера“ във всеки метод.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_econt_is_courier is nashenski commerce - econt courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_econt_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Econt courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
+			<tr data-search-bg="bacs_payment_type вид плащане видът плащане за нап за този метод на плащане. начин на плащане на поръчката според системата на нап.">
+				<td><code>bacs_payment_type</code></td>
+				<td><strong>Вид плащане</strong><div class="desc">Видът плащане за НАП за този метод на плащане.</div><div class="desc">Начин на плащане на поръчката според системата на НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, плащане без ППП; 2 = Виртуален ПОС терминал; 3 = Наложен платеж с ППП; 4 = Доставчик на платежни услуги; 5 = Друго; 6 = Отразено с касова бележка</div></td>
+				<td>един избор</td>
+				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_speedy_is_courier is nashenski commerce - speedy courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_speedy_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Speedy courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
+			<tr data-search-bg="bacs_virtual_pos_number виртуален пос № номерът на виртуалния пос терминал от банката ви. нужен е в одиторския файл за нап при плащания с карта.">
+				<td><code>bacs_virtual_pos_number</code></td>
+				<td><strong>Виртуален ПОС №</strong><div class="desc">Номерът на виртуалния ПОС терминал от банката Ви.</div><div class="desc">Нужен е в одиторския файл за НАП при плащания с карта.</div></td>
+				<td>текст</td>
+				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_boxnow_is_courier is nashenski commerce - box now courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_boxnow_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - BOX NOW courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="shippings_nashenski_pigeon_is_courier is nashenski commerce - pigeon express courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_pigeon_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Pigeon Express courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
+			<tr data-search-bg="bacs_identifier идентификатор идентификаторът на доставчика на плащания, ако ви е дал такъв. влиза в одиторския файл за нап с всяко плащане.">
+				<td><code>bacs_identifier</code></td>
+				<td><strong>Идентификатор</strong><div class="desc">Идентификаторът на доставчика на плащания, ако Ви е дал такъв.</div><div class="desc">Влиза в одиторския файл за НАП с всяко плащане.</div></td>
+				<td>текст</td>
+				<td><span class="muted">празно</span></td>
 			</tr>
 			<tr data-search-bg="cod_payment_type вид плащане видът плащане за нап за този метод на плащане. начин на плащане на поръчката според системата на нап.">
 				<td><code>cod_payment_type</code></td>
@@ -2712,7 +2712,8 @@ section{padding:20px 16px}
 <h3>Recommended settings</h3>
 <p>On the Help tab, a list of settings that suit most Bulgarian stores, each with its current and recommended value. Only the rows you tick are applied.</p>
 <h3>Moving from another plugin</h3>
-<p>Nashenski Commerce is based on Bulgarisation for WooCommerce 4.0.13. The Help tab imports from it, and from the mreja.net plugins (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping for Econt and for Speedy, Econt Delivery and Speedy Shipping. The import takes over the courier logins, sender details, the waybill numbers of your orders, the shipping zone methods with the mreja.net free shipping totals and, from the N-18 plugin, the company details and document numbers. The order documents and invoices of Bulgarisation for WooCommerce move into the private documents folder and open from the order as before. Each import switches the old plugin off. Econt Delivery and Drusoft Shipping use a different Econt key: enter your Econt username and password after the import.</p>
+<p>Nashenski Commerce is based on Bulgarisation for WooCommerce 4.0.13. The Help tab imports from it, and from the mreja.net plugins (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping for Econt and for Speedy, Econt Delivery and Speedy Shipping. The import takes over the courier logins, sender details, the waybill numbers of your orders, the shipping zone methods with the mreja.net free shipping totals and, from the N-18 plugin, the company details and document numbers. The order documents and invoices of Bulgarisation for WooCommerce move into the private documents folder and open from the order as before. After each import, deactivate the old plugin. Econt Delivery and Drusoft Shipping use a different Econt key: enter your Econt username and password after the import.</p>
+<p>While Bulgarisation for WooCommerce (4.x or 5.x) is active, Nashenski Commerce is paused; deactivate it before the import. Import the Ordinance N-18 plugin while it is off. Until its documents are imported, Nashenski Commerce makes no invoices or other documents while a new number could clash with one of them (the plugin is active, or a counter has not passed its numbers). If it is turned on again after the import, it can reuse numbers Nashenski Commerce already gave out: documents pause until its import is run again from the Help tab, which lists each order whose number clashes, to correct. An error notice says so, the PDF Files box of an order explains it, and orders made meanwhile get a note. Then use "Regenerate PDF's" for orders without documents.</p>
 <h3>Updates</h3>
 <p>New versions show up in Dashboard &gt; Updates and on the Plugins screen, like any other plugin update. Betas are opt in: install "Nashenski Commerce Beta Updates" from the GitHub release, and deactivate it to go back to the WordPress.org versions.</p></div><div data-l="bg">
 <h3>Математически невъзможни цени</h3>
@@ -2720,14 +2721,15 @@ section{padding:20px 16px}
 <h3>Препоръчителни настройки</h3>
 <p>В раздел Помощ има списък с настройки, които подхождат на повечето български магазини, всяка с текущата и препоръчителната си стойност. Прилагат се само отбелязаните редове.</p>
 <h3>Преминаване от друга добавка</h3>
-<p>Нашенски Комерс се основава на Bulgarisation for WooCommerce 4.0.13. Разделът Помощ импортира от нея и от добавките на mreja.net (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping за Econt и за Speedy, Econt Delivery и Speedy Shipping. Импортът взема входовете на куриерите, данните на подателя, номерата на товарителниците на поръчките, методите в зоните за доставка с праговете за безплатна доставка от mreja.net и от добавката за Н-18 - данните на фирмата и номерата на документите. Документите и фактурите от Bulgarisation for WooCommerce се преместват в частната папка за документи и се отварят от поръчката както преди. Всеки импорт изключва старата добавка. Econt Delivery и Drusoft Shipping ползват друг ключ за Econt: след импорта въведете вашия потребител и парола за Econt.</p>
+<p>Нашенски Комерс се основава на Bulgarisation for WooCommerce 4.0.13. Разделът Помощ импортира от нея и от добавките на mreja.net (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping за Econt и за Speedy, Econt Delivery и Speedy Shipping. Импортът взема входовете на куриерите, данните на подателя, номерата на товарителниците на поръчките, методите в зоните за доставка с праговете за безплатна доставка от mreja.net и от добавката за Н-18 - данните на фирмата и номерата на документите. Документите и фактурите от Bulgarisation for WooCommerce се преместват в частната папка за документи и се отварят от поръчката както преди. След всеки импорт деактивирайте старата добавка. Econt Delivery и Drusoft Shipping ползват друг ключ за Econt: след импорта въведете вашия потребител и парола за Econt.</p>
+<p>Докато Bulgarisation for WooCommerce (4.x или 5.x) е активна, Нашенски Комерс е на пауза; деактивирайте я преди импорта. Импортирайте добавката за Н-18, докато е изключена. Докато документите ѝ не са импортирани, Нашенски Комерс не създава фактури и други документи, ако нов номер може да съвпадне с някой от тях (добавката е активна или някой брояч не е минал номерата ѝ). Ако след импорта тя бъде включена отново, може да използва повторно номера, които Нашенски Комерс вече е дал: документите са на пауза, докато импортът ѝ не бъде пуснат отново от раздела Помощ, който изброява всяка поръчка с повтарящ се номер, за да я поправите. Съобщение за грешка го казва, полето „PDF файлове“ на поръчката го обяснява, а поръчките от това време получават бележка. След това използвайте „Повторно създаване на PDF файловете“ за поръчките без документи.</p>
 <h3>Актуализации</h3>
 <p>Новите версии се показват в Табло &gt; Актуализации и в Добавки, както всяка друга актуализация. Бета версиите са по избор: инсталирайте „Nashenski Commerce Beta Updates“ от GitHub release и го деактивирайте, за да се върнете към версиите от WordPress.org.</p></div></section>
 <section id="settings-ref" aria-labelledby="settings-ref-h"><h2 id="settings-ref-h"><span data-l="en">Settings reference</span><span data-l="bg">Справка за настройките</span></h2><div data-l="en">
 <p>Every setting, page by page, with the name the command line uses (see the WP-CLI reference). The search box filters every table on this page. The list is built from the same definitions as the settings screens, so it also includes the settings of couriers that are off.</p>
-<p class="note">191 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
+<p class="note">189 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
 <p>Всяка настройка, страница по страница, с името, което ползва командният ред (вижте справката за WP-CLI). Полето за търсене филтрира всяка таблица на тази страница. Списъкът е изграден от същите определения като екраните с настройки, затова включва и настройките на изключените куриери.</p>
-<p class="note">191 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
+<p class="note">189 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
 <input id="filter" type="search" data-ph-en="Search the settings, e.g. econt, invoice, speedy" data-ph-bg="Търсене в настройките, например econt, фактура, speedy" aria-label="Search the settings / Търсене в настройките">
 		<div class="table-wrap settings-wrap" data-l="en">
 		<table class="settings">
@@ -4382,12 +4384,6 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-en="invoice_remove_shipping remove delivery from documents removes delivery from invoices and the xml file for cash on delivery orders. use it when the courier issues its own document for the delivery price. ">
-				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Remove delivery from documents</strong><div class="desc">Removes delivery from invoices and the XML file for cash on delivery orders. Use it when the courier issues its own document for the delivery price.</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
 			<tr data-search-en="invoice_next_invoice_number next nra document number the number of the next order document, 10 digits. the document number of the next order.">
 				<td><code>invoice_next_invoice_number</code></td>
 				<td><strong>Next NRA Document Number</strong><div class="desc">The number of the next order document, 10 digits.</div><div class="desc">The document number of the next order.</div></td>
@@ -4478,47 +4474,41 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="shippings_flat_rate_is_courier is flat rate courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
+			<tr data-search-en="shippings_flat_rate_is_courier is flat rate courier? enable for shipping methods of other plugins. yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the nra file. econt, speedy and pigeon express of nashenski commerce use &quot;customer pays the courier&quot; on each method instead.">
 				<td><code>shippings_flat_rate_is_courier</code></td>
-				<td><strong>Is Flat rate courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
+				<td><strong>Is Flat rate courier?</strong><div class="desc">Enable</div><div class="desc">For shipping methods of other plugins. Yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the NRA file. Econt, Speedy and Pigeon Express of Nashenski Commerce use &quot;Customer pays the courier&quot; on each method instead.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_free_shipping_is_courier is free shipping courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
+			<tr data-search-en="shippings_free_shipping_is_courier is free shipping courier? enable for shipping methods of other plugins. yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the nra file. econt, speedy and pigeon express of nashenski commerce use &quot;customer pays the courier&quot; on each method instead.">
 				<td><code>shippings_free_shipping_is_courier</code></td>
-				<td><strong>Is Free shipping courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
+				<td><strong>Is Free shipping courier?</strong><div class="desc">Enable</div><div class="desc">For shipping methods of other plugins. Yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the NRA file. Econt, Speedy and Pigeon Express of Nashenski Commerce use &quot;Customer pays the courier&quot; on each method instead.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_local_pickup_is_courier is local pickup courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
+			<tr data-search-en="shippings_local_pickup_is_courier is local pickup courier? enable for shipping methods of other plugins. yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the nra file. econt, speedy and pigeon express of nashenski commerce use &quot;customer pays the courier&quot; on each method instead.">
 				<td><code>shippings_local_pickup_is_courier</code></td>
-				<td><strong>Is Local pickup courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
+				<td><strong>Is Local pickup courier?</strong><div class="desc">Enable</div><div class="desc">For shipping methods of other plugins. Yes: with cash on delivery the courier collects the delivery and gives its own receipt, so it is left out of the order document and the NRA file. Econt, Speedy and Pigeon Express of Nashenski Commerce use &quot;Customer pays the courier&quot; on each method instead.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_econt_is_courier is nashenski commerce - econt courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_econt_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Econt courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
+			<tr data-search-en="bacs_payment_type payment type the nra payment type of this payment method. manner of payment of the order according to the nra system.">
+				<td><code>bacs_payment_type</code></td>
+				<td><strong>Payment Type</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">Manner of payment of the order according to the NRA system.</div><div class="choices">Choices: 1 = Released under Art. 3 payment without PPP; 2 = Virtual POS terminal; 3 = Cash on delivery with PPP; 4 = Payment service provider; 5 = Other; 6 = Reflected with receipt</div></td>
+				<td>one choice</td>
+				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_speedy_is_courier is nashenski commerce - speedy courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_speedy_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Speedy courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
+			<tr data-search-en="bacs_virtual_pos_number virtual pos № the number of the virtual pos terminal from your bank. needed in the nra audit file for card payments.">
+				<td><code>bacs_virtual_pos_number</code></td>
+				<td><strong>Virtual POS №</strong><div class="desc">The number of the virtual POS terminal from your bank.</div><div class="desc">Needed in the NRA audit file for card payments.</div></td>
+				<td>text</td>
+				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="shippings_nashenski_boxnow_is_courier is nashenski commerce - box now courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_boxnow_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - BOX NOW courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-en="shippings_nashenski_pigeon_is_courier is nashenski commerce - pigeon express courier? enable if set to yes, all deliveries with ppp will be removed from documents and xml export">
-				<td><code>shippings_nashenski_pigeon_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Pigeon Express courier?</strong><div class="desc">Enable</div><div class="desc">If set to yes, all deliveries with PPP will be removed from documents and XML export</div></td>
-				<td>yes or no</td>
-				<td><code>no</code></td>
+			<tr data-search-en="bacs_identifier identifier the identifier of the payment provider, if it gave you one. goes into the nra audit file with each payment.">
+				<td><code>bacs_identifier</code></td>
+				<td><strong>Identifier</strong><div class="desc">The identifier of the payment provider, if it gave you one.</div><div class="desc">Goes into the NRA audit file with each payment.</div></td>
+				<td>text</td>
+				<td><span class="muted">empty</span></td>
 			</tr>
 			<tr data-search-en="cod_payment_type payment type the nra payment type of this payment method. manner of payment of the order according to the nra system.">
 				<td><code>cod_payment_type</code></td>
@@ -4725,12 +4715,6 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>order_created</code></td>
 			</tr>
-			<tr data-search-bg="invoice_remove_shipping без доставката в документите премахва доставката от фактурите и от xml файла при наложен платеж. използвайте го, когато куриерът издава собствен документ за цената на доставката. ">
-				<td><code>invoice_remove_shipping</code></td>
-				<td><strong>Без доставката в документите</strong><div class="desc">Премахва доставката от фактурите и от XML файла при наложен платеж. Използвайте го, когато куриерът издава собствен документ за цената на доставката.</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
 			<tr data-search-bg="invoice_next_invoice_number следващ номер на документ за нап номерът на следващия документ за продажба, 10 цифри. номерът на документа за следващата поръчка.">
 				<td><code>invoice_next_invoice_number</code></td>
 				<td><strong>Следващ номер на документ за НАП</strong><div class="desc">Номерът на следващия документ за продажба, 10 цифри.</div><div class="desc">Номерът на документа за следващата поръчка.</div></td>
@@ -4821,47 +4805,41 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="shippings_flat_rate_is_courier is flat rate courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_flat_rate_is_courier is flat rate courier? включване за методи за доставка на други добавки. да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за нап. еконт, спиди и pigeon express на нашенски комерс ползват вместо това „клиентът плаща на куриера“ във всеки метод.">
 				<td><code>shippings_flat_rate_is_courier</code></td>
-				<td><strong>Is Flat rate courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Flat rate courier?</strong><div class="desc">Включване</div><div class="desc">За методи за доставка на други добавки. Да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за НАП. Еконт, Спиди и Pigeon Express на Нашенски Комерс ползват вместо това „Клиентът плаща на куриера“ във всеки метод.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_free_shipping_is_courier is free shipping courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_free_shipping_is_courier is free shipping courier? включване за методи за доставка на други добавки. да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за нап. еконт, спиди и pigeon express на нашенски комерс ползват вместо това „клиентът плаща на куриера“ във всеки метод.">
 				<td><code>shippings_free_shipping_is_courier</code></td>
-				<td><strong>Is Free shipping courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Free shipping courier?</strong><div class="desc">Включване</div><div class="desc">За методи за доставка на други добавки. Да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за НАП. Еконт, Спиди и Pigeon Express на Нашенски Комерс ползват вместо това „Клиентът плаща на куриера“ във всеки метод.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_local_pickup_is_courier is local pickup courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
+			<tr data-search-bg="shippings_local_pickup_is_courier is local pickup courier? включване за методи за доставка на други добавки. да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за нап. еконт, спиди и pigeon express на нашенски комерс ползват вместо това „клиентът плаща на куриера“ във всеки метод.">
 				<td><code>shippings_local_pickup_is_courier</code></td>
-				<td><strong>Is Local pickup courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
+				<td><strong>Is Local pickup courier?</strong><div class="desc">Включване</div><div class="desc">За методи за доставка на други добавки. Да: при наложен платеж куриерът събира доставката и издава собствен документ, затова тя не влиза в документа за продажба и във файла за НАП. Еконт, Спиди и Pigeon Express на Нашенски Комерс ползват вместо това „Клиентът плаща на куриера“ във всеки метод.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_econt_is_courier is nashenski commerce - econt courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_econt_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Econt courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
+			<tr data-search-bg="bacs_payment_type вид плащане видът плащане за нап за този метод на плащане. начин на плащане на поръчката според системата на нап.">
+				<td><code>bacs_payment_type</code></td>
+				<td><strong>Вид плащане</strong><div class="desc">Видът плащане за НАП за този метод на плащане.</div><div class="desc">Начин на плащане на поръчката според системата на НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, плащане без ППП; 2 = Виртуален ПОС терминал; 3 = Наложен платеж с ППП; 4 = Доставчик на платежни услуги; 5 = Друго; 6 = Отразено с касова бележка</div></td>
+				<td>един избор</td>
+				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_speedy_is_courier is nashenski commerce - speedy courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_speedy_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Speedy courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
+			<tr data-search-bg="bacs_virtual_pos_number виртуален пос № номерът на виртуалния пос терминал от банката ви. нужен е в одиторския файл за нап при плащания с карта.">
+				<td><code>bacs_virtual_pos_number</code></td>
+				<td><strong>Виртуален ПОС №</strong><div class="desc">Номерът на виртуалния ПОС терминал от банката Ви.</div><div class="desc">Нужен е в одиторския файл за НАП при плащания с карта.</div></td>
+				<td>текст</td>
+				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="shippings_nashenski_boxnow_is_courier is nashenski commerce - box now courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_boxnow_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - BOX NOW courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
-			</tr>
-			<tr data-search-bg="shippings_nashenski_pigeon_is_courier is nashenski commerce - pigeon express courier? включване ако е „да“, всички доставки с ппп се премахват от документите и от xml експорта">
-				<td><code>shippings_nashenski_pigeon_is_courier</code></td>
-				<td><strong>Is Nashenski Commerce - Pigeon Express courier?</strong><div class="desc">Включване</div><div class="desc">Ако е „да“, всички доставки с ППП се премахват от документите и от XML експорта</div></td>
-				<td>да или не</td>
-				<td><code>no</code></td>
+			<tr data-search-bg="bacs_identifier идентификатор идентификаторът на доставчика на плащания, ако ви е дал такъв. влиза в одиторския файл за нап с всяко плащане.">
+				<td><code>bacs_identifier</code></td>
+				<td><strong>Идентификатор</strong><div class="desc">Идентификаторът на доставчика на плащания, ако Ви е дал такъв.</div><div class="desc">Влиза в одиторския файл за НАП с всяко плащане.</div></td>
+				<td>текст</td>
+				<td><span class="muted">празно</span></td>
 			</tr>
 			<tr data-search-bg="cod_payment_type вид плащане видът плащане за нап за този метод на плащане. начин на плащане на поръчката според системата на нап.">
 				<td><code>cod_payment_type</code></td>
@@ -5195,8 +5173,8 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <li>Настройки, добавени от друг код чрез филтъра <code>nashenski_admin_get_tabs_items</code>, не са в списъка.</li>
 </ul></div></section>
 <section id="developers" aria-labelledby="developers-h"><h2 id="developers-h"><span data-l="en">For developers</span><span data-l="bg">За разработчици</span></h2><div data-l="en">
-<p>A few hooks, found in the code. Each name is the one used in the source at version 0.21.6. Since 0.21.0 the names use underscores; the old names with slashes still work but are deprecated.</p></div><div data-l="bg">
-<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.21.6. От 0.21.0 имената са с долни черти; старите имена с наклонени черти още работят, но са остарели.</p></div><div class="table-wrap" data-l="en"><table>
+<p>A few hooks, found in the code. Each name is the one used in the source at version 0.21.8. Since 0.21.0 the names use underscores; the old names with slashes still work but are deprecated.</p></div><div data-l="bg">
+<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.21.8. От 0.21.0 имената са с долни черти; старите имена с наклонени черти още работят, но са остарели.</p></div><div class="table-wrap" data-l="en"><table>
 <thead><tr><th>Hook</th><th>Type</th><th>What it does</th></tr></thead>
 <tbody><tr><td><code>nashenski_admin_get_tabs_items</code></td><td>filter</td><td>Change the list of settings tabs</td></tr><tr><td><code>nashenski_admin_nra_fields</code></td><td>filter</td><td>Add fields to the Documents tab</td></tr><tr><td><code>nashenski_admin_settings_after_save_fields_{Tab class}</code></td><td>action</td><td>Runs after a tab is saved (login checks and profile data); also run by the command line</td></tr><tr><td><code>nashenski_admin_export_orders</code>, <code>nashenski_admin_export_refunded_orders</code></td><td>filter</td><td>Change the orders of an NRA export month</td></tr><tr><td><code>nashenski_econt_default_weight</code>, <code>nashenski_econt_min_pack_weight</code></td><td>filter</td><td>Default and minimum parcel weight for Econt labels</td></tr><tr><td><code>nashenski_boxnow_create_label</code></td><td>filter</td><td>Change the label request body before it is sent</td></tr><tr><td><code>nashenski_before_init_classes</code>, <code>nashenski_init_classes</code></td><td>action</td><td>Before and after the plugin's classes are loaded</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Кука</th><th>Вид</th><th>Какво прави</th></tr></thead>
@@ -5417,7 +5395,7 @@ wp nashenski setting set prices_econt - &lt; prices-econt.json</code></pre></div
 <tbody><tr><td>Courier websites (public price lists)</td><td>Only a normal page request, when you press "Check the courier website" and once a week: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Prices, labels, offices, cities, shipment status and courier requests: the receiver's name, phone, address or office, the parcel details and the cash on delivery amount. Hosts: ee.econt.com, demo.econt.com</td></tr><tr><td>Econt and Speedy office maps</td><td>Only when the customer presses "Choose on the map". The town is sent (Speedy: only the town number). Speedy's map uses Google Maps.</td></tr><tr><td>Speedy</td><td>Same purpose and data as Econt. Hosts: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Lockers, labels and status. Hosts: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Offices, lockers, prices, labels and status. Hosts: api.pigeonexpress.com, api-demo.pigeonexpress.com. Without a login, the public list of offices and lockers is loaded (nothing about the customer is sent)</td></tr><tr><td>nekorekten.com</td><td>The customer's phone number for a lookup; and, only when you press "Send report", the report with the name, phone and email of that order. Host: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>The customer's phone number, and shipment data when tracking is on. Hosts: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>The customer's phone number, and labels when that option is on. Host: nepostop.com</td></tr><tr><td>EU VIES</td><td>The VAT number a company customer enters at checkout. Host: ec.europa.eu</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Услуга</th><th>Какво се изпраща и кога</th></tr></thead>
 <tbody><tr><td>Сайтове на куриерите (публични ценови листи)</td><td>Само обикновена заявка за страница, когато натиснете „Проверка в сайта на куриера“ и веднъж седмично: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Цени, товарителници, офиси, населени места, статус на пратка и заявки за куриер: името, телефонът, адресът или офисът на получателя, данните за пратката и сумата на наложения платеж. Хостове: ee.econt.com, demo.econt.com</td></tr><tr><td>Картите на офисите на Econt и Speedy</td><td>Само когато клиентът натисне „Избор на картата“. Населеното място се изпраща (при Speedy: само номерът на населеното място). Картата на Speedy използва Google Maps.</td></tr><tr><td>Speedy</td><td>Същата цел и данни като при Econt. Хостове: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Автомати, товарителници и статус. Хостове: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Офиси, автомати, цени, товарителници и статус. Хостове: api.pigeonexpress.com, api-demo.pigeonexpress.com. Без вход се зарежда публичният списък с офиси и автомати (нищо за клиента не се изпраща)</td></tr><tr><td>nekorekten.com</td><td>Телефонният номер на клиента за проверка; и, само когато натиснете „Изпрати сигнал“, сигналът с името, телефона и имейла на поръчката. Хост: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>Телефонният номер на клиента и данните за пратката, когато проследяването е включено. Хостове: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>Телефонният номер на клиента и товарителниците, когато тази опция е включена. Хост: nepostop.com</td></tr><tr><td>EU VIES</td><td>ДДС номерът, който фирмен клиент въвежда при плащане. Хост: ec.europa.eu</td></tr></tbody></table></div><div data-l="en"><p>Terms and privacy links of each service are in the readme file of the plugin.</p></div><div data-l="bg"><p>Линковете към условията и политиката за поверителност на всяка услуга са в readme файла на добавката.</p></div></section>
-<p class="note"><span data-l="en">Built from the plugin source at version 0.21.6. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.21.6. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
+<p class="note"><span data-l="en">Built from the plugin source at version 0.21.8. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.21.8. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
 </main>
 </div>
 <script>
