@@ -96,7 +96,7 @@ section{padding:20px 16px}
 <div class="layout">
 <aside id="side">
 	<div class="brand"><img class="mark" src="img/logo.png" alt="" width="34" height="34"><strong><span data-l="en">Nashenski Commerce</span><span data-l="bg">Нашенски Комерс</span></strong></div>
-	<p class="version"><span data-l="en">Manual for version 0.23.5, built 2026-11-23</span><span data-l="bg">Ръководство за версия 0.23.5, изградено на 2026-11-23</span></p>
+	<p class="version"><span data-l="en">Manual for version 0.23.6, built 2026-11-25</span><span data-l="bg">Ръководство за версия 0.23.6, изградено на 2026-11-25</span></p>
 	<div class="lang-switch lang-switch-side" role="group" aria-label="Language / Език">
 		<button type="button" data-set-lang="en" aria-pressed="true">EN</button>
 		<button type="button" data-set-lang="bg" aria-pressed="false">BG</button>
@@ -117,7 +117,7 @@ section{padding:20px 16px}
 <section id="overview" aria-labelledby="overview-h"><h2 id="overview-h"><span data-l="en">What it is</span><span data-l="bg">Какво е</span></h2><div data-l="en">
 <p>Nashenski Commerce adds what a Bulgarian online store needs to WooCommerce: the couriers Econt, Speedy, BOX NOW and Pigeon Express, invoices and the documents of Ordinance N-18 (the light regime), the customer checks before cash on delivery, quick orders, abandoned carts and the EU withdrawal function.</p>
 <p>Everything runs on your own site. Prices, labels and documents are made by your site and sent only to the services you turn on. The plugin is free. Nashenski Pro is a separate paid add-on, see <a href="#pro">Nashenski Pro</a>.</p>
-<div class="callout"><strong>Version 0.23.5.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab.</div>
+<div class="callout"><strong>Version 0.23.6.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab.</div>
 <h3>Requirements</h3>
 <ul>
 <li>WordPress 6.5 or newer, tested up to 7.1.</li>
@@ -128,7 +128,7 @@ section{padding:20px 16px}
 <h3>What is inside</h3></div><div data-l="bg">
 <p>Nashenski Commerce добавя към WooCommerce това, от което се нуждае българският онлайн магазин: куриерите Econt, Speedy, BOX NOW и Pigeon Express, фактури и документите по Наредба Н-18 (облекчения режим), проверките на клиентите преди наложен платеж, бързи поръчки, изоставени колички и функцията за отказ от договор от ЕС.</p>
 <p>Всичко работи във вашия собствен сайт. Цените, товарителниците и документите се създават от сайта ви и се изпращат само до услугите, които включите. Добавката е безплатна. Нашенски Про е отделна платена добавка, вижте <a href="#pro">Нашенски Про</a>.</p>
-<div class="callout"><strong>Версия 0.23.5.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел.</div>
+<div class="callout"><strong>Версия 0.23.6.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел.</div>
 <h3>Изисквания</h3>
 <ul>
 <li>WordPress 6.5 или по-нов, тестван до 7.1.</li>
@@ -171,7 +171,7 @@ section{padding:20px 16px}
 <ol class="steps">
 <li><strong>Settings and jobs</strong> are copied on the first admin or cron request. The settings become one option per area, for example <code>nashenski_documents</code>.</li>
 <li><strong>Orders, order lines and customers</strong> are copied in batches of 500 through WooCommerce's scheduled actions, so a large store is never stopped. A notice on the Dashboard, the Plugins screen and the WooCommerce screens shows the progress. Document numbers, credit notes and exports wait until the copy is checked, so no number is given out twice.</li>
-<li><strong>The check</strong> compares the copy with the old data, key by key. If it fails, the old data stays in use and the reason is in WooCommerce &gt; Status &gt; Logs (source <code>nashenski-upgrade</code>).</li>
+<li><strong>The check</strong> compares the copy with the old data, key by key. If it fails, document numbers and exports wait, the plugin tries again up to three times, an hour apart, and the reason is in WooCommerce &gt; Status &gt; Logs (source <code>nashenski-upgrade</code>).</li>
 <li><strong>The old data</strong> is kept for 30 days after the check, then removed.</li>
 </ol>
 <p>Until the old data is removed you can go back. Tools shows "Roll back the data update" and "Remove the old data now" (for users who can manage plugins), or run <code>wp nashenski upgrade rollback</code>. The rollback puts every value back under its old name; then install 0.21.12 again. After the old data is removed, only your database backup can take you back.</p>
@@ -180,7 +180,7 @@ section{padding:20px 16px}
 <ol class="steps">
 <li><strong>Настройките и задачите</strong> се копират при първата заявка в администрацията или от cron. Настройките стават по една опция за всяка област, например <code>nashenski_documents</code>.</li>
 <li><strong>Поръчките, редовете в поръчките и клиентите</strong> се копират на пакети по 500 чрез планираните действия на WooCommerce, така че голям магазин никога не спира. Известие в Таблото, на екрана с разширенията и на екраните на WooCommerce показва напредъка. Номерата на документите, кредитните известия и експортите изчакват, докато копието бъде проверено, така че никой номер не се дава два пъти.</li>
-<li><strong>Проверката</strong> сравнява копието със старите данни, ключ по ключ. Ако не успее, старите данни остават в употреба, а причината е в WooCommerce &gt; Статус &gt; Логове (източник <code>nashenski-upgrade</code>).</li>
+<li><strong>Проверката</strong> сравнява копието със старите данни, ключ по ключ. Ако не успее, номерата на документите и експортите изчакват, добавката опитва отново до три пъти през един час, а причината е в WooCommerce &gt; Статус &gt; Логове (източник <code>nashenski-upgrade</code>).</li>
 <li><strong>Старите данни</strong> се пазят 30 дни след проверката, след това се изтриват.</li>
 </ol>
 <p>Докато старите данни не са изтрити, можете да се върнете. В Инструменти има „Върни обновяването на данните“ и „Изтрий старите данни сега“ (за потребители, които могат да управляват разширенията), или изпълнете <code>wp nashenski upgrade rollback</code>. Връщането поставя всяка стойност обратно под старото ѝ име; след това инсталирайте отново 0.21.12. След като старите данни са изтрити, само резервното копие на базата данни може да ви върне назад.</p>
@@ -199,7 +199,7 @@ section{padding:20px 16px}
 <li><strong>Sender.</strong> "Where you send from" (address, city and office, depending on the courier) and the sender name and phone.</li>
 <li><strong>Offices, cities and lockers</strong> are kept on your site and refreshed once a week. "Reload offices and cities" on a courier tab refreshes them at once. From the command line: <code>wp nashenski courier reload econt</code>.</li>
 <li><strong>Prices.</strong> With a working login, the courier calculates each price with your contract. Without one, or when the courier does not answer, the courier's public price list is used so customers can always order. See Shipping prices below.</li>
-<li><strong>Waybills and labels.</strong> A waybill is made from the order: in the courier box on the order, or from the orders list (bulk action "Create waybill"). Labels print from the order or the orders list. Where a courier offers several print sizes, choose one first.</li>
+<li><strong>Waybills and labels.</strong> A waybill is made from the order: in the courier box on the order, or from the orders list (bulk action "Create waybill"). Labels print from the order or the orders list. Where a courier offers several print sizes, choose one first. BOX NOW and Pigeon Express keep one live label per order: cancel it to make a new one. A label made from the orders list or when the order is placed takes cash on delivery from the order's current payment method.</li>
 <li><strong>Generate label after checkout.</strong> On each courier tab. The waybill is made as soon as the order is placed.</li>
 <li><strong>Courier requests.</strong> "Request a courier" books a pick-up for Econt and Speedy only; the other couriers collect with the waybill itself. Econt skips weekends and holidays by itself; Speedy picks the next possible day.</li>
 <li><strong>Tracking.</strong> The customer sees "Track your parcel" with the waybill number on the order page, and in the order emails.</li>
@@ -213,7 +213,7 @@ section{padding:20px 16px}
 <li><strong>Подател.</strong> „Откъде изпращате“ (адрес, населено място и офис, според куриера) и името и телефонът на подателя.</li>
 <li><strong>Офиси, населени места и автомати</strong> се пазят във вашия сайт и се обновяват веднъж седмично. „Презареждане на офиси и населени места“ в раздела на куриера ги обновява веднага. От командния ред: <code>wp nashenski courier reload econt</code>.</li>
 <li><strong>Цени.</strong> С работещ вход куриерът изчислява всяка цена по вашия договор. Без вход или когато куриерът не отговаря, се ползва публичната ценова листа на куриера, така че клиентите винаги могат да поръчат. Вижте по-долу „Живи цени и публична ценова листа“.</li>
-<li><strong>Товарителници и етикети.</strong> Товарителницата се създава от поръчката: в кутията на куриера в поръчката или от списъка с поръчки (групово действие „Създаване на товарителница“). Етикетите се печатат от поръчката или от списъка с поръчки. Когато куриерът предлага няколко размера на печат, изберете един преди това.</li>
+<li><strong>Товарителници и етикети.</strong> Товарителницата се създава от поръчката: в кутията на куриера в поръчката или от списъка с поръчки (групово действие „Създаване на товарителница“). Етикетите се печатат от поръчката или от списъка с поръчки. Когато куриерът предлага няколко размера на печат, изберете един преди това. BOX NOW и Pigeon Express пазят по една активна товарителница на поръчка: откажете я, за да направите нова. Товарителница от списъка с поръчки или при създаването на поръчката взема наложения платеж от текущия начин на плащане.</li>
 <li><strong>Генериране на етикет след поръчка.</strong> В раздела на всеки куриер. Товарителницата се създава веднага щом поръчката е направена.</li>
 <li><strong>Заявки за куриер.</strong> „Заявка за куриер“ резервира вземане само за Econt и Speedy; останалите куриери взимат пратката с товарителницата. Econt пропуска съботите, неделите и празниците сам; Speedy избира следващия възможен ден.</li>
 <li><strong>Проследяване.</strong> Клиентът вижда „Проследете пратката си“ с номера на товарителницата на страницата с поръчката и в имейлите за поръчката.</li>
@@ -1100,21 +1100,21 @@ section{padding:20px 16px}
 			<caption>Настройки на публичните цени</caption>
 			<thead><tr><th scope="col">Име в командния ред</th><th scope="col">Настройка</th><th scope="col">Вид</th><th scope="col">По подразбиране</th></tr></thead>
 			<tbody>
-			<tr data-search-bg="price_list_econt public prices, econt price bands for the courier public price list. ">
+			<tr data-search-bg="price_list_econt публични цени, econt ценови диапазони за публичния ценоразпис на куриера. ">
 				<td><code>price_list_econt</code></td>
-				<td><strong>Public prices, Econt</strong><div class="desc">Price bands for the courier public price list.</div></td>
+				<td><strong>Публични цени, Econt</strong><div class="desc">Ценови диапазони за публичния ценоразпис на куриера.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="price_list_speedy public prices, speedy price bands for the courier public price list. ">
+			<tr data-search-bg="price_list_speedy публични цени, speedy ценови диапазони за публичния ценоразпис на куриера. ">
 				<td><code>price_list_speedy</code></td>
-				<td><strong>Public prices, Speedy</strong><div class="desc">Price bands for the courier public price list.</div></td>
+				<td><strong>Публични цени, Speedy</strong><div class="desc">Ценови диапазони за публичния ценоразпис на куриера.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="price_list_pigeon public prices, pigeon price bands for the courier public price list. ">
+			<tr data-search-bg="price_list_pigeon публични цени, pigeon ценови диапазони за публичния ценоразпис на куриера. ">
 				<td><code>price_list_pigeon</code></td>
-				<td><strong>Public prices, Pigeon</strong><div class="desc">Price bands for the courier public price list.</div></td>
+				<td><strong>Публични цени, Pigeon</strong><div class="desc">Ценови диапазони за публичния ценоразпис на куриера.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr></tbody>
@@ -1585,7 +1585,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-bg="quick_order.phone_country държава за телефона държавата, от която са телефоните. тя задава кода на държавата, с който номерата се проверяват и запазват. ">
 				<td><code>quick_order.phone_country</code></td>
-				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Albania (+355); AU = Australia (+61); AT = Austria (+43); BE = Belgium (+32); BR = Brazil (+55); BG = Bulgaria (+359); CA = Canada (+1); HR = Croatia (+385); CY = Cyprus (+357); CZ = Czech Republic (+420); DK = Denmark (+45); EE = Estonia (+372); FI = Finland (+358); FR = France (+33); DE = Germany (+49); GR = Greece (+30); HU = Hungary (+36); IS = Iceland (+354); IN = India (+91); IE = Ireland (+353); IL = Israel (+972); IT = Italy (+39); JP = Japan (+81); LV = Latvia (+371); LT = Lithuania (+370); LU = Luxembourg (+352); MT = Malta (+356); MX = Mexico (+52); NL = Netherlands (+31); NZ = New Zealand (+64); NO = Norway (+47); PL = Poland (+48); PT = Portugal (+351); RO = Romania (+40); RS = Serbia (+381); SK = Slovakia (+421); SI = Slovenia (+386); ZA = South Africa (+27); ES = Spain (+34); SE = Sweden (+46); CH = Switzerland (+41); TR = Türkiye (+90); GB = United Kingdom (UK) (+44); US = United States (US) (+1)</div></td>
+				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Албания (+355); AU = Австралия (+61); AT = Австрия (+43); BE = Белгия (+32); BR = Бразилия (+55); BG = България (+359); CA = Канада (+1); HR = Хърватия (+385); CY = Кипър (+357); CZ = Чехия (+420); DK = Дания (+45); EE = Естония (+372); FI = Финландия (+358); FR = Франция (+33); DE = Германия (+49); GR = Гърция (+30); HU = Унгария (+36); IS = Исландия (+354); IN = Индия (+91); IE = Ирландия (+353); IL = Израел (+972); IT = Италия (+39); JP = Япония (+81); LV = Латвия (+371); LT = Литва (+370); LU = Люксембург (+352); MT = Малта (+356); MX = Мексико (+52); NL = Нидерландия (+31); NZ = Нова Зеландия (+64); NO = Норвегия (+47); PL = Полша (+48); PT = Португалия (+351); RO = Румъния (+40); RS = Сърбия (+381); SK = Словакия (+421); SI = Словения (+386); ZA = Южна Африка (+27); ES = Испания (+34); SE = Швеция (+46); CH = Швейцария (+41); TR = Турция (+90); GB = Обединено кралство (UK) (+44); US = САЩ (+1)</div></td>
 				<td>един избор</td>
 				<td><code>AL</code></td>
 			</tr>
@@ -2543,6 +2543,7 @@ section{padding:20px 16px}
 <li><strong>NRA audit file (XML).</strong> The standardised file of Ordinance N-18 (Annex 38) for any number of orders. It is checked against the NRA schema before it is saved. Choose the month and press "Create XML file". Submit it to the NRA by the 15th.</li>
 <li><strong>Invoice archive.</strong> "Download archive" gives the invoices of a month as a ZIP.</li>
 <li><strong>Microinvest Delta.</strong> "Create file" makes the file for the Delta accounting program.</li>
+<li><strong>Dates and months.</strong> Dates follow the site's time zone. In Delta and the archive each document goes into the month of its own date: an invoice in the month it was issued, a credit note in the month of its refund. A sale paid in a month stays in that month's NRA file even when it is refunded later.</li>
 <li><strong>Custom export.</strong> Orders, products sold or documents, with your filters, columns, order and file format (CSV, Excel, JSON or XML). Save an export to run it again next month. The "Documents" source picks documents by their own date (invoice date, credit note date).</li>
 <li><strong>Files are kept 7 days.</strong> The created XML and Delta files are deleted 7 days after they are made, so download them when you create them. Documents and export files never show in the Media Library.</li>
 <li><strong>Monthly email.</strong> With "Email the audit file every month" on, the audit file of the month before is emailed to your accountant on the 1st.</li>
@@ -2552,6 +2553,7 @@ section{padding:20px 16px}
 <li><strong>Файл за НАП (XML).</strong> Стандартизираният файл по Наредба Н-18 (Приложение 38) за произволен брой поръчки. Проверява се по схемата на НАП, преди да се запази. Изберете месеца и натиснете „Създаване на XML файл“. Изпратете го на НАП до 15-о число.</li>
 <li><strong>Архив с фактури.</strong> „Изтегляне на архива“ дава фактурите на месец като ZIP файл.</li>
 <li><strong>Microinvest Delta.</strong> „Създаване на файл“ прави файла за счетоводната програма Delta.</li>
+<li><strong>Дати и месеци.</strong> Датите следват часовата зона на сайта. В Delta и в архива всеки документ влиза в месеца на своята дата: фактурата в месеца, в който е издадена, кредитното известие в месеца на връщането. Продажба, платена в даден месец, остава във файла за НАП за този месец, дори ако по-късно бъде върната.</li>
 <li><strong>Персонализиран експорт.</strong> Поръчки, продадени продукти или документи, с вашите филтри, колони, ред и формат на файла (CSV, Excel, JSON или XML). Запазете експорта, за да го пуснете отново следващия месец. Източникът „Документи“ избира документите по тяхната собствена дата (дата на фактурата, дата на кредитното известие).</li>
 <li><strong>Файловете се пазят 7 дни.</strong> Създадените XML и Delta файлове се изтриват 7 дни след създаването им, затова ги изтеглете веднага. Документите и файловете от експорт никога не се показват в Медийната библиотека.</li>
 <li><strong>Месечен имейл.</strong> Когато „Изпращане на файла за НАП всеки месец“ е включено, файлът за предходния месец се изпраща на счетоводителя ви на 1-во число.</li>
@@ -3751,21 +3753,21 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="price_list_econt public prices, econt price bands for the courier public price list. ">
+			<tr data-search-bg="price_list_econt публични цени, econt ценови диапазони за публичния ценоразпис на куриера. ">
 				<td><code>price_list_econt</code></td>
-				<td><strong>Public prices, Econt</strong><div class="desc">Price bands for the courier public price list.</div></td>
+				<td><strong>Публични цени, Econt</strong><div class="desc">Ценови диапазони за публичния ценоразпис на куриера.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="price_list_speedy public prices, speedy price bands for the courier public price list. ">
+			<tr data-search-bg="price_list_speedy публични цени, speedy ценови диапазони за публичния ценоразпис на куриера. ">
 				<td><code>price_list_speedy</code></td>
-				<td><strong>Public prices, Speedy</strong><div class="desc">Price bands for the courier public price list.</div></td>
+				<td><strong>Публични цени, Speedy</strong><div class="desc">Ценови диапазони за публичния ценоразпис на куриера.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="price_list_pigeon public prices, pigeon price bands for the courier public price list. ">
+			<tr data-search-bg="price_list_pigeon публични цени, pigeon ценови диапазони за публичния ценоразпис на куриера. ">
 				<td><code>price_list_pigeon</code></td>
-				<td><strong>Public prices, Pigeon</strong><div class="desc">Price bands for the courier public price list.</div></td>
+				<td><strong>Публични цени, Pigeon</strong><div class="desc">Ценови диапазони за публичния ценоразпис на куриера.</div></td>
 				<td>таблица с цени (JSON)</td>
 				<td><span class="muted">празно</span></td>
 			</tr></tbody>
@@ -4153,7 +4155,7 @@ section{padding:20px 16px}
 			</tr>
 			<tr data-search-bg="quick_order.phone_country държава за телефона държавата, от която са телефоните. тя задава кода на държавата, с който номерата се проверяват и запазват. ">
 				<td><code>quick_order.phone_country</code></td>
-				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Albania (+355); AU = Australia (+61); AT = Austria (+43); BE = Belgium (+32); BR = Brazil (+55); BG = Bulgaria (+359); CA = Canada (+1); HR = Croatia (+385); CY = Cyprus (+357); CZ = Czech Republic (+420); DK = Denmark (+45); EE = Estonia (+372); FI = Finland (+358); FR = France (+33); DE = Germany (+49); GR = Greece (+30); HU = Hungary (+36); IS = Iceland (+354); IN = India (+91); IE = Ireland (+353); IL = Israel (+972); IT = Italy (+39); JP = Japan (+81); LV = Latvia (+371); LT = Lithuania (+370); LU = Luxembourg (+352); MT = Malta (+356); MX = Mexico (+52); NL = Netherlands (+31); NZ = New Zealand (+64); NO = Norway (+47); PL = Poland (+48); PT = Portugal (+351); RO = Romania (+40); RS = Serbia (+381); SK = Slovakia (+421); SI = Slovenia (+386); ZA = South Africa (+27); ES = Spain (+34); SE = Sweden (+46); CH = Switzerland (+41); TR = Türkiye (+90); GB = United Kingdom (UK) (+44); US = United States (US) (+1)</div></td>
+				<td><strong>Държава за телефона</strong><div class="desc">Държавата, от която са телефоните. Тя задава кода на държавата, с който номерата се проверяват и запазват.</div><div class="choices">Избор: AL = Албания (+355); AU = Австралия (+61); AT = Австрия (+43); BE = Белгия (+32); BR = Бразилия (+55); BG = България (+359); CA = Канада (+1); HR = Хърватия (+385); CY = Кипър (+357); CZ = Чехия (+420); DK = Дания (+45); EE = Естония (+372); FI = Финландия (+358); FR = Франция (+33); DE = Германия (+49); GR = Гърция (+30); HU = Унгария (+36); IS = Исландия (+354); IN = Индия (+91); IE = Ирландия (+353); IL = Израел (+972); IT = Италия (+39); JP = Япония (+81); LV = Латвия (+371); LT = Литва (+370); LU = Люксембург (+352); MT = Малта (+356); MX = Мексико (+52); NL = Нидерландия (+31); NZ = Нова Зеландия (+64); NO = Норвегия (+47); PL = Полша (+48); PT = Португалия (+351); RO = Румъния (+40); RS = Сърбия (+381); SK = Словакия (+421); SI = Словения (+386); ZA = Южна Африка (+27); ES = Испания (+34); SE = Швеция (+46); CH = Швейцария (+41); TR = Турция (+90); GB = Обединено кралство (UK) (+44); US = САЩ (+1)</div></td>
 				<td>един избор</td>
 				<td><code>AL</code></td>
 			</tr>
@@ -5295,8 +5297,8 @@ wp site list --field=url | xargs -I% wp --url=% nashenski upgrade run</code></pr
 <li>Настройки, добавени от друг код чрез филтъра <code>nashenski_settings_areas</code>, не са в списъка.</li>
 </ul></div></section>
 <section id="developers" aria-labelledby="developers-h"><h2 id="developers-h"><span data-l="en">For developers</span><span data-l="bg">За разработчици</span></h2><div data-l="en">
-<p>A few hooks, found in the code. Each name is the one used in the source at version 0.23.5. A hook that belongs to one courier passes the courier (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) as its last argument. The names of version 0.21 still work, with their old arguments, but are deprecated and go in 0.23.0; <code>includes/compat/hook-names.php</code> lists the old and new names. The old names with slashes are gone. A PDF template copied from 0.21 must be made again from <code>includes/documents/views/document.php</code> (filter <code>nashenski_document_view</code>); until then the bundled template is used.</p></div><div data-l="bg">
-<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.23.5. Кука, която принадлежи на един куриер, подава куриера (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) като последен аргумент. Имената от версия 0.21 още работят, със старите си аргументи, но са остарели и отпадат в 0.23.0; <code>includes/compat/hook-names.php</code> показва старите и новите имена. Старите имена с наклонени черти вече не работят. PDF шаблон, копиран от 0.21, трябва да се направи отново от <code>includes/documents/views/document.php</code> (филтър <code>nashenski_document_view</code>); дотогава се ползва вграденият шаблон.</p></div><div class="table-wrap" data-l="en"><table>
+<p>A few hooks, found in the code. Each name is the one used in the source at version 0.23.6. A hook that belongs to one courier passes the courier (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) as its last argument. The names of version 0.21 still work, with their old arguments, but are deprecated and go in 0.23.0; <code>includes/compat/hook-names.php</code> lists the old and new names. The old names with slashes are gone. A PDF template copied from 0.21 must be made again from <code>includes/documents/views/document.php</code> (filter <code>nashenski_document_view</code>); until then the bundled template is used.</p></div><div data-l="bg">
+<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.23.6. Кука, която принадлежи на един куриер, подава куриера (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) като последен аргумент. Имената от версия 0.21 още работят, със старите си аргументи, но са остарели и отпадат в 0.23.0; <code>includes/compat/hook-names.php</code> показва старите и новите имена. Старите имена с наклонени черти вече не работят. PDF шаблон, копиран от 0.21, трябва да се направи отново от <code>includes/documents/views/document.php</code> (филтър <code>nashenski_document_view</code>); дотогава се ползва вграденият шаблон.</p></div><div class="table-wrap" data-l="en"><table>
 <thead><tr><th>Hook</th><th>Type</th><th>What it does</th></tr></thead>
 <tbody><tr><td><code>nashenski_settings_areas</code></td><td>filter</td><td>Change the list of settings areas</td></tr><tr><td><code>nashenski_settings_schema</code></td><td>filter</td><td>Add fields to a settings area ($fields, $area), for example documents</td></tr><tr><td><code>nashenski_settings_saved</code></td><td>action</td><td>Runs after a settings area is saved ($area; login checks and profile data); also run by the command line</td></tr><tr><td><code>nashenski_export_nra_orders</code>, <code>nashenski_export_nra_refunds</code></td><td>filter</td><td>Change the orders of an NRA export month</td></tr><tr><td><code>nashenski_waybill_default_weight</code>, <code>nashenski_waybill_min_weight</code></td><td>filter</td><td>Default and minimum parcel weight for waybills ($kg, $courier)</td></tr><tr><td><code>nashenski_waybill_request</code></td><td>filter</td><td>Change the waybill request body before it is sent ($request, $order, $courier)</td></tr><tr><td><code>nashenski_services_ready</code>, <code>nashenski_modules_started</code></td><td>action</td><td>Before and after the plugin's parts are started</td></tr><tr><td><code>nashenski_latin_place_names</code></td><td>filter</td><td>Whether checkout office and locker names show in Latin (bool, locale); by default on pages that are not in Bulgarian</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Кука</th><th>Вид</th><th>Какво прави</th></tr></thead>
@@ -5534,7 +5536,7 @@ wp site list --field=url | xargs -I% wp --url=% nashenski upgrade run</code></pr
 <tbody><tr><td>Courier websites (public price lists)</td><td>Only a normal page request, when you press "Check the courier website" and once a week: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Prices, labels, offices, cities, shipment status and courier requests: the receiver's name, phone, address or office, the parcel details and the cash on delivery amount. Hosts: ee.econt.com, demo.econt.com</td></tr><tr><td>Econt and Speedy office maps</td><td>Only when the customer presses "Choose on the map". The town is sent (Speedy: only the town number). Speedy's map uses Google Maps.</td></tr><tr><td>Speedy</td><td>Same purpose and data as Econt. Hosts: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Lockers, labels and status. Hosts: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Offices, lockers, prices, labels and status. Hosts: api.pigeonexpress.com, api-demo.pigeonexpress.com. Without a login, the public list of offices and lockers is loaded (nothing about the customer is sent)</td></tr><tr><td>nekorekten.com</td><td>The customer's phone number for a lookup; and, only when you press "Send report", the report with the name, phone and email of that order. Host: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>The customer's phone number, and shipment data when tracking is on. Hosts: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>The customer's phone number, and labels when that option is on. Host: nepostop.com</td></tr><tr><td>EU VIES</td><td>The VAT number a company customer enters at checkout. Host: ec.europa.eu</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Услуга</th><th>Какво се изпраща и кога</th></tr></thead>
 <tbody><tr><td>Сайтове на куриерите (публични ценови листи)</td><td>Само обикновена заявка за страница, когато натиснете „Проверка в сайта на куриера“ и веднъж седмично: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Цени, товарителници, офиси, населени места, статус на пратка и заявки за куриер: името, телефонът, адресът или офисът на получателя, данните за пратката и сумата на наложения платеж. Хостове: ee.econt.com, demo.econt.com</td></tr><tr><td>Картите на офисите на Econt и Speedy</td><td>Само когато клиентът натисне „Избор на картата“. Населеното място се изпраща (при Speedy: само номерът на населеното място). Картата на Speedy използва Google Maps.</td></tr><tr><td>Speedy</td><td>Същата цел и данни като при Econt. Хостове: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Автомати, товарителници и статус. Хостове: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Офиси, автомати, цени, товарителници и статус. Хостове: api.pigeonexpress.com, api-demo.pigeonexpress.com. Без вход се зарежда публичният списък с офиси и автомати (нищо за клиента не се изпраща)</td></tr><tr><td>nekorekten.com</td><td>Телефонният номер на клиента за проверка; и, само когато натиснете „Изпрати сигнал“, сигналът с името, телефона и имейла на поръчката. Хост: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>Телефонният номер на клиента и данните за пратката, когато проследяването е включено. Хостове: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>Телефонният номер на клиента и товарителниците, когато тази опция е включена. Хост: nepostop.com</td></tr><tr><td>EU VIES</td><td>ДДС номерът, който фирмен клиент въвежда при плащане. Хост: ec.europa.eu</td></tr></tbody></table></div><div data-l="en"><p>Terms and privacy links of each service are in the readme file of the plugin.</p></div><div data-l="bg"><p>Линковете към условията и политиката за поверителност на всяка услуга са в readme файла на добавката.</p></div></section>
-<p class="note"><span data-l="en">Built from the plugin source at version 0.23.5. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.23.5. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
+<p class="note"><span data-l="en">Built from the plugin source at version 0.23.6. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.23.6. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
 </main>
 </div>
 <script>
