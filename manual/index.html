@@ -96,7 +96,7 @@ section{padding:20px 16px}
 <div class="layout">
 <aside id="side">
 	<div class="brand"><img class="mark" src="img/logo.png" alt="" width="34" height="34"><strong><span data-l="en">Nashenski Commerce</span><span data-l="bg">Нашенски Комерс</span></strong></div>
-	<p class="version"><span data-l="en">Manual for version 0.23.6, built 2026-11-25</span><span data-l="bg">Ръководство за версия 0.23.6, изградено на 2026-11-25</span></p>
+	<p class="version"><span data-l="en">Manual for version 0.24.0, built 2026-11-26</span><span data-l="bg">Ръководство за версия 0.24.0, изградено на 2026-11-26</span></p>
 	<div class="lang-switch lang-switch-side" role="group" aria-label="Language / Език">
 		<button type="button" data-set-lang="en" aria-pressed="true">EN</button>
 		<button type="button" data-set-lang="bg" aria-pressed="false">BG</button>
@@ -117,7 +117,7 @@ section{padding:20px 16px}
 <section id="overview" aria-labelledby="overview-h"><h2 id="overview-h"><span data-l="en">What it is</span><span data-l="bg">Какво е</span></h2><div data-l="en">
 <p>Nashenski Commerce adds what a Bulgarian online store needs to WooCommerce: the couriers Econt, Speedy, BOX NOW and Pigeon Express, invoices and the documents of Ordinance N-18 (the light regime), the customer checks before cash on delivery, quick orders, abandoned carts and the EU withdrawal function.</p>
 <p>Everything runs on your own site. Prices, labels and documents are made by your site and sent only to the services you turn on. The plugin is free. Nashenski Pro is a separate paid add-on, see <a href="#pro">Nashenski Pro</a>.</p>
-<div class="callout"><strong>Version 0.23.6.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab.</div>
+<div class="callout"><strong>Version 0.24.0.</strong> This page describes that version. Settings you do not see on your screen are hidden on purpose: a courier that is off has no tab.</div>
 <h3>Requirements</h3>
 <ul>
 <li>WordPress 6.5 or newer, tested up to 7.1.</li>
@@ -128,7 +128,7 @@ section{padding:20px 16px}
 <h3>What is inside</h3></div><div data-l="bg">
 <p>Nashenski Commerce добавя към WooCommerce това, от което се нуждае българският онлайн магазин: куриерите Econt, Speedy, BOX NOW и Pigeon Express, фактури и документите по Наредба Н-18 (облекчения режим), проверките на клиентите преди наложен платеж, бързи поръчки, изоставени колички и функцията за отказ от договор от ЕС.</p>
 <p>Всичко работи във вашия собствен сайт. Цените, товарителниците и документите се създават от сайта ви и се изпращат само до услугите, които включите. Добавката е безплатна. Нашенски Про е отделна платена добавка, вижте <a href="#pro">Нашенски Про</a>.</p>
-<div class="callout"><strong>Версия 0.23.6.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел.</div>
+<div class="callout"><strong>Версия 0.24.0.</strong> Това ръководство описва тази версия. Настройките, които не виждате на екрана си, са скрити нарочно: куриер, който е изключен, няма раздел.</div>
 <h3>Изисквания</h3>
 <ul>
 <li>WordPress 6.5 или по-нов, тестван до 7.1.</li>
@@ -199,7 +199,8 @@ section{padding:20px 16px}
 <li><strong>Sender.</strong> "Where you send from" (address, city and office, depending on the courier) and the sender name and phone.</li>
 <li><strong>Offices, cities and lockers</strong> are kept on your site and refreshed once a week. "Reload offices and cities" on a courier tab refreshes them at once. From the command line: <code>wp nashenski courier reload econt</code>.</li>
 <li><strong>Prices.</strong> With a working login, the courier calculates each price with your contract. Without one, or when the courier does not answer, the courier's public price list is used so customers can always order. See Shipping prices below.</li>
-<li><strong>Waybills and labels.</strong> A waybill is made from the order: in the courier box on the order, or from the orders list (bulk action "Create waybill"). Labels print from the order or the orders list. Where a courier offers several print sizes, choose one first. BOX NOW and Pigeon Express keep one live label per order: cancel it to make a new one. A label made from the orders list or when the order is placed takes cash on delivery from the order's current payment method.</li>
+<li><strong>Waybills and labels.</strong> A waybill is made from the order: in the courier box on the order, or from the orders list (bulk action "Create waybill"). Labels print from the order or the orders list. Where a courier offers several print sizes, choose one first. BOX NOW and Pigeon Express keep one live label per order: cancel it to make a new one. A label made from the orders list or when the order is placed takes cash on delivery from the order's current payment method. Only one label request per order runs at a time. When the courier gives no clear answer (a timeout or a server error), the label may exist anyway: the order is marked, and new labels wait until you check your account with the courier and confirm in the label box.</li>
+<li><strong>Courier price errors.</strong> When a courier cannot price a cart at checkout, its last errors show in its own words in the label box and on its tab, never to shoppers. The tab also counts the products without a weight, which are priced at the default 1 kg, and links to them.</li>
 <li><strong>Generate label after checkout.</strong> On each courier tab. The waybill is made as soon as the order is placed.</li>
 <li><strong>Courier requests.</strong> "Request a courier" books a pick-up for Econt and Speedy only; the other couriers collect with the waybill itself. Econt skips weekends and holidays by itself; Speedy picks the next possible day.</li>
 <li><strong>Tracking.</strong> The customer sees "Track your parcel" with the waybill number on the order page, and in the order emails.</li>
@@ -213,7 +214,8 @@ section{padding:20px 16px}
 <li><strong>Подател.</strong> „Откъде изпращате“ (адрес, населено място и офис, според куриера) и името и телефонът на подателя.</li>
 <li><strong>Офиси, населени места и автомати</strong> се пазят във вашия сайт и се обновяват веднъж седмично. „Презареждане на офиси и населени места“ в раздела на куриера ги обновява веднага. От командния ред: <code>wp nashenski courier reload econt</code>.</li>
 <li><strong>Цени.</strong> С работещ вход куриерът изчислява всяка цена по вашия договор. Без вход или когато куриерът не отговаря, се ползва публичната ценова листа на куриера, така че клиентите винаги могат да поръчат. Вижте по-долу „Живи цени и публична ценова листа“.</li>
-<li><strong>Товарителници и етикети.</strong> Товарителницата се създава от поръчката: в кутията на куриера в поръчката или от списъка с поръчки (групово действие „Създаване на товарителница“). Етикетите се печатат от поръчката или от списъка с поръчки. Когато куриерът предлага няколко размера на печат, изберете един преди това. BOX NOW и Pigeon Express пазят по една активна товарителница на поръчка: откажете я, за да направите нова. Товарителница от списъка с поръчки или при създаването на поръчката взема наложения платеж от текущия начин на плащане.</li>
+<li><strong>Товарителници и етикети.</strong> Товарителницата се създава от поръчката: в кутията на куриера в поръчката или от списъка с поръчки (групово действие „Създаване на товарителница“). Етикетите се печатат от поръчката или от списъка с поръчки. Когато куриерът предлага няколко размера на печат, изберете един преди това. BOX NOW и Pigeon Express пазят по една активна товарителница на поръчка: откажете я, за да направите нова. Товарителница от списъка с поръчки или при създаването на поръчката взема наложения платеж от текущия начин на плащане. За една поръчка се изпълнява само една заявка за товарителница наведнъж. Когато куриерът не даде ясен отговор (изтекло време или грешка в сървъра), товарителницата може вече да съществува: поръчката се отбелязва и нови товарителници чакат, докато проверите профила си при куриера и потвърдите в полето на куриера.</li>
+<li><strong>Грешки в цените на куриера.</strong> Когато куриерът не може да изчисли цена на количка при поръчка, последните му грешки се показват с неговите думи в полето на куриера и в неговия раздел, никога пред купувачите. Разделът брои и продуктите без тегло, които се изчисляват с 1 кг по подразбиране, и води към тях.</li>
 <li><strong>Генериране на етикет след поръчка.</strong> В раздела на всеки куриер. Товарителницата се създава веднага щом поръчката е направена.</li>
 <li><strong>Заявки за куриер.</strong> „Заявка за куриер“ резервира вземане само за Econt и Speedy; останалите куриери взимат пратката с товарителницата. Econt пропуска съботите, неделите и празниците сам; Speedy избира следващия възможен ден.</li>
 <li><strong>Проследяване.</strong> Клиентът вижда „Проследете пратката си“ с номера на товарителницата на страницата с поръчката и в имейлите за поръчката.</li>
@@ -244,9 +246,9 @@ section{padding:20px 16px}
 				<td>text (hidden here)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_profile courier profile pick a profile and save. the other options then appear or update. ">
+			<tr data-search-en="courier_econt.sender_profile courier profile pick a profile and save. the other options then appear or update. an account can have several sender profiles. waybills are made with the one you choose.">
 				<td><code>courier_econt.sender_profile</code></td>
-				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="desc">An account can have several sender profiles. Waybills are made with the one you choose.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>0</code></td>
 			</tr>
@@ -262,27 +264,27 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_econt.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. ">
+			<tr data-search-en="courier_econt.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. use it only when the waybill contents miss sizes or colours of the products.">
 				<td><code>courier_econt.variations_in_contents</code></td>
-				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div></td>
+				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div><div class="desc">Use it only when the waybill contents miss sizes or colours of the products.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_econt.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_econt.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. ">
+			<tr data-search-en="courier_econt.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. insures the parcel for the order value. the courier charges a little extra for it.">
 				<td><code>courier_econt.insure</code></td>
-				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div></td>
+				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div><div class="desc">Insures the parcel for the order value. The courier charges a little extra for it.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.locker_size calculate the box size works out the length, width and height of the parcel box. ">
+			<tr data-search-en="courier_econt.locker_size calculate the box size works out the length, width and height of the parcel box. uses the product dimensions to fit the order into the courier&#39;s box sizes. products without dimensions count as the default size.">
 				<td><code>courier_econt.locker_size</code></td>
-				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div></td>
+				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div><div class="desc">Uses the product dimensions to fit the order into the courier&#39;s box sizes. Products without dimensions count as the default size.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -292,27 +294,27 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_kind ship from choose where your parcels leave from, then save to see more options. ">
+			<tr data-search-en="courier_econt.sender_kind ship from choose where your parcels leave from, then save to see more options. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
 				<td><code>courier_econt.sender_kind</code></td>
-				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="choices">Choices: office = Office; address = Address</div></td>
+				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
 				<td>one choice</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_address sender address  ">
+			<tr data-search-en="courier_econt.sender_address sender address  where your parcels start. prices are calculated from here.">
 				<td><code>courier_econt.sender_address</code></td>
-				<td><strong>Sender address</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Sender address</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>0</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_office_town city  ">
+			<tr data-search-en="courier_econt.sender_office_town city  where your parcels start. prices are calculated from here.">
 				<td><code>courier_econt.sender_office_town</code></td>
-				<td><strong>City</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>cityID-4</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_office office pick a city and save to see its offices. ">
+			<tr data-search-en="courier_econt.sender_office office pick a city and save to see its offices. where your parcels start. prices are calculated from here.">
 				<td><code>courier_econt.sender_office</code></td>
-				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>officeID-6017</code></td>
 			</tr></tbody>
@@ -341,9 +343,9 @@ section{padding:20px 16px}
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. ">
+			<tr data-search-bg="courier_econt.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. един профил може да има няколко профила на подател. товарителниците се създават с избрания.">
 				<td><code>courier_econt.sender_profile</code></td>
-				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="desc">Един профил може да има няколко профила на подател. Товарителниците се създават с избрания.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>0</code></td>
 			</tr>
@@ -359,27 +361,27 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_econt.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. ">
+			<tr data-search-bg="courier_econt.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.">
 				<td><code>courier_econt.variations_in_contents</code></td>
-				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div></td>
+				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div><div class="desc">Използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_econt.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_econt.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. ">
+			<tr data-search-bg="courier_econt.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. застрахова пратката за стойността на поръчката. куриерът взема малка допълнителна такса за това.">
 				<td><code>courier_econt.insure</code></td>
-				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div></td>
+				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div><div class="desc">Застрахова пратката за стойността на поръчката. Куриерът взема малка допълнителна такса за това.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. ">
+			<tr data-search-bg="courier_econt.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. използва размерите на продуктите, за да събере поръчката в кутиите на куриера. продуктите без размери се броят с размера по подразбиране.">
 				<td><code>courier_econt.locker_size</code></td>
-				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div></td>
+				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div><div class="desc">Използва размерите на продуктите, за да събере поръчката в кутиите на куриера. Продуктите без размери се броят с размера по подразбиране.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -389,27 +391,27 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. ">
+			<tr data-search-bg="courier_econt.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>courier_econt.sender_kind</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_address адрес на подателя  ">
+			<tr data-search-bg="courier_econt.sender_address адрес на подателя  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_econt.sender_address</code></td>
-				<td><strong>Адрес на подателя</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Адрес на подателя</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>0</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_office_town град  ">
+			<tr data-search-bg="courier_econt.sender_office_town град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_econt.sender_office_town</code></td>
-				<td><strong>Град</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>cityID-4</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_office офис изберете град и запазете, за да се покажат офисите. ">
+			<tr data-search-bg="courier_econt.sender_office офис изберете град и запазете, за да се покажат офисите. откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_econt.sender_office</code></td>
-				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>officeID-6017</code></td>
 			</tr></tbody>
@@ -436,9 +438,9 @@ section{padding:20px 16px}
 				<td>text (hidden here)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_speedy.sender_profile courier profile pick a profile and save. the other options then appear or update. ">
+			<tr data-search-en="courier_speedy.sender_profile courier profile pick a profile and save. the other options then appear or update. an account can have several sender profiles. waybills are made with the one you choose.">
 				<td><code>courier_speedy.sender_profile</code></td>
-				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="desc">An account can have several sender profiles. Waybills are made with the one you choose.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>0</code></td>
 			</tr>
@@ -472,39 +474,39 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. ">
+			<tr data-search-en="courier_speedy.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. use it only when the waybill contents miss sizes or colours of the products.">
 				<td><code>courier_speedy.variations_in_contents</code></td>
-				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div></td>
+				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div><div class="desc">Use it only when the waybill contents miss sizes or colours of the products.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_speedy.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_speedy.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. ">
+			<tr data-search-en="courier_speedy.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. insures the parcel for the order value. the courier charges a little extra for it.">
 				<td><code>courier_speedy.insure</code></td>
-				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div></td>
+				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div><div class="desc">Insures the parcel for the order value. The courier charges a little extra for it.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.locker_size calculate the box size works out the length, width and height of the parcel box. ">
+			<tr data-search-en="courier_speedy.locker_size calculate the box size works out the length, width and height of the parcel box. uses the product dimensions to fit the order into the courier&#39;s box sizes. products without dimensions count as the default size.">
 				<td><code>courier_speedy.locker_size</code></td>
-				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div></td>
+				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div><div class="desc">Uses the product dimensions to fit the order into the courier&#39;s box sizes. Products without dimensions count as the default size.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.sender_kind ship from choose where your parcels leave from, then save to see more options. with &quot;address&quot;, parcels leave from the address in your profile. ">
+			<tr data-search-en="courier_speedy.sender_kind ship from choose where your parcels leave from, then save to see more options. with &quot;address&quot;, parcels leave from the address in your profile. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
 				<td><code>courier_speedy.sender_kind</code></td>
-				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options. With &quot;Address&quot;, parcels leave from the address in your profile.</div><div class="choices">Choices: office = Office; address = Address</div></td>
+				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options. With &quot;Address&quot;, parcels leave from the address in your profile.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
 				<td>one choice</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.sender_town city  ">
+			<tr data-search-en="courier_speedy.sender_town city  where your parcels start. prices are calculated from here.">
 				<td><code>courier_speedy.sender_town</code></td>
-				<td><strong>City</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>cityID-14</code></td>
 			</tr>
@@ -533,9 +535,9 @@ section{padding:20px 16px}
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. ">
+			<tr data-search-bg="courier_speedy.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. един профил може да има няколко профила на подател. товарителниците се създават с избрания.">
 				<td><code>courier_speedy.sender_profile</code></td>
-				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="desc">Един профил може да има няколко профила на подател. Товарителниците се създават с избрания.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>0</code></td>
 			</tr>
@@ -569,39 +571,39 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. ">
+			<tr data-search-bg="courier_speedy.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.">
 				<td><code>courier_speedy.variations_in_contents</code></td>
-				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div></td>
+				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div><div class="desc">Използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_speedy.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_speedy.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. ">
+			<tr data-search-bg="courier_speedy.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. застрахова пратката за стойността на поръчката. куриерът взема малка допълнителна такса за това.">
 				<td><code>courier_speedy.insure</code></td>
-				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div></td>
+				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div><div class="desc">Застрахова пратката за стойността на поръчката. Куриерът взема малка допълнителна такса за това.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. ">
+			<tr data-search-bg="courier_speedy.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. използва размерите на продуктите, за да събере поръчката в кутиите на куриера. продуктите без размери се броят с размера по подразбиране.">
 				<td><code>courier_speedy.locker_size</code></td>
-				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div></td>
+				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div><div class="desc">Използва размерите на продуктите, за да събере поръчката в кутиите на куриера. Продуктите без размери се броят с размера по подразбиране.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. при „адрес“ пратките тръгват от адреса в профила ви. ">
+			<tr data-search-bg="courier_speedy.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. при „адрес“ пратките тръгват от адреса в профила ви. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>courier_speedy.sender_kind</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки. При „Адрес“ пратките тръгват от адреса в профила ви.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки. При „Адрес“ пратките тръгват от адреса в профила ви.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.sender_town град  ">
+			<tr data-search-bg="courier_speedy.sender_town град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_speedy.sender_town</code></td>
-				<td><strong>Град</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>cityID-14</code></td>
 			</tr>
@@ -670,9 +672,9 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_boxnow.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_boxnow.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_boxnow.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -761,9 +763,9 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_boxnow.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_boxnow.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_boxnow.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -826,27 +828,27 @@ section{padding:20px 16px}
 				<td>text (hidden here)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_pigeon.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_pigeon.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.locker_size calculate the box size works out the length, width and height of the parcel box. ">
+			<tr data-search-en="courier_pigeon.locker_size calculate the box size works out the length, width and height of the parcel box. uses the product dimensions to fit the order into the courier&#39;s box sizes. products without dimensions count as the default size.">
 				<td><code>courier_pigeon.locker_size</code></td>
-				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div></td>
+				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div><div class="desc">Uses the product dimensions to fit the order into the courier&#39;s box sizes. Products without dimensions count as the default size.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.sender_kind ship from choose where your parcels leave from, then save to see more options. ">
+			<tr data-search-en="courier_pigeon.sender_kind ship from choose where your parcels leave from, then save to see more options. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
 				<td><code>courier_pigeon.sender_kind</code></td>
-				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="choices">Choices: office = Office; address = Address</div></td>
+				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
 				<td>one choice</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.sender_town city  ">
+			<tr data-search-en="courier_pigeon.sender_town city  where your parcels start. prices are calculated from here.">
 				<td><code>courier_pigeon.sender_town</code></td>
-				<td><strong>City</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>cityID-2924</code></td>
 			</tr>
@@ -856,9 +858,9 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.sender_office office pick a city and save to see its offices. ">
+			<tr data-search-en="courier_pigeon.sender_office office pick a city and save to see its offices. where your parcels start. prices are calculated from here.">
 				<td><code>courier_pigeon.sender_office</code></td>
-				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>officeID-26</code></td>
 			</tr>
@@ -929,27 +931,27 @@ section{padding:20px 16px}
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_pigeon.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_pigeon.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. ">
+			<tr data-search-bg="courier_pigeon.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. използва размерите на продуктите, за да събере поръчката в кутиите на куриера. продуктите без размери се броят с размера по подразбиране.">
 				<td><code>courier_pigeon.locker_size</code></td>
-				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div></td>
+				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div><div class="desc">Използва размерите на продуктите, за да събере поръчката в кутиите на куриера. Продуктите без размери се броят с размера по подразбиране.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. ">
+			<tr data-search-bg="courier_pigeon.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>courier_pigeon.sender_kind</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.sender_town град  ">
+			<tr data-search-bg="courier_pigeon.sender_town град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_pigeon.sender_town</code></td>
-				<td><strong>Град</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>cityID-2924</code></td>
 			</tr>
@@ -959,9 +961,9 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.sender_office офис изберете град и запазете, за да се покажат офисите. ">
+			<tr data-search-bg="courier_pigeon.sender_office офис изберете град и запазете, за да се покажат офисите. откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_pigeon.sender_office</code></td>
-				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>officeID-26</code></td>
 			</tr>
@@ -1295,6 +1297,12 @@ section{padding:20px 16px}
 				<td><strong>Withdrawal period (days)</strong><div class="desc">The link shows on an order (My Account, order page, order emails) until this many days after the order is completed. The form itself is always open.</div><div class="desc">14 days is the legal minimum; give more if your terms promise more.</div></td>
 				<td>number</td>
 				<td><code>14</code></td>
+			</tr>
+			<tr data-search-en="checkout.minimum_order minimum order amount orders whose products cost less, with vat and after coupons, cannot be placed. delivery does not count. leave empty or 0 for no minimum. in the shop currency, for example 30. the order cannot be placed until the products reach it.">
+				<td><code>checkout.minimum_order</code></td>
+				<td><strong>Minimum order amount</strong><div class="desc">Orders whose products cost less, with VAT and after coupons, cannot be placed. Delivery does not count. Leave empty or 0 for no minimum.</div><div class="desc">In the shop currency, for example 30. The order cannot be placed until the products reach it.</div></td>
+				<td>number</td>
+				<td><span class="muted">empty</span></td>
 			</tr></tbody>
 		</table>
 		</div>
@@ -1434,6 +1442,12 @@ section{padding:20px 16px}
 				<td><strong>Срок за отказ (дни)</strong><div class="desc">Връзката се показва при поръчката (Моят профил, страницата на поръчката, имейлите) до толкова дни след завършването ѝ. Самият формуляр е винаги достъпен.</div><div class="desc">14 дни е законовият минимум; дайте повече, ако общите Ви условия обещават повече.</div></td>
 				<td>число</td>
 				<td><code>14</code></td>
+			</tr>
+			<tr data-search-bg="checkout.minimum_order минимална сума на поръчката поръчки, чиито продукти струват по-малко, с ддс и след купоните, не могат да бъдат направени. доставката не се брои. оставете празно или 0 за без минимум. във валутата на магазина, например 30. поръчката не може да бъде направена, докато продуктите не я достигнат.">
+				<td><code>checkout.minimum_order</code></td>
+				<td><strong>Минимална сума на поръчката</strong><div class="desc">Поръчки, чиито продукти струват по-малко, с ДДС и след купоните, не могат да бъдат направени. Доставката не се брои. Оставете празно или 0 за без минимум.</div><div class="desc">Във валутата на магазина, например 30. Поръчката не може да бъде направена, докато продуктите не я достигнат.</div></td>
+				<td>число</td>
+				<td><span class="muted">празно</span></td>
 			</tr></tbody>
 		</table>
 		</div><figure data-l="en"><img src="img/screenshot-2.png" alt="The Checkout page with countries, courier logos, transliteration and company invoice fields" loading="lazy"><figcaption>The Checkout page: countries, courier logos, address transliteration and the company invoice fields.</figcaption></figure><figure data-l="bg"><img src="img/screenshot-2.png" alt="Страницата Плащане с държави, лога на куриери, превод на адреси и полета за фирма" loading="lazy"><figcaption>Страницата Плащане: държави, лога на куриери, превод на адреси и полетата за фирма.</figcaption></figure></section>
@@ -2030,39 +2044,39 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.payment_bacs payment type for the nra  how the nra audit file shows this payment.">
+			<tr data-search-en="nra.payment_bacs payment type for the nra the nra payment type of this payment method. how the nra audit file shows this payment.">
 				<td><code>nra.payment_bacs</code></td>
-				<td><strong>Payment type for the NRA</strong><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
+				<td><strong>Payment type for the NRA</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
 				<td>one choice</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="nra.pos_bacs virtual pos number  ">
+			<tr data-search-en="nra.pos_bacs virtual pos number the number of the virtual pos terminal from your bank. needed in the nra audit file for card payments.">
 				<td><code>nra.pos_bacs</code></td>
-				<td><strong>Virtual POS number</strong></td>
+				<td><strong>Virtual POS number</strong><div class="desc">The number of the virtual POS terminal from your bank.</div><div class="desc">Needed in the NRA audit file for card payments.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.provider_bacs payment provider id  ">
+			<tr data-search-en="nra.provider_bacs payment provider id the identifier of the payment provider, if it gave you one. goes into the nra audit file with each payment.">
 				<td><code>nra.provider_bacs</code></td>
-				<td><strong>Payment provider ID</strong></td>
+				<td><strong>Payment provider ID</strong><div class="desc">The identifier of the payment provider, if it gave you one.</div><div class="desc">Goes into the NRA audit file with each payment.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.payment_cod payment type for the nra  how the nra audit file shows this payment.">
+			<tr data-search-en="nra.payment_cod payment type for the nra the nra payment type of this payment method. how the nra audit file shows this payment.">
 				<td><code>nra.payment_cod</code></td>
-				<td><strong>Payment type for the NRA</strong><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
+				<td><strong>Payment type for the NRA</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
 				<td>one choice</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="nra.pos_cod virtual pos number  ">
+			<tr data-search-en="nra.pos_cod virtual pos number the number of the virtual pos terminal from your bank. needed in the nra audit file for card payments.">
 				<td><code>nra.pos_cod</code></td>
-				<td><strong>Virtual POS number</strong></td>
+				<td><strong>Virtual POS number</strong><div class="desc">The number of the virtual POS terminal from your bank.</div><div class="desc">Needed in the NRA audit file for card payments.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.provider_cod payment provider id  ">
+			<tr data-search-en="nra.provider_cod payment provider id the identifier of the payment provider, if it gave you one. goes into the nra audit file with each payment.">
 				<td><code>nra.provider_cod</code></td>
-				<td><strong>Payment provider ID</strong></td>
+				<td><strong>Payment provider ID</strong><div class="desc">The identifier of the payment provider, if it gave you one.</div><div class="desc">Goes into the NRA audit file with each payment.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -2409,39 +2423,39 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.payment_bacs вид плащане за нап  как се отбелязва това плащане в одиторския файл за нап.">
+			<tr data-search-bg="nra.payment_bacs вид плащане за нап видът плащане за нап за този метод на плащане. как се отбелязва това плащане в одиторския файл за нап.">
 				<td><code>nra.payment_bacs</code></td>
-				<td><strong>Вид плащане за НАП</strong><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
+				<td><strong>Вид плащане за НАП</strong><div class="desc">Видът плащане за НАП за този метод на плащане.</div><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="nra.pos_bacs номер на виртуалния пос терминал  ">
+			<tr data-search-bg="nra.pos_bacs номер на виртуалния пос терминал номерът на виртуалния пос терминал от банката ви. нужен е в одиторския файл за нап при плащания с карта.">
 				<td><code>nra.pos_bacs</code></td>
-				<td><strong>Номер на виртуалния ПОС терминал</strong></td>
+				<td><strong>Номер на виртуалния ПОС терминал</strong><div class="desc">Номерът на виртуалния ПОС терминал от банката Ви.</div><div class="desc">Нужен е в одиторския файл за НАП при плащания с карта.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.provider_bacs идентификатор на доставчика на плащания  ">
+			<tr data-search-bg="nra.provider_bacs идентификатор на доставчика на плащания идентификаторът на доставчика на плащания, ако ви е дал такъв. влиза в одиторския файл за нап с всяко плащане.">
 				<td><code>nra.provider_bacs</code></td>
-				<td><strong>Идентификатор на доставчика на плащания</strong></td>
+				<td><strong>Идентификатор на доставчика на плащания</strong><div class="desc">Идентификаторът на доставчика на плащания, ако Ви е дал такъв.</div><div class="desc">Влиза в одиторския файл за НАП с всяко плащане.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.payment_cod вид плащане за нап  как се отбелязва това плащане в одиторския файл за нап.">
+			<tr data-search-bg="nra.payment_cod вид плащане за нап видът плащане за нап за този метод на плащане. как се отбелязва това плащане в одиторския файл за нап.">
 				<td><code>nra.payment_cod</code></td>
-				<td><strong>Вид плащане за НАП</strong><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
+				<td><strong>Вид плащане за НАП</strong><div class="desc">Видът плащане за НАП за този метод на плащане.</div><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="nra.pos_cod номер на виртуалния пос терминал  ">
+			<tr data-search-bg="nra.pos_cod номер на виртуалния пос терминал номерът на виртуалния пос терминал от банката ви. нужен е в одиторския файл за нап при плащания с карта.">
 				<td><code>nra.pos_cod</code></td>
-				<td><strong>Номер на виртуалния ПОС терминал</strong></td>
+				<td><strong>Номер на виртуалния ПОС терминал</strong><div class="desc">Номерът на виртуалния ПОС терминал от банката Ви.</div><div class="desc">Нужен е в одиторския файл за НАП при плащания с карта.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.provider_cod идентификатор на доставчика на плащания  ">
+			<tr data-search-bg="nra.provider_cod идентификатор на доставчика на плащания идентификаторът на доставчика на плащания, ако ви е дал такъв. влиза в одиторския файл за нап с всяко плащане.">
 				<td><code>nra.provider_cod</code></td>
-				<td><strong>Идентификатор на доставчика на плащания</strong></td>
+				<td><strong>Идентификатор на доставчика на плащания</strong><div class="desc">Идентификаторът на доставчика на плащания, ако Ви е дал такъв.</div><div class="desc">Влиза в одиторския файл за НАП с всяко плащане.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -2542,6 +2556,7 @@ section{padding:20px 16px}
 <ul>
 <li><strong>NRA audit file (XML).</strong> The standardised file of Ordinance N-18 (Annex 38) for any number of orders. It is checked against the NRA schema before it is saved. Choose the month and press "Create XML file". Submit it to the NRA by the 15th.</li>
 <li><strong>Invoice archive.</strong> "Download archive" gives the invoices of a month as a ZIP.</li>
+<li><strong>File names.</strong> A downloaded document, an email attachment and the files in the invoice ZIP are named by kind, number and order, for example faktura-0000000123-poruchka-4567.pdf. The stored files keep random names, so nobody can guess them.</li>
 <li><strong>Microinvest Delta.</strong> "Create file" makes the file for the Delta accounting program.</li>
 <li><strong>Dates and months.</strong> Dates follow the site's time zone. In Delta and the archive each document goes into the month of its own date: an invoice in the month it was issued, a credit note in the month of its refund. A sale paid in a month stays in that month's NRA file even when it is refunded later.</li>
 <li><strong>Custom export.</strong> Orders, products sold or documents, with your filters, columns, order and file format (CSV, Excel, JSON or XML). Save an export to run it again next month. The "Documents" source picks documents by their own date (invoice date, credit note date).</li>
@@ -2552,6 +2567,7 @@ section{padding:20px 16px}
 <ul>
 <li><strong>Файл за НАП (XML).</strong> Стандартизираният файл по Наредба Н-18 (Приложение 38) за произволен брой поръчки. Проверява се по схемата на НАП, преди да се запази. Изберете месеца и натиснете „Създаване на XML файл“. Изпратете го на НАП до 15-о число.</li>
 <li><strong>Архив с фактури.</strong> „Изтегляне на архива“ дава фактурите на месец като ZIP файл.</li>
+<li><strong>Имена на файловете.</strong> Изтеглен документ, прикачен към имейл файл и файловете в ZIP архива с фактури се именуват по вид, номер и поръчка, например faktura-0000000123-poruchka-4567.pdf. Съхранените файлове запазват случайни имена, за да не може никой да ги отгатне.</li>
 <li><strong>Microinvest Delta.</strong> „Създаване на файл“ прави файла за счетоводната програма Delta.</li>
 <li><strong>Дати и месеци.</strong> Датите следват часовата зона на сайта. В Delta и в архива всеки документ влиза в месеца на своята дата: фактурата в месеца, в който е издадена, кредитното известие в месеца на връщането. Продажба, платена в даден месец, остава във файла за НАП за този месец, дори ако по-късно бъде върната.</li>
 <li><strong>Персонализиран експорт.</strong> Поръчки, продадени продукти или документи, с вашите филтри, колони, ред и формат на файла (CSV, Excel, JSON или XML). Запазете експорта, за да го пуснете отново следващия месец. Източникът „Документи“ избира документите по тяхната собствена дата (дата на фактурата, дата на кредитното известие).</li>
@@ -2729,8 +2745,9 @@ section{padding:20px 16px}
 <h3>Recommended settings</h3>
 <p>On the Help tab, a list of settings that suit most Bulgarian stores, each with its current and recommended value. Only the rows you tick are applied.</p>
 <h3>Moving from another plugin</h3>
-<p>The Help tab imports from Bulgarisation for WooCommerce (4.x and 5.x) and from the mreja.net plugins (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping for Econt and for Speedy, Econt Delivery and Speedy Shipping. The import takes over the courier logins, sender details, the waybill numbers of your orders, the shipping zone methods with the mreja.net free shipping totals and, from the N-18 plugin, the company details and document numbers. The order documents and invoices of Bulgarisation for WooCommerce move into the private documents folder and open from the order as before. After each import, deactivate the old plugin. Econt Delivery and Drusoft Shipping use a different Econt key: enter your Econt username and password after the import.</p>
+<p>The Help tab imports from Bulgarisation for WooCommerce (4.x and 5.x), BulCommerce 1.6.4 and the mreja.net plugins (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping for Econt and for Speedy, Econt Delivery and Speedy Shipping. The import takes over the courier logins, sender details, the waybill numbers of your orders, the shipping zone methods with the mreja.net free shipping totals and, from the N-18 plugin, the company details and document numbers. The order documents and invoices of Bulgarisation for WooCommerce move into the private documents folder and open from the order as before. After each import, deactivate the old plugin. Econt Delivery and Drusoft Shipping use a different Econt key: enter your Econt username and password after the import.</p>
 <p>While Bulgarisation for WooCommerce (4.x or 5.x) is active, Nashenski Commerce is paused; deactivate it before the import. Import the Ordinance N-18 plugin while it is off. Until its documents are imported, Nashenski Commerce makes no invoices or other documents while a new number could clash with one of them (the plugin is active, or a counter has not passed its numbers). If it is turned on again after the import, it can reuse numbers Nashenski Commerce already gave out: documents pause until its import is run again from the Help tab, which lists each order whose number clashes, to correct. An error notice says so, the PDF Files box of an order explains it, and orders made meanwhile get a note. Then use "Regenerate PDF's" for orders without documents.</p>
+<p>From BulCommerce it also takes the company, document, NRA, accountant and NepoStop settings, one Nashenski method for each of its methods in your shipping zones (the old one is turned off), and on orders the waybills, the courier shipping lines and the company details. The numbers of its sales documents, invoices and credit notes go onto their orders and refunds, and both counters continue after its highest numbers. Only empty Nashenski settings are filled; its licence key, Stripe settings, webhook key and backup token are never read. Like the N-18 plugin, BulCommerce is imported only while it is off, and documents pause while its numbers could clash.</p>
 <h3>Updates</h3>
 <p>New versions show up in Dashboard &gt; Updates and on the Plugins screen, like any other plugin update. Betas are opt in: install "Nashenski Commerce Beta Updates" from the GitHub release, and deactivate it to go back to the WordPress.org versions.</p></div><div data-l="bg">
 <h3>Математически невъзможни цени</h3>
@@ -2738,8 +2755,9 @@ section{padding:20px 16px}
 <h3>Препоръчителни настройки</h3>
 <p>В раздел Помощ има списък с настройки, които подхождат на повечето български магазини, всяка с текущата и препоръчителната си стойност. Прилагат се само отбелязаните редове.</p>
 <h3>Преминаване от друга добавка</h3>
-<p>Разделът Помощ импортира от Bulgarisation for WooCommerce (4.x и 5.x) и от добавките на mreja.net (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping за Econt и за Speedy, Econt Delivery и Speedy Shipping. Импортът взема входовете на куриерите, данните на подателя, номерата на товарителниците на поръчките, методите в зоните за доставка с праговете за безплатна доставка от mreja.net и от добавката за Н-18 - данните на фирмата и номерата на документите. Документите и фактурите от Bulgarisation for WooCommerce се преместват в частната папка за документи и се отварят от поръчката както преди. След всеки импорт деактивирайте старата добавка. Econt Delivery и Drusoft Shipping ползват друг ключ за Econt: след импорта въведете вашия потребител и парола за Econt.</p>
+<p>Разделът Помощ импортира от Bulgarisation for WooCommerce (4.x и 5.x), BulCommerce 1.6.4 и добавките на mreja.net (Econt Express, BOX NOW Delivery, Speedy shipping method, Pigeon Express shipping, Ordinance N-18 light regime), Drusoft Shipping за Econt и за Speedy, Econt Delivery и Speedy Shipping. Импортът взема входовете на куриерите, данните на подателя, номерата на товарителниците на поръчките, методите в зоните за доставка с праговете за безплатна доставка от mreja.net и от добавката за Н-18 - данните на фирмата и номерата на документите. Документите и фактурите от Bulgarisation for WooCommerce се преместват в частната папка за документи и се отварят от поръчката както преди. След всеки импорт деактивирайте старата добавка. Econt Delivery и Drusoft Shipping ползват друг ключ за Econt: след импорта въведете вашия потребител и парола за Econt.</p>
 <p>Докато Bulgarisation for WooCommerce (4.x или 5.x) е активна, Нашенски Комерс е на пауза; деактивирайте я преди импорта. Импортирайте добавката за Н-18, докато е изключена. Докато документите ѝ не са импортирани, Нашенски Комерс не създава фактури и други документи, ако нов номер може да съвпадне с някой от тях (добавката е активна или някой брояч не е минал номерата ѝ). Ако след импорта тя бъде включена отново, може да използва повторно номера, които Нашенски Комерс вече е дал: документите са на пауза, докато импортът ѝ не бъде пуснат отново от раздела Помощ, който изброява всяка поръчка с повтарящ се номер, за да я поправите. Съобщение за грешка го казва, полето „PDF файлове“ на поръчката го обяснява, а поръчките от това време получават бележка. След това използвайте „Повторно създаване на PDF файловете“ за поръчките без документи.</p>
+<p>От BulCommerce импортът взема и настройките за фирмата, документите, НАП, счетоводителя и NepoStop, по един метод на Нашенски за всеки негов метод в зоните за доставка (старият се изключва), а в поръчките товарителниците, редовете за доставка с куриер и данните на фирмата. Номерата на документите за продажба, фактурите и кредитните известия отиват в техните поръчки и връщания, а двата брояча продължават след най-високите номера. Попълват се само празните настройки на Нашенски; лицензният ключ, настройките на Stripe, ключът за webhook и токенът за архивиране никога не се четат. Както добавката за Н-18, BulCommerce се импортира само докато е изключена, а документите са на пауза, докато номерата ѝ могат да съвпаднат.</p>
 <h3>Актуализации</h3>
 <p>Новите версии се показват в Табло &gt; Актуализации и в Добавки, както всяка друга актуализация. Бета версиите са по избор: инсталирайте „Nashenski Commerce Beta Updates“ от GitHub release и го деактивирайте, за да се върнете към версиите от WordPress.org.</p></div></section>
 <section id="pro" aria-labelledby="pro-h"><h2 id="pro-h"><span data-l="en">Nashenski Pro (paid add-on)</span><span data-l="bg">Нашенски Про (платена добавка)</span></h2><div data-l="en">
@@ -2805,9 +2823,9 @@ section{padding:20px 16px}
 <p>Повече за Нашенски Про: <a href="https://nashenski.com/pro/">nashenski.com/pro/</a>.</p></div></section>
 <section id="settings-ref" aria-labelledby="settings-ref-h"><h2 id="settings-ref-h"><span data-l="en">Settings reference</span><span data-l="bg">Справка за настройките</span></h2><div data-l="en">
 <p>Every setting, page by page, with the name the command line uses (see the WP-CLI reference). The search box filters every table on this page. The list is built from the same definitions as the settings screens, so it also includes the settings of couriers that are off.</p>
-<p class="note">192 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
+<p class="note">194 settings in this list. Settings added by other code through filters, and the actions on the Exports page, are not listed.</p></div><div data-l="bg">
 <p>Всяка настройка, страница по страница, с името, което ползва командният ред (вижте справката за WP-CLI). Полето за търсене филтрира всяка таблица на тази страница. Списъкът е изграден от същите определения като екраните с настройки, затова включва и настройките на изключените куриери.</p>
-<p class="note">192 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
+<p class="note">194 настройки в този списък. Настройки, добавени от друг код чрез филтри, и действията на страницата Експорти не са в списъка.</p></div>
 <input id="filter" type="search" data-ph-en="Search the settings, e.g. econt, invoice, speedy" data-ph-bg="Търсене в настройките, например econt, фактура, speedy" aria-label="Search the settings / Търсене в настройките">
 		<div class="table-wrap settings-wrap" data-l="en">
 		<table class="settings">
@@ -2855,6 +2873,12 @@ section{padding:20px 16px}
 				<td><strong>Abandoned carts</strong><div class="desc">Keep the carts that were not ordered and send reminders to shoppers who typed an email</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
+			</tr>
+			<tr data-search-en="modules.language plugin language the language of this plugin&#39;s texts in wp-admin, at checkout, in emails and on pages. wordpress and woocommerce texts do not change. auto uses the language of the site, or of your user profile in wp-admin. the pdf documents are still made in bulgarian and in english.">
+				<td><code>modules.language</code></td>
+				<td><strong>Plugin language</strong><div class="desc">The language of this plugin&#39;s texts in wp-admin, at checkout, in emails and on pages. WordPress and WooCommerce texts do not change.</div><div class="desc">Auto uses the language of the site, or of your user profile in wp-admin. The PDF documents are still made in Bulgarian and in English.</div><div class="choices">Choices: auto = Auto (the site language); bg = Bulgarian; en = English</div></td>
+				<td>one choice</td>
+				<td><code>auto</code></td>
 			</tr>
 			<tr data-search-en="checks.nekorekten services reports about the customer&#39;s phone number from nekorekten.com ">
 				<td><code>checks.nekorekten</code></td>
@@ -2953,6 +2977,12 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
+			<tr data-search-bg="modules.language език на плъгина езикът на текстовете на този плъгин в администрацията, при плащане, в имейлите и на страниците. текстовете на wordpress и woocommerce не се променят. „автоматично“ използва езика на сайта, а в администрацията езика на вашия профил. pdf документите пак се създават на български и на английски.">
+				<td><code>modules.language</code></td>
+				<td><strong>Език на плъгина</strong><div class="desc">Езикът на текстовете на този плъгин в администрацията, при плащане, в имейлите и на страниците. Текстовете на WordPress и WooCommerce не се променят.</div><div class="desc">„Автоматично“ използва езика на сайта, а в администрацията езика на вашия профил. PDF документите пак се създават на български и на английски.</div><div class="choices">Избор: auto = Автоматично (езикът на сайта); bg = Български; en = English</div></td>
+				<td>един избор</td>
+				<td><code>auto</code></td>
+			</tr>
 			<tr data-search-bg="checks.nekorekten услуги сигнали за телефонния номер на клиента от nekorekten.com ">
 				<td><code>checks.nekorekten</code></td>
 				<td><strong>Услуги</strong><div class="desc">Сигнали за телефонния номер на клиента от nekorekten.com</div></td>
@@ -3026,9 +3056,9 @@ section{padding:20px 16px}
 				<td>text (hidden here)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_profile courier profile pick a profile and save. the other options then appear or update. ">
+			<tr data-search-en="courier_econt.sender_profile courier profile pick a profile and save. the other options then appear or update. an account can have several sender profiles. waybills are made with the one you choose.">
 				<td><code>courier_econt.sender_profile</code></td>
-				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="desc">An account can have several sender profiles. Waybills are made with the one you choose.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>0</code></td>
 			</tr>
@@ -3044,27 +3074,27 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_econt.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. ">
+			<tr data-search-en="courier_econt.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. use it only when the waybill contents miss sizes or colours of the products.">
 				<td><code>courier_econt.variations_in_contents</code></td>
-				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div></td>
+				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div><div class="desc">Use it only when the waybill contents miss sizes or colours of the products.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_econt.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_econt.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. ">
+			<tr data-search-en="courier_econt.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. insures the parcel for the order value. the courier charges a little extra for it.">
 				<td><code>courier_econt.insure</code></td>
-				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div></td>
+				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div><div class="desc">Insures the parcel for the order value. The courier charges a little extra for it.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.locker_size calculate the box size works out the length, width and height of the parcel box. ">
+			<tr data-search-en="courier_econt.locker_size calculate the box size works out the length, width and height of the parcel box. uses the product dimensions to fit the order into the courier&#39;s box sizes. products without dimensions count as the default size.">
 				<td><code>courier_econt.locker_size</code></td>
-				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div></td>
+				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div><div class="desc">Uses the product dimensions to fit the order into the courier&#39;s box sizes. Products without dimensions count as the default size.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -3074,27 +3104,27 @@ section{padding:20px 16px}
 				<td>one choice</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_kind ship from choose where your parcels leave from, then save to see more options. ">
+			<tr data-search-en="courier_econt.sender_kind ship from choose where your parcels leave from, then save to see more options. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
 				<td><code>courier_econt.sender_kind</code></td>
-				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="choices">Choices: office = Office; address = Address</div></td>
+				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
 				<td>one choice</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_address sender address  ">
+			<tr data-search-en="courier_econt.sender_address sender address  where your parcels start. prices are calculated from here.">
 				<td><code>courier_econt.sender_address</code></td>
-				<td><strong>Sender address</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Sender address</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>0</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_office_town city  ">
+			<tr data-search-en="courier_econt.sender_office_town city  where your parcels start. prices are calculated from here.">
 				<td><code>courier_econt.sender_office_town</code></td>
-				<td><strong>City</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>cityID-4</code></td>
 			</tr>
-			<tr data-search-en="courier_econt.sender_office office pick a city and save to see its offices. ">
+			<tr data-search-en="courier_econt.sender_office office pick a city and save to see its offices. where your parcels start. prices are calculated from here.">
 				<td><code>courier_econt.sender_office</code></td>
-				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>officeID-6017</code></td>
 			</tr>
@@ -3110,9 +3140,9 @@ section{padding:20px 16px}
 				<td>text (hidden here)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_speedy.sender_profile courier profile pick a profile and save. the other options then appear or update. ">
+			<tr data-search-en="courier_speedy.sender_profile courier profile pick a profile and save. the other options then appear or update. an account can have several sender profiles. waybills are made with the one you choose.">
 				<td><code>courier_speedy.sender_profile</code></td>
-				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Courier profile</strong><div class="desc">Pick a profile and save. The other options then appear or update.</div><div class="desc">An account can have several sender profiles. Waybills are made with the one you choose.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>0</code></td>
 			</tr>
@@ -3146,39 +3176,39 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. ">
+			<tr data-search-en="courier_speedy.variations_in_contents variation details on the waybill adds the variation details to the waybill. use it only when the printed waybill lacks them. use it only when the waybill contents miss sizes or colours of the products.">
 				<td><code>courier_speedy.variations_in_contents</code></td>
-				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div></td>
+				<td><strong>Variation details on the waybill</strong><div class="desc">Adds the variation details to the waybill. Use it only when the printed waybill lacks them.</div><div class="desc">Use it only when the waybill contents miss sizes or colours of the products.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_speedy.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_speedy.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. ">
+			<tr data-search-en="courier_speedy.insure declared value for cod orders puts a declared value on the waybill of cash on delivery orders. insures the parcel for the order value. the courier charges a little extra for it.">
 				<td><code>courier_speedy.insure</code></td>
-				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div></td>
+				<td><strong>Declared value for COD orders</strong><div class="desc">Puts a declared value on the waybill of cash on delivery orders.</div><div class="desc">Insures the parcel for the order value. The courier charges a little extra for it.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.locker_size calculate the box size works out the length, width and height of the parcel box. ">
+			<tr data-search-en="courier_speedy.locker_size calculate the box size works out the length, width and height of the parcel box. uses the product dimensions to fit the order into the courier&#39;s box sizes. products without dimensions count as the default size.">
 				<td><code>courier_speedy.locker_size</code></td>
-				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div></td>
+				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div><div class="desc">Uses the product dimensions to fit the order into the courier&#39;s box sizes. Products without dimensions count as the default size.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.sender_kind ship from choose where your parcels leave from, then save to see more options. with &quot;address&quot;, parcels leave from the address in your profile. ">
+			<tr data-search-en="courier_speedy.sender_kind ship from choose where your parcels leave from, then save to see more options. with &quot;address&quot;, parcels leave from the address in your profile. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
 				<td><code>courier_speedy.sender_kind</code></td>
-				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options. With &quot;Address&quot;, parcels leave from the address in your profile.</div><div class="choices">Choices: office = Office; address = Address</div></td>
+				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options. With &quot;Address&quot;, parcels leave from the address in your profile.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
 				<td>one choice</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-en="courier_speedy.sender_town city  ">
+			<tr data-search-en="courier_speedy.sender_town city  where your parcels start. prices are calculated from here.">
 				<td><code>courier_speedy.sender_town</code></td>
-				<td><strong>City</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>cityID-14</code></td>
 			</tr>
@@ -3236,9 +3266,9 @@ section{padding:20px 16px}
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_boxnow.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_boxnow.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_boxnow.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
@@ -3290,27 +3320,27 @@ section{padding:20px 16px}
 				<td>text (hidden here)</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. ">
+			<tr data-search-en="courier_pigeon.auto_waybill create the waybill when the order is placed tries to create the waybill right after checkout and adds the tracking number to the order email. the waybill is made as soon as the order is placed and its number goes into the order emails. leave it off if you check orders before shipping.">
 				<td><code>courier_pigeon.auto_waybill</code></td>
-				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div></td>
+				<td><strong>Create the waybill when the order is placed</strong><div class="desc">Tries to create the waybill right after checkout and adds the tracking number to the order email.</div><div class="desc">The waybill is made as soon as the order is placed and its number goes into the order emails. Leave it off if you check orders before shipping.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.locker_size calculate the box size works out the length, width and height of the parcel box. ">
+			<tr data-search-en="courier_pigeon.locker_size calculate the box size works out the length, width and height of the parcel box. uses the product dimensions to fit the order into the courier&#39;s box sizes. products without dimensions count as the default size.">
 				<td><code>courier_pigeon.locker_size</code></td>
-				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div></td>
+				<td><strong>Calculate the box size</strong><div class="desc">Works out the length, width and height of the parcel box.</div><div class="desc">Uses the product dimensions to fit the order into the courier&#39;s box sizes. Products without dimensions count as the default size.</div></td>
 				<td>yes or no</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.sender_kind ship from choose where your parcels leave from, then save to see more options. ">
+			<tr data-search-en="courier_pigeon.sender_kind ship from choose where your parcels leave from, then save to see more options. address: the courier comes to you. office: you take the parcels to a courier office, which is often cheaper. save to see the next fields.">
 				<td><code>courier_pigeon.sender_kind</code></td>
-				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="choices">Choices: office = Office; address = Address</div></td>
+				<td><strong>Ship from</strong><div class="desc">Choose where your parcels leave from, then save to see more options.</div><div class="desc">Address: the courier comes to you. Office: you take the parcels to a courier office, which is often cheaper. Save to see the next fields.</div><div class="choices">Choices: office = Office; address = Address</div></td>
 				<td>one choice</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.sender_town city  ">
+			<tr data-search-en="courier_pigeon.sender_town city  where your parcels start. prices are calculated from here.">
 				<td><code>courier_pigeon.sender_town</code></td>
-				<td><strong>City</strong><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>City</strong><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>cityID-2924</code></td>
 			</tr>
@@ -3320,9 +3350,9 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="courier_pigeon.sender_office office pick a city and save to see its offices. ">
+			<tr data-search-en="courier_pigeon.sender_office office pick a city and save to see its offices. where your parcels start. prices are calculated from here.">
 				<td><code>courier_pigeon.sender_office</code></td>
-				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
+				<td><strong>Office</strong><div class="desc">Pick a city and save to see its offices.</div><div class="desc">Where your parcels start. Prices are calculated from here.</div><div class="choices">The choices come from your courier account, so they are not listed here.</div></td>
 				<td>one choice</td>
 				<td><code>officeID-26</code></td>
 			</tr>
@@ -3411,9 +3441,9 @@ section{padding:20px 16px}
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. ">
+			<tr data-search-bg="courier_econt.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. един профил може да има няколко профила на подател. товарителниците се създават с избрания.">
 				<td><code>courier_econt.sender_profile</code></td>
-				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="desc">Един профил може да има няколко профила на подател. Товарителниците се създават с избрания.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>0</code></td>
 			</tr>
@@ -3429,27 +3459,27 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_econt.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. ">
+			<tr data-search-bg="courier_econt.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.">
 				<td><code>courier_econt.variations_in_contents</code></td>
-				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div></td>
+				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div><div class="desc">Използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_econt.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_econt.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. ">
+			<tr data-search-bg="courier_econt.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. застрахова пратката за стойността на поръчката. куриерът взема малка допълнителна такса за това.">
 				<td><code>courier_econt.insure</code></td>
-				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div></td>
+				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div><div class="desc">Застрахова пратката за стойността на поръчката. Куриерът взема малка допълнителна такса за това.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. ">
+			<tr data-search-bg="courier_econt.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. използва размерите на продуктите, за да събере поръчката в кутиите на куриера. продуктите без размери се броят с размера по подразбиране.">
 				<td><code>courier_econt.locker_size</code></td>
-				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div></td>
+				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div><div class="desc">Използва размерите на продуктите, за да събере поръчката в кутиите на куриера. Продуктите без размери се броят с размера по подразбиране.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -3459,27 +3489,27 @@ section{padding:20px 16px}
 				<td>един избор</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. ">
+			<tr data-search-bg="courier_econt.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>courier_econt.sender_kind</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_address адрес на подателя  ">
+			<tr data-search-bg="courier_econt.sender_address адрес на подателя  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_econt.sender_address</code></td>
-				<td><strong>Адрес на подателя</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Адрес на подателя</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>0</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_office_town град  ">
+			<tr data-search-bg="courier_econt.sender_office_town град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_econt.sender_office_town</code></td>
-				<td><strong>Град</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>cityID-4</code></td>
 			</tr>
-			<tr data-search-bg="courier_econt.sender_office офис изберете град и запазете, за да се покажат офисите. ">
+			<tr data-search-bg="courier_econt.sender_office офис изберете град и запазете, за да се покажат офисите. откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_econt.sender_office</code></td>
-				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>officeID-6017</code></td>
 			</tr>
@@ -3495,9 +3525,9 @@ section{padding:20px 16px}
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. ">
+			<tr data-search-bg="courier_speedy.sender_profile профил при куриера изберете профил и запазете. след това другите настройки се показват или обновяват. един профил може да има няколко профила на подател. товарителниците се създават с избрания.">
 				<td><code>courier_speedy.sender_profile</code></td>
-				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Профил при куриера</strong><div class="desc">Изберете профил и запазете. След това другите настройки се показват или обновяват.</div><div class="desc">Един профил може да има няколко профила на подател. Товарителниците се създават с избрания.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>0</code></td>
 			</tr>
@@ -3531,39 +3561,39 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. ">
+			<tr data-search-bg="courier_speedy.variations_in_contents данни за вариациите в товарителницата добавя данните за вариацията в товарителницата. включете само ако липсват на отпечатаната товарителница. използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.">
 				<td><code>courier_speedy.variations_in_contents</code></td>
-				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div></td>
+				<td><strong>Данни за вариациите в товарителницата</strong><div class="desc">Добавя данните за вариацията в товарителницата. Включете само ако липсват на отпечатаната товарителница.</div><div class="desc">Използвайте го само когато в съдържанието на товарителницата липсват размерите или цветовете на продуктите.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_speedy.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_speedy.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. ">
+			<tr data-search-bg="courier_speedy.insure обявена стойност при наложен платеж добавя обявена стойност към товарителницата при наложен платеж. застрахова пратката за стойността на поръчката. куриерът взема малка допълнителна такса за това.">
 				<td><code>courier_speedy.insure</code></td>
-				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div></td>
+				<td><strong>Обявена стойност при наложен платеж</strong><div class="desc">Добавя обявена стойност към товарителницата при наложен платеж.</div><div class="desc">Застрахова пратката за стойността на поръчката. Куриерът взема малка допълнителна такса за това.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. ">
+			<tr data-search-bg="courier_speedy.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. използва размерите на продуктите, за да събере поръчката в кутиите на куриера. продуктите без размери се броят с размера по подразбиране.">
 				<td><code>courier_speedy.locker_size</code></td>
-				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div></td>
+				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div><div class="desc">Използва размерите на продуктите, за да събере поръчката в кутиите на куриера. Продуктите без размери се броят с размера по подразбиране.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. при „адрес“ пратките тръгват от адреса в профила ви. ">
+			<tr data-search-bg="courier_speedy.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. при „адрес“ пратките тръгват от адреса в профила ви. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>courier_speedy.sender_kind</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки. При „Адрес“ пратките тръгват от адреса в профила ви.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки. При „Адрес“ пратките тръгват от адреса в профила ви.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-bg="courier_speedy.sender_town град  ">
+			<tr data-search-bg="courier_speedy.sender_town град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_speedy.sender_town</code></td>
-				<td><strong>Град</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>cityID-14</code></td>
 			</tr>
@@ -3621,9 +3651,9 @@ section{padding:20px 16px}
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_boxnow.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_boxnow.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_boxnow.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
@@ -3675,27 +3705,27 @@ section{padding:20px 16px}
 				<td>текст (скрит тук)</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. ">
+			<tr data-search-bg="courier_pigeon.auto_waybill създаване на товарителница след поръчка опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката. товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. оставете го изключено, ако проверявате поръчките преди изпращане.">
 				<td><code>courier_pigeon.auto_waybill</code></td>
-				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div></td>
+				<td><strong>Създаване на товарителница след поръчка</strong><div class="desc">Опитва да създаде товарителницата веднага след поръчката на клиента и добавя номера за проследяване в имейла за поръчката.</div><div class="desc">Товарителницата се създава веднага щом поръчката е направена и номерът ѝ влиза в имейлите за поръчката. Оставете го изключено, ако проверявате поръчките преди изпращане.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. ">
+			<tr data-search-bg="courier_pigeon.locker_size автоматично изчисляване на размера на кутията автоматично изчислява дължината, ширината и височината на кутията за пратката. използва размерите на продуктите, за да събере поръчката в кутиите на куриера. продуктите без размери се броят с размера по подразбиране.">
 				<td><code>courier_pigeon.locker_size</code></td>
-				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div></td>
+				<td><strong>Автоматично изчисляване на размера на кутията</strong><div class="desc">Автоматично изчислява дължината, ширината и височината на кутията за пратката.</div><div class="desc">Използва размерите на продуктите, за да събере поръчката в кутиите на куриера. Продуктите без размери се броят с размера по подразбиране.</div></td>
 				<td>да или не</td>
 				<td><code>no</code></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. ">
+			<tr data-search-bg="courier_pigeon.sender_kind изпращане от изберете откъде ще изпращате пратките и запазете, за да видите още настройки. адрес: куриерът идва при вас. офис: вие занасяте пратките в офис на куриера, което често е по-евтино. запазете, за да видите следващите полета.">
 				<td><code>courier_pigeon.sender_kind</code></td>
-				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
+				<td><strong>Изпращане от</strong><div class="desc">Изберете откъде ще изпращате пратките и запазете, за да видите още настройки.</div><div class="desc">Адрес: куриерът идва при Вас. Офис: Вие занасяте пратките в офис на куриера, което често е по-евтино. Запазете, за да видите следващите полета.</div><div class="choices">Избор: office = Офис; address = Адрес</div></td>
 				<td>един избор</td>
 				<td><code>office</code></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.sender_town град  ">
+			<tr data-search-bg="courier_pigeon.sender_town град  откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_pigeon.sender_town</code></td>
-				<td><strong>Град</strong><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Град</strong><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>cityID-2924</code></td>
 			</tr>
@@ -3705,9 +3735,9 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="courier_pigeon.sender_office офис изберете град и запазете, за да се покажат офисите. ">
+			<tr data-search-bg="courier_pigeon.sender_office офис изберете град и запазете, за да се покажат офисите. откъдето тръгват пратките ви. цените се изчисляват оттук.">
 				<td><code>courier_pigeon.sender_office</code></td>
-				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
+				<td><strong>Офис</strong><div class="desc">Изберете град и запазете, за да се покажат офисите.</div><div class="desc">Откъдето тръгват пратките Ви. Цените се изчисляват оттук.</div><div class="choices">Възможностите идват от вашия акаунт при куриера, затова не са показани тук.</div></td>
 				<td>един избор</td>
 				<td><code>officeID-26</code></td>
 			</tr>
@@ -3909,6 +3939,12 @@ section{padding:20px 16px}
 				<td><strong>Withdrawal period (days)</strong><div class="desc">The link shows on an order (My Account, order page, order emails) until this many days after the order is completed. The form itself is always open.</div><div class="desc">14 days is the legal minimum; give more if your terms promise more.</div></td>
 				<td>number</td>
 				<td><code>14</code></td>
+			</tr>
+			<tr data-search-en="checkout.minimum_order minimum order amount orders whose products cost less, with vat and after coupons, cannot be placed. delivery does not count. leave empty or 0 for no minimum. in the shop currency, for example 30. the order cannot be placed until the products reach it.">
+				<td><code>checkout.minimum_order</code></td>
+				<td><strong>Minimum order amount</strong><div class="desc">Orders whose products cost less, with VAT and after coupons, cannot be placed. Delivery does not count. Leave empty or 0 for no minimum.</div><div class="desc">In the shop currency, for example 30. The order cannot be placed until the products reach it.</div></td>
+				<td>number</td>
+				<td><span class="muted">empty</span></td>
 			</tr></tbody>
 		</table>
 		</div>
@@ -4048,6 +4084,12 @@ section{padding:20px 16px}
 				<td><strong>Срок за отказ (дни)</strong><div class="desc">Връзката се показва при поръчката (Моят профил, страницата на поръчката, имейлите) до толкова дни след завършването ѝ. Самият формуляр е винаги достъпен.</div><div class="desc">14 дни е законовият минимум; дайте повече, ако общите Ви условия обещават повече.</div></td>
 				<td>число</td>
 				<td><code>14</code></td>
+			</tr>
+			<tr data-search-bg="checkout.minimum_order минимална сума на поръчката поръчки, чиито продукти струват по-малко, с ддс и след купоните, не могат да бъдат направени. доставката не се брои. оставете празно или 0 за без минимум. във валутата на магазина, например 30. поръчката не може да бъде направена, докато продуктите не я достигнат.">
+				<td><code>checkout.minimum_order</code></td>
+				<td><strong>Минимална сума на поръчката</strong><div class="desc">Поръчки, чиито продукти струват по-малко, с ДДС и след купоните, не могат да бъдат направени. Доставката не се брои. Оставете празно или 0 за без минимум.</div><div class="desc">Във валутата на магазина, например 30. Поръчката не може да бъде направена, докато продуктите не я достигнат.</div></td>
+				<td>число</td>
+				<td><span class="muted">празно</span></td>
 			</tr></tbody>
 		</table>
 		</div>
@@ -4558,39 +4600,39 @@ section{padding:20px 16px}
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.payment_bacs payment type for the nra  how the nra audit file shows this payment.">
+			<tr data-search-en="nra.payment_bacs payment type for the nra the nra payment type of this payment method. how the nra audit file shows this payment.">
 				<td><code>nra.payment_bacs</code></td>
-				<td><strong>Payment type for the NRA</strong><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
+				<td><strong>Payment type for the NRA</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
 				<td>one choice</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="nra.pos_bacs virtual pos number  ">
+			<tr data-search-en="nra.pos_bacs virtual pos number the number of the virtual pos terminal from your bank. needed in the nra audit file for card payments.">
 				<td><code>nra.pos_bacs</code></td>
-				<td><strong>Virtual POS number</strong></td>
+				<td><strong>Virtual POS number</strong><div class="desc">The number of the virtual POS terminal from your bank.</div><div class="desc">Needed in the NRA audit file for card payments.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.provider_bacs payment provider id  ">
+			<tr data-search-en="nra.provider_bacs payment provider id the identifier of the payment provider, if it gave you one. goes into the nra audit file with each payment.">
 				<td><code>nra.provider_bacs</code></td>
-				<td><strong>Payment provider ID</strong></td>
+				<td><strong>Payment provider ID</strong><div class="desc">The identifier of the payment provider, if it gave you one.</div><div class="desc">Goes into the NRA audit file with each payment.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.payment_cod payment type for the nra  how the nra audit file shows this payment.">
+			<tr data-search-en="nra.payment_cod payment type for the nra the nra payment type of this payment method. how the nra audit file shows this payment.">
 				<td><code>nra.payment_cod</code></td>
-				<td><strong>Payment type for the NRA</strong><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
+				<td><strong>Payment type for the NRA</strong><div class="desc">The NRA payment type of this payment method.</div><div class="desc">How the NRA audit file shows this payment.</div><div class="choices">Choices: 1 = Exempt by Art. 3, paid without a postal money transfer; 2 = Card payment through a virtual POS; 3 = Cash on delivery by postal money transfer; 4 = A provider of payment services; 5 = Another payment type; 6 = Shown on a cash register receipt</div></td>
 				<td>one choice</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-en="nra.pos_cod virtual pos number  ">
+			<tr data-search-en="nra.pos_cod virtual pos number the number of the virtual pos terminal from your bank. needed in the nra audit file for card payments.">
 				<td><code>nra.pos_cod</code></td>
-				<td><strong>Virtual POS number</strong></td>
+				<td><strong>Virtual POS number</strong><div class="desc">The number of the virtual POS terminal from your bank.</div><div class="desc">Needed in the NRA audit file for card payments.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
-			<tr data-search-en="nra.provider_cod payment provider id  ">
+			<tr data-search-en="nra.provider_cod payment provider id the identifier of the payment provider, if it gave you one. goes into the nra audit file with each payment.">
 				<td><code>nra.provider_cod</code></td>
-				<td><strong>Payment provider ID</strong></td>
+				<td><strong>Payment provider ID</strong><div class="desc">The identifier of the payment provider, if it gave you one.</div><div class="desc">Goes into the NRA audit file with each payment.</div></td>
 				<td>text</td>
 				<td><span class="muted">empty</span></td>
 			</tr>
@@ -4937,39 +4979,39 @@ section{padding:20px 16px}
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.payment_bacs вид плащане за нап  как се отбелязва това плащане в одиторския файл за нап.">
+			<tr data-search-bg="nra.payment_bacs вид плащане за нап видът плащане за нап за този метод на плащане. как се отбелязва това плащане в одиторския файл за нап.">
 				<td><code>nra.payment_bacs</code></td>
-				<td><strong>Вид плащане за НАП</strong><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
+				<td><strong>Вид плащане за НАП</strong><div class="desc">Видът плащане за НАП за този метод на плащане.</div><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="nra.pos_bacs номер на виртуалния пос терминал  ">
+			<tr data-search-bg="nra.pos_bacs номер на виртуалния пос терминал номерът на виртуалния пос терминал от банката ви. нужен е в одиторския файл за нап при плащания с карта.">
 				<td><code>nra.pos_bacs</code></td>
-				<td><strong>Номер на виртуалния ПОС терминал</strong></td>
+				<td><strong>Номер на виртуалния ПОС терминал</strong><div class="desc">Номерът на виртуалния ПОС терминал от банката Ви.</div><div class="desc">Нужен е в одиторския файл за НАП при плащания с карта.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.provider_bacs идентификатор на доставчика на плащания  ">
+			<tr data-search-bg="nra.provider_bacs идентификатор на доставчика на плащания идентификаторът на доставчика на плащания, ако ви е дал такъв. влиза в одиторския файл за нап с всяко плащане.">
 				<td><code>nra.provider_bacs</code></td>
-				<td><strong>Идентификатор на доставчика на плащания</strong></td>
+				<td><strong>Идентификатор на доставчика на плащания</strong><div class="desc">Идентификаторът на доставчика на плащания, ако Ви е дал такъв.</div><div class="desc">Влиза в одиторския файл за НАП с всяко плащане.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.payment_cod вид плащане за нап  как се отбелязва това плащане в одиторския файл за нап.">
+			<tr data-search-bg="nra.payment_cod вид плащане за нап видът плащане за нап за този метод на плащане. как се отбелязва това плащане в одиторския файл за нап.">
 				<td><code>nra.payment_cod</code></td>
-				<td><strong>Вид плащане за НАП</strong><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
+				<td><strong>Вид плащане за НАП</strong><div class="desc">Видът плащане за НАП за този метод на плащане.</div><div class="desc">Как се отбелязва това плащане в одиторския файл за НАП.</div><div class="choices">Избор: 1 = Освободено по чл. 3, платено без пощенски паричен превод; 2 = Плащане с карта през виртуален ПОС; 3 = Пощенски паричен превод за наложен платеж; 4 = Плащане чрез доставчик на платежни услуги; 5 = Друго; 6 = Показано в касова бележка</div></td>
 				<td>един избор</td>
 				<td><code>1</code></td>
 			</tr>
-			<tr data-search-bg="nra.pos_cod номер на виртуалния пос терминал  ">
+			<tr data-search-bg="nra.pos_cod номер на виртуалния пос терминал номерът на виртуалния пос терминал от банката ви. нужен е в одиторския файл за нап при плащания с карта.">
 				<td><code>nra.pos_cod</code></td>
-				<td><strong>Номер на виртуалния ПОС терминал</strong></td>
+				<td><strong>Номер на виртуалния ПОС терминал</strong><div class="desc">Номерът на виртуалния ПОС терминал от банката Ви.</div><div class="desc">Нужен е в одиторския файл за НАП при плащания с карта.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
-			<tr data-search-bg="nra.provider_cod идентификатор на доставчика на плащания  ">
+			<tr data-search-bg="nra.provider_cod идентификатор на доставчика на плащания идентификаторът на доставчика на плащания, ако ви е дал такъв. влиза в одиторския файл за нап с всяко плащане.">
 				<td><code>nra.provider_cod</code></td>
-				<td><strong>Идентификатор на доставчика на плащания</strong></td>
+				<td><strong>Идентификатор на доставчика на плащания</strong><div class="desc">Идентификаторът на доставчика на плащания, ако Ви е дал такъв.</div><div class="desc">Влиза в одиторския файл за НАП с всяко плащане.</div></td>
 				<td>текст</td>
 				<td><span class="muted">празно</span></td>
 			</tr>
@@ -5297,8 +5339,8 @@ wp site list --field=url | xargs -I% wp --url=% nashenski upgrade run</code></pr
 <li>Настройки, добавени от друг код чрез филтъра <code>nashenski_settings_areas</code>, не са в списъка.</li>
 </ul></div></section>
 <section id="developers" aria-labelledby="developers-h"><h2 id="developers-h"><span data-l="en">For developers</span><span data-l="bg">За разработчици</span></h2><div data-l="en">
-<p>A few hooks, found in the code. Each name is the one used in the source at version 0.23.6. A hook that belongs to one courier passes the courier (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) as its last argument. The names of version 0.21 still work, with their old arguments, but are deprecated and go in 0.23.0; <code>includes/compat/hook-names.php</code> lists the old and new names. The old names with slashes are gone. A PDF template copied from 0.21 must be made again from <code>includes/documents/views/document.php</code> (filter <code>nashenski_document_view</code>); until then the bundled template is used.</p></div><div data-l="bg">
-<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.23.6. Кука, която принадлежи на един куриер, подава куриера (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) като последен аргумент. Имената от версия 0.21 още работят, със старите си аргументи, но са остарели и отпадат в 0.23.0; <code>includes/compat/hook-names.php</code> показва старите и новите имена. Старите имена с наклонени черти вече не работят. PDF шаблон, копиран от 0.21, трябва да се направи отново от <code>includes/documents/views/document.php</code> (филтър <code>nashenski_document_view</code>); дотогава се ползва вграденият шаблон.</p></div><div class="table-wrap" data-l="en"><table>
+<p>A few hooks, found in the code. Each name is the one used in the source at version 0.24.0. A hook that belongs to one courier passes the courier (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) as its last argument. The names of version 0.21 still work, with their old arguments, but are deprecated and go in 0.23.0; <code>includes/compat/hook-names.php</code> lists the old and new names. The old names with slashes are gone. A PDF template copied from 0.21 must be made again from <code>includes/documents/views/document.php</code> (filter <code>nashenski_document_view</code>); until then the bundled template is used.</p></div><div data-l="bg">
+<p>Няколко куки, намерени в кода. Всяко име е както е в кода за версия 0.24.0. Кука, която принадлежи на един куриер, подава куриера (<code>econt</code>, <code>speedy</code>, <code>boxnow</code>, <code>pigeon</code>) като последен аргумент. Имената от версия 0.21 още работят, със старите си аргументи, но са остарели и отпадат в 0.23.0; <code>includes/compat/hook-names.php</code> показва старите и новите имена. Старите имена с наклонени черти вече не работят. PDF шаблон, копиран от 0.21, трябва да се направи отново от <code>includes/documents/views/document.php</code> (филтър <code>nashenski_document_view</code>); дотогава се ползва вграденият шаблон.</p></div><div class="table-wrap" data-l="en"><table>
 <thead><tr><th>Hook</th><th>Type</th><th>What it does</th></tr></thead>
 <tbody><tr><td><code>nashenski_settings_areas</code></td><td>filter</td><td>Change the list of settings areas</td></tr><tr><td><code>nashenski_settings_schema</code></td><td>filter</td><td>Add fields to a settings area ($fields, $area), for example documents</td></tr><tr><td><code>nashenski_settings_saved</code></td><td>action</td><td>Runs after a settings area is saved ($area; login checks and profile data); also run by the command line</td></tr><tr><td><code>nashenski_export_nra_orders</code>, <code>nashenski_export_nra_refunds</code></td><td>filter</td><td>Change the orders of an NRA export month</td></tr><tr><td><code>nashenski_waybill_default_weight</code>, <code>nashenski_waybill_min_weight</code></td><td>filter</td><td>Default and minimum parcel weight for waybills ($kg, $courier)</td></tr><tr><td><code>nashenski_waybill_request</code></td><td>filter</td><td>Change the waybill request body before it is sent ($request, $order, $courier)</td></tr><tr><td><code>nashenski_services_ready</code>, <code>nashenski_modules_started</code></td><td>action</td><td>Before and after the plugin's parts are started</td></tr><tr><td><code>nashenski_latin_place_names</code></td><td>filter</td><td>Whether checkout office and locker names show in Latin (bool, locale); by default on pages that are not in Bulgarian</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Кука</th><th>Вид</th><th>Какво прави</th></tr></thead>
@@ -5429,7 +5471,7 @@ wp site list --field=url | xargs -I% wp --url=% nashenski upgrade run</code></pr
 			</dl>
 		</article></div>
 <h3>What to send support</h3>
-<p>Send these, so the problem can be found without asking again:</p>
+<p>Write to help@nashenski.com (the Help tab has the link) and send these, so the problem can be found without asking again:</p>
 <ul><li>The plugin version (for example 0.16.7).</li><li>The WooCommerce, WordPress and PHP versions. WooCommerce > Status shows all three.</li><li>The courier and the environment (Demo, Live or Sandbox), and where the problem shows: the courier tab, the order, the checkout or the command line.</li><li>The exact message, copied as it is on the screen, or the command and its output.</li><li>The order number, if one order is affected. Do not send the customer's details.</li></ul>
 <p class="callout">Never send passwords, API keys or tokens. If one of them shows in a message, delete it before you send the message.</p></div><div data-l="bg">
 <p>Всяка точка показва какво се вижда, вероятната причина и поправката. Имената на екраните и настройките са както на екраните. Когато причината не е потвърдена в кода или на сайт, точката го казва.</p>
@@ -5526,7 +5568,7 @@ wp site list --field=url | xargs -I% wp --url=% nashenski upgrade run</code></pr
 			</dl>
 		</article></div>
 <h3>Какво да изпратите на поддръжката</h3>
-<p>Изпратете тези данни, за да се намери проблемът, без да се питате отново:</p>
+<p>Пишете на help@nashenski.com (връзката е в раздел Помощ) и изпратете тези данни, за да се намери проблемът, без да се питате отново:</p>
 <ul><li>Версията на Нашенски Комерс (например 0.16.7).</li><li>Версиите на WooCommerce, WordPress и PHP. WooCommerce > Състояние показва и трите.</li><li>Куриерът и средата (Демо, Реална среда или Sandbox) и къде се вижда проблемът: разделът на куриера, поръчката, плащането или командният ред.</li><li>Точното съобщение, копирано както е на екрана, или командата и нейният изход.</li><li>Номерът на поръчката, ако е засегната една поръчка. Не изпращайте данните на клиента.</li></ul>
 <p class="callout">Никога не изпращайте пароли, API ключове или токени. Ако някой от тях се вижда в съобщение, изтрийте го, преди да изпратите съобщението.</p></div></section>
 <section id="external" aria-labelledby="external-h"><h2 id="external-h"><span data-l="en">Privacy and external services</span><span data-l="bg">Поверителност и външни услуги</span></h2><div data-l="en">
@@ -5536,7 +5578,7 @@ wp site list --field=url | xargs -I% wp --url=% nashenski upgrade run</code></pr
 <tbody><tr><td>Courier websites (public price lists)</td><td>Only a normal page request, when you press "Check the courier website" and once a week: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Prices, labels, offices, cities, shipment status and courier requests: the receiver's name, phone, address or office, the parcel details and the cash on delivery amount. Hosts: ee.econt.com, demo.econt.com</td></tr><tr><td>Econt and Speedy office maps</td><td>Only when the customer presses "Choose on the map". The town is sent (Speedy: only the town number). Speedy's map uses Google Maps.</td></tr><tr><td>Speedy</td><td>Same purpose and data as Econt. Hosts: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Lockers, labels and status. Hosts: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Offices, lockers, prices, labels and status. Hosts: api.pigeonexpress.com, api-demo.pigeonexpress.com. Without a login, the public list of offices and lockers is loaded (nothing about the customer is sent)</td></tr><tr><td>nekorekten.com</td><td>The customer's phone number for a lookup; and, only when you press "Send report", the report with the name, phone and email of that order. Host: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>The customer's phone number, and shipment data when tracking is on. Hosts: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>The customer's phone number, and labels when that option is on. Host: nepostop.com</td></tr><tr><td>EU VIES</td><td>The VAT number a company customer enters at checkout. Host: ec.europa.eu</td></tr></tbody></table></div><div class="table-wrap" data-l="bg"><table>
 <thead><tr><th>Услуга</th><th>Какво се изпраща и кога</th></tr></thead>
 <tbody><tr><td>Сайтове на куриерите (публични ценови листи)</td><td>Само обикновена заявка за страница, когато натиснете „Проверка в сайта на куриера“ и веднъж седмично: admin-ee.econt.com, services.speedy.bg, pigeonexpress.com</td></tr><tr><td>Econt</td><td>Цени, товарителници, офиси, населени места, статус на пратка и заявки за куриер: името, телефонът, адресът или офисът на получателя, данните за пратката и сумата на наложения платеж. Хостове: ee.econt.com, demo.econt.com</td></tr><tr><td>Картите на офисите на Econt и Speedy</td><td>Само когато клиентът натисне „Избор на картата“. Населеното място се изпраща (при Speedy: само номерът на населеното място). Картата на Speedy използва Google Maps.</td></tr><tr><td>Speedy</td><td>Същата цел и данни като при Econt. Хостове: api.speedy.bg, services.speedy.bg</td></tr><tr><td>BOX NOW</td><td>Автомати, товарителници и статус. Хостове: api-production.boxnow.bg, api-stage.boxnow.bg, locationapi-production.boxnow.bg, locationapi-stage.boxnow.bg, map.boxnow.bg</td></tr><tr><td>Pigeon Express</td><td>Офиси, автомати, цени, товарителници и статус. Хостове: api.pigeonexpress.com, api-demo.pigeonexpress.com. Без вход се зарежда публичният списък с офиси и автомати (нищо за клиента не се изпраща)</td></tr><tr><td>nekorekten.com</td><td>Телефонният номер на клиента за проверка; и, само когато натиснете „Изпрати сигнал“, сигналът с името, телефона и имейла на поръчката. Хост: api.nekorekten.com</td></tr><tr><td>Connectix</td><td>Телефонният номер на клиента и данните за пратката, когато проследяването е включено. Хостове: api.connectix.bg, api-sandbox.connectix.bg</td></tr><tr><td>NepoStop</td><td>Телефонният номер на клиента и товарителниците, когато тази опция е включена. Хост: nepostop.com</td></tr><tr><td>EU VIES</td><td>ДДС номерът, който фирмен клиент въвежда при плащане. Хост: ec.europa.eu</td></tr></tbody></table></div><div data-l="en"><p>Terms and privacy links of each service are in the readme file of the plugin.</p></div><div data-l="bg"><p>Линковете към условията и политиката за поверителност на всяка услуга са в readme файла на добавката.</p></div></section>
-<p class="note"><span data-l="en">Built from the plugin source at version 0.23.6. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.23.6. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
+<p class="note"><span data-l="en">Built from the plugin source at version 0.24.0. The settings tables come from the plugin&#39;s own definitions (tools: settings-dump.php and build-manual.js in the workspace nashenski-tools folder).</span><span data-l="bg">Изградено от изходния код на добавката, версия 0.24.0. Таблиците с настройки идват от определенията на самата добавка (инструменти: settings-dump.php и build-manual.js в работната папка nashenski-tools).</span></p>
 </main>
 </div>
 <script>
